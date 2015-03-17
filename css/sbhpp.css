@@ -1,0 +1,11 @@
+.navbar-brand {
+    background-color: #337ab7 !important;
+-webkit-box-shadow: inset 0px 0px 93px 8px rgba(62,88,110,1);
+-moz-box-shadow: inset 0px 0px 93px 8px rgba(62,88,110,1);
+box-shadow: inset 0px 0px 93px 8px rgba(62,88,110,1);
+}
+#logo.navbar-brand > img {
+    height: 41px;
+    margin: 0 auto;
+    padding-right: 4px;
+}
