@@ -1,9 +1,10 @@
 .navbar-brand {
-    background-color: #FFFFFF !important;
-box-shadow: inset 2px 3px 19px 9px #689F38,26px 4px 37px -23px #406321;
--webkit-box-shadow: inset 2px 3px 19px 9px #689F38,26px 4px 37px -23px #406321;
--moz-box-shadow: inset 2px 3px 19px 9px #689F38,26px 4px 37px -23px #406321;
--o-box-shadow: inset 2px 3px 19px 9px #689F38,26px 4px 37px -23px #406321;
+border-bottom:solid 2px #406321;
+background-color:#fafafa !important;
+box-shadow: inset 0px 0px 22px 0px #ABABAB;
+-webkit-box-shadow: inset 0px 0px 22px 0px #ABABAB;
+-moz-box-shadow: inset 0px 0px 22px 0px #ABABAB;
+-o-box-shadow: inset 0px 0px 22px 0px #ABABAB;
 }
 
 #logo.navbar-brand > img {
