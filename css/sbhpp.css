@@ -1,11 +1,28 @@
 .navbar-brand {
-    background-color: #337ab7 !important;
--webkit-box-shadow: inset 0px 0px 93px 8px rgba(62,88,110,1);
--moz-box-shadow: inset 0px 0px 93px 8px rgba(62,88,110,1);
-box-shadow: inset 0px 0px 93px 8px rgba(62,88,110,1);
+    background-color: #FFFFFF !important;
+box-shadow: inset 2px 3px 19px 9px #689F38,26px 4px 37px -23px #406321;
+-webkit-box-shadow: inset 2px 3px 19px 9px #689F38,26px 4px 37px -23px #406321;
+-moz-box-shadow: inset 2px 3px 19px 9px #689F38,26px 4px 37px -23px #406321;
+-o-box-shadow: inset 2px 3px 19px 9px #689F38,26px 4px 37px -23px #406321;
 }
+
 #logo.navbar-brand > img {
-    height: 41px;
+    height: 60px !important;
     margin: 0 auto;
     padding-right: 4px;
+
+}
+.navbar-brand {
+    float: left;
+    font-size: 18px;
+    height: auto !important;
+    line-height: 20px;
+    padding: 15px;
+}
+
+.nav-no-collapse.pull-right {
+    padding: 15px 5px;
+}
+.nav-no-collapse.navbar-left.pull-left.hidden-sm.hidden-xs {
+    padding: 15px 5px;
 }
