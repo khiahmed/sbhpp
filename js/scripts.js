@@ -1,8 +1,11 @@
 $(function($) {
+
+
     setTimeout(function() {
         $('#content-wrapper > .row').css({
             opacity: 1
         });
+			
     }, 200);
     $('#sidebar-nav,#nav-col-submenu').on('click', '.dropdown-toggle', function(e) {
         e.preventDefault();
@@ -118,4 +121,9 @@ $.fn.removeClassPrefix = function(prefix) {
     jQuery.fn[sr] = function(fn) {
         return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
     };
+	//$(".nav-stacked > li > ul ").css({"display":"block"});
+document.write('<script type="text/javascript" src="js/pace.min.js"></script>');
+document.write('<script type="text/javascript" src="js/jquery.dataTables.js"></script>');
+document.write('<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>');
+
 })(jQuery, 'smartresize');

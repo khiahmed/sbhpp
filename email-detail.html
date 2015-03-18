@@ -16,13 +16,10 @@
 		<link href='fonts/fonts.googleapis.com/cssf58a.css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
 		<link rel="stylesheet" href="css/libs/daterangepicker.css" type="text/css"/>
-		<link rel="stylesheet" href="css/libs/dataTables.tableTools.css" type="text/css"/>
-		<link rel="stylesheet" href="css/libs/select2.css" type="text/css"/>
       </head>
    <body class="pace-done theme-white">
       <div id="theme-wrapper">
-	  
-	           <header class="navbar" id="header-navbar">
+         <header class="navbar" id="header-navbar">
             <div class="container">
                <a href="index-2.html" id="logo" class="navbar-brand">
                <img src="img/sbhpp_logo_shs.png" alt="" class="normal-logo logo-white"/>
@@ -181,14 +178,18 @@
                               </li>
                            </ul>
                         </li>
-
+                        <li class="hidden-xxs">
+                           <a class="btn">
+                           <i class="fa fa-power-off">
+                           </i>
+                           </a>
+                        </li>
                      </ul>
                   </div>
                </div>
             </div>
          </header>
-                  
-		 <div id="page-wrapper" class="container">
+         <div id="page-wrapper" class="container">
             <div class="row">
 			
                <div id="nav-col">
@@ -199,7 +200,7 @@
 								<li class="nav-header nav-header-first hidden-sm hidden-xs">
 								<span>&nbsp;</span>
 								</li>
-								<li class=""> 
+								<li class="active"> 
 									<a href="#" class="dropdown-toggle">
 									<i class="fa fa-envelope">
 									</i>
@@ -213,7 +214,7 @@
 								   <i class="fa fa-angle-right drop-icon"></i>
 									</a>
 									<ul class="submenu email" style="display: none;">
-				<li class="" >
+				<li class="active" >
                     <a href="email-inbox.html">
                         <i class="fa fa-inbox"></i> Inbox
                      
@@ -323,265 +324,213 @@
                   </div>
                </div>
                
-			   <div id="content-wrapper">
+
+
+			<div id="content-wrapper">
 			   <div class="row">
     <div class="col-lg-12">
-        <div class="main-box clearfix">
-            <header class="main-box-header clearfix">
-                <h2 class="pull-left">RFQ Status</h2>
-                <div class="pull-right daterange-filter" id="reportrange">
-                    <i class="icon-calendar"></i>
-                    <span>February 16, 2015 - March 17, 2015</span> <b class="caret"></b>
+<div class="clearfix" id="email-box">
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="visible-xs visible-sm clearfix" id="email-header-mobile">
+                <div class="pull-left" id="email-header-title-mobile">
+                    <i class="fa fa-inbox"></i> Inbox
+                </div>
+                <a class="btn btn-success email-compose-btn pull-right" href="email-compose.html">
+                    <i class="fa fa-pencil-square-o"></i> Compose email
+                </a>
+            </div>
+            <header class="clearfix" id="email-header">
+                <div class="visible-md visible-lg" id="email-header-title">
+                    <i class="fa fa-inbox"></i> Inbox
+                </div>
+                <div id="email-header-tools">
+                    <div class="btn-group">
+                        <button title="" type="button" class="btn btn-primary dropdown-toggle has-tooltip" data-toggle="dropdown" data-original-title="Select">
+                            <i class="fa fa-square-o"></i> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">All</a></li>
+                            <li><a href="#">None</a></li>
+                            <li><a href="#">Read</a></li>
+                            <li><a href="#">Unread</a></li>
+                            <li><a href="#">Starred</a></li>
+                            <li><a href="#">Unstarred</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button data-placement="bottom" data-toggle="tooltip" title="" type="button" class="btn btn-primary" data-original-title="Refresh">
+                            <i class="fa fa-refresh"></i>
+                        </button>
+                        <button data-placement="bottom" data-toggle="tooltip" title="" type="button" class="btn btn-primary" data-original-title="Spam">
+                            <i class="fa fa-exclamation-circle"></i>
+                        </button>
+                        <button data-placement="bottom" data-toggle="tooltip" title="" type="button" class="btn btn-primary" data-original-title="Erase">
+                            <i class="fa fa-trash-o"></i>
+                        </button>
+                    </div>
+                    <div class="btn-group">
+                        <button title="" type="button" class="btn btn-primary dropdown-toggle has-tooltip" data-toggle="dropdown" data-original-title="Labels">
+                            <i class="fa fa-tag"></i> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right">
+                            <li><a href="#"><i class="fa fa-circle green"></i> Work</a></li>
+                            <li><a href="#"><i class="fa fa-circle red"></i> Home</a></li>
+                            <li><a href="#"><i class="fa fa-circle yellow"></i> Personal</a></li>
+                            <li><a href="#"><i class="fa fa-circle purple"></i> Documents</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="pull-right" id="email-header-pagination">
+                    <div class="btn-group pagination pull-right">
+                        <button data-placement="bottom" data-toggle="tooltip" title="" type="button" class="btn btn-primary" data-original-title="Previous">
+                            <i class="fa fa-chevron-left"></i>
+                        </button>
+                        <button data-placement="bottom" data-toggle="tooltip" title="" type="button" class="btn btn-primary" data-original-title="Next">
+                            <i class="fa fa-chevron-right"></i>
+                        </button>
+                    </div>
+                    <div class="num-items pull-right hidden-xs">
+                        1-50 from 5,912
+                    </div>
                 </div>
             </header>
-			
-            <div class="main-box-body clearfix">
-                <div class="">
-				<div class="modal fade" id="status-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-					<div class="modal-content">
-					  <div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">RFQ Status Filter</h4>
-					  </div>
-					  <div class="modal-body">
-						<div class="checkbox-nice">
-						<input type="checkbox" id="checkbox-1" checked="checked"/>
-						<label for="checkbox-1">
-						Show All
-						</label>
-						</div>
-						<div class="checkbox-nice">
-						<input type="checkbox" id="checkbox-2" />
-						<label for="checkbox-2">
-						Open
-						</label>
-						</div>						
-						<div class="checkbox-nice">
-						<input type="checkbox" id="checkbox-3" />
-						<label for="checkbox-3">
-						Closed
-						</label>
-						</div>
-
-						<div class="checkbox-nice">
-						<input type="checkbox" id="checkbox-4" />
-						<label for="checkbox-4">
-						Awaiting for approval
-						</label>
-						</div>
-					  </div>
-					  <div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					  </div>
-					</div>
-				  </div>
-				</div>
-                
-				<div class="modal fade" id="vendor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-					<div class="modal-content">
-					  <div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">RFQ Vendor Filter</h4>
-					  </div>
-						<div class="modal-body">
-						<div class="form-group form-group-select2">
-						<label>use , commas for, multiple selection(s)</label>
-						<div class="form-group form-group-select2">
-							<select style="width:300px" id="sel2Multi" multiple>
-							<option value="United States">United States</option>
-							<option value="United Kingdom">United Kingdom</option>
-							<option value="Afghanistan">Afghanistan</option>
-							<option value="Albania">Albania</option>
-							<option value="Algeria">Algeria</option>
-							<option value="American Samoa">American Samoa</option>
-							<option value="Andorra">Andorra</option>
-							<option value="Angola">Angola</option>
-							<option value="Anguilla">Anguilla</option>
-							<option value="Antarctica">Antarctica</option>
-							<option value="Antigua and Barbuda">Antigua and Barbuda</option>
-							<option value="Argentina">Argentina</option>
-							<option value="Armenia">Armenia</option>
-							<option value="Aruba">Aruba</option>
-							<option value="Australia">Australia</option>
-							<option value="Austria">Austria</option>
-							<option value="Azerbaijan">Azerbaijan</option>
-							<option value="Slovakia">Slovakia</option>
-							</select>
-						</div>
-						</div>
-						</div>
-					  <div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					  </div>
-					</div>
-				  </div>
-				</div>  
-					
-				
-				<div class="modal fade" id="plant-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-					<div class="modal-content">
-					  <div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">RFQ Plant Filter</h4>
-					  </div>
-						<div class="modal-body">
-						<div class="form-group form-group-select2">
-						<label>use , commas for, multiple selection(s)</label>
-						<div class="form-group form-group-select2">
-							<select style="width:300px" id="sel3Multi" multiple>
-							<option value="United States">United States</option>
-							<option value="United Kingdom">United Kingdom</option>
-							<option value="Afghanistan">Afghanistan</option>
-							<option value="Albania">Albania</option>
-							<option value="Algeria">Algeria</option>
-							<option value="American Samoa">American Samoa</option>
-							<option value="Andorra">Andorra</option>
-							<option value="Angola">Angola</option>
-							<option value="Anguilla">Anguilla</option>
-							<option value="Antarctica">Antarctica</option>
-							<option value="Antigua and Barbuda">Antigua and Barbuda</option>
-							<option value="Argentina">Argentina</option>
-							<option value="Armenia">Armenia</option>
-							<option value="Aruba">Aruba</option>
-							<option value="Australia">Australia</option>
-							<option value="Austria">Austria</option>
-							<option value="Azerbaijan">Azerbaijan</option>
-							<option value="Slovakia">Slovakia</option>
-							</select>
-						</div>
-						</div>
-						</div>
-					  <div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					  </div>
-					</div>
-				  </div>
-				</div>  
-				
-				<div class="modal fade" id="date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-					<div class="modal-content">
-					  <div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">RFQ Due Date Filter</h4>
-					  </div>
-						<div class="modal-body">
-						<div class="input-group">
-<span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
-<input type="text" class="form-control" id="datepickerDateRange">
-</div>
-						</div>
-					  <div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					  </div>
-					</div>
-				  </div>
-				</div>  
-				
-				<table class="table table-bordered table-striped table-condensed" id="table1">
-                        <thead>
-							<tr class="success">
-								<th>#</th>
-								<th><a>Status</a> <button class="btn pull-right btn-primary btn-xs" data-id="table-status" data-toggle="modal" data-target="#status-modal"><i class="fa  fa-magic"></i></button></th>
-								<th><a>Vendor</a> <button class="btn pull-right btn-primary btn-xs" data-id="table-vendor" data-toggle="modal" data-target="#vendor-modal"><i class="fa  fa-magic"></i></button></th>
-								<th><a>Plant</a>  <button class="btn pull-right btn-primary btn-xs" data-id="table-plant" data-toggle="modal" data-target="#plant-modal"><i class="fa  fa-magic"></i></button></th>
-								<th><a>Due Date</a> <button class="btn pull-right btn-primary btn-xs" data-id="table-plant" data-toggle="modal" data-target="#date-modal"><i class="fa  fa-magic"></i></button> </th>
-								<th>Collective No</th>
-								<th>RFQ No</th>
-								<th>RFQ Description</th>
-								<th>RFQ Date</th>
-							</tr>
-
-                        </thead>
-						<tbody>
- <tr>					<td>1</td>
-                        <td>Approved</td>
-                        <td>Deepak Jain</td>
-                        <td>ABC</td>
-                        <td>11/10/2015</td>
-                        <td>12345</td>
-                        <td>RFQ110002</td>
-                        <td>All description here</td>
-                        <td>11/10/2015</td>
-                      </tr>
-                      <tr>
-					  <td>2</td>
-                        <td>Approved</td>
-                        <td>Deepak Jain</td>
-                        <td>ABC</td>
-                        <td>11/10/2015</td>
-                        <td>12345</td>
-                        <td>RFQ110002</td>
-                        <td>All description here</td>
-                        <td>11/10/2015</td>
-                      </tr>
-                      <tr>
-						<td>3</td>
-                        <td>Awaiting for approval</td>
-                        <td>Deepak Jain</td>
-                        <td>ABC</td>
-                        <td>11/10/2015</td>
-                        <td>12345</td>
-                        <td>RFQ110002</td>
-                        <td>All description here</td>
-                        <td>11/10/2015</td>
-                      </tr>
-                      <tr>
-					  <td>4</td>
-                        <td>Approved</td>
-                        <td>Deepak Jain</td>
-                        <td>ABC</td>
-                        <td>11/10/2015</td>
-                        <td>12345</td>
-                        <td>RFQ110002</td>
-                        <td>All description here</td>
-                        <td>11/10/2015</td>
-                      </tr>
-                      <tr>
-					  <td>5</td>
-                        <td>Approved</td>
-                        <td>Deepak Jain</td>
-                        <td>ABC</td>
-                        <td>11/10/2015</td>
-                        <td>12345</td>
-                        <td>RFQ110002</td>
-                        <td>All description here</td>
-                        <td>11/10/2015</td>
-                      </tr>
-                      <tr>
-					  <td>6</td>
-                        <td>Approved</td>
-                        <td>Deepak Jain</td>
-                        <td>ABC</td>
-                        <td>11/10/2015</td>
-                        <td>12345</td>
-                        <td>RFQ110002</td>
-                        <td>All description here</td>
-                        <td>11/10/2015</td>
-                      </tr>
-						</tbody>
-
-				  </table>
-                </div>
-                <ul class="pagination pull-right">
-                    <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                </ul>
-            </div>
         </div>
     </div>
+    <div class="row">
+		<div class="col-lg-12">    <div class="email-detail-nano has-scrollbar" id="email-detail" style="height: 396px;">
+        <div class="email-detail-nano-content" tabindex="0" style="right: -17px;">
+            <div id="email-detail-inner">
+                <div class="clearfix" id="email-detail-subject">
+                    <span class="subject">FW: Like your new movie</span>
+                    <span class="label label-success">Work</span>
+                </div>
+                <div class="clearfix" id="email-detail-sender">
+                    <div class="picture hidden-xs">
+                        <img alt="" src="img/user.jpg">
+                    </div>
+                    <div class="users">
+                        <div class="from clearfix">
+                            <div class="name">
+                                Angelina Jolie
+                            </div>
+                            <div class="email hidden-xs">
+                                &lt;angelina@jolie.com
+                                &gt;
+                            </div>
+                        </div>
+                        <div class="to">
+                            To: <span>Me, Brad Pitt</span>
+                        </div>
+                    </div>
+                    <div class="tools">
+                        <div class="date">
+                            Sep 12 (6 days ago)
+                        </div>
+                        <div class="btns">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-success">
+                                    <i class="fa fa-mail-reply"></i>
+                                </button>
+                                <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown">
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-mail-reply"></i> Reply
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-mail-reply-all"></i> Reply all
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-mail-forward"></i> Forward
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <i class="fa fa-print"></i> Print
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="email-body">
+                    <p>
+                        Hey Scarlett,
+                    </p>
+                    <p>
+                        Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows. <a href="#">Some pilots</a> get picked and become television programs. Some don't, become nothing. She starred in one of the ones that became nothing.
+                    </p>
+                    <p>
+                        Now that there is the Tec-9, a crappy spray gun from South Miami. This gun is advertised as the most popular gun in American crime. Do you believe that shit? It actually says that in the <a href="#">little book</a> that comes with it: the most popular gun in American crime. Like they're actually proud of that shit.
+                    </p>
+                    <p>
+                        <b>You don't get sick!</b>
+                        <br> Your bones don't break, mine do. That's clear. Your cells react to bacteria and viruses differently than mine. You don't get sick, I do. That's also clear. But for some reason, you and I react the exact same way to water. We swallow it too fast, we choke. We get some in our lungs, we drown. However unreal it may seem, we are connected, you and I. We're on the same curve, just on opposite ends.
+                    </p>
+                </div>
+                <div id="email-detail-attachments">
+                    <div class="clearfix" id="email-attachments-header">
+                        <div class="headline">
+                            <i class="fa fa-paperclip"></i> <span>Attachments:</span> <b>3</b> -
+                        </div>
+                        <div class="tools">
+                            <a href="#">Download all</a>
+                        </div>
+                    </div>
+                    <div id="email-attachments-content">
+                        <ul class="clearfix">
+                            <li>
+                                <div class="img">
+                                    <a href="#">
+                                        <img alt="" src="img/samples/hdr/small/img_5.jpg">
+                                    </a>
+                                </div>
+                                <span class="name">
+nature.jpg
+</span>
+                                <a href="#">Download</a>
+                            </li>
+                            <li>
+                                <div class="img">
+                                    <a href="#">
+                                        <img alt="" src="img/samples/hdr/small/img_8.jpg">
+                                    </a>
+                                </div>
+                                <span class="name">
+bratislava.jpg
+</span>
+                                <a href="#">Download</a>
+                            </li>
+                            <li>
+                                <div class="img">
+                                    <i class="fa fa-file"></i>
+                                </div>
+                                <span class="name">
+invoice.pdf
+</span>
+                                <a href="#">Download</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="nano-pane" style="display: block;">
+            <div class="nano-slider" style="height: 233px; transform: translate(0px, 0px);"></div>
+        </div>
+    </div>
+</div>
+	</div>
+</div>
+	</div>
 </div>
                   <div class="row">
                      <div class="col-lg-12">
@@ -620,63 +569,62 @@
 <script src="js/daterangepicker.js"></script>
       <script src="js/scripts.js"></script>
 	  <script src="js/jquery.nanoscroller.min.js"></script>
-	   <script src="js/select2.min.js"></script>
-<script type="text/javascript">
+	 
+
+	
+		<script>
 	$(document).ready(function() {
-		$("#table1").dataTable();
-		$('#reportrange').daterangepicker({
-			startDate: moment().subtract('days', 29),
-			endDate: moment(),
-			minDate: '01/01/1990',
-			maxDate: '12/31/2022',
-			dateLimit: { days: 60 },
-			showDropdowns: true,
-			showWeekNumbers: true,
-			timePicker: false,
-			timePickerIncrement: 1,
-			timePicker12Hour: true,
-			ranges: {
-				'Today': [moment(), moment()],
-				'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
-				'Last 7 Days': [moment().subtract('days', 6), moment()],
-				'Last 30 Days': [moment().subtract('days', 29), moment()],
-				'This Month': [moment().startOf('month'), moment().endOf('month')],
-				'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
-			},
-			opens: 'left',
-			buttonClasses: ['btn btn-default'],
-			applyClass: 'btn-small btn-primary',
-			cancelClass: 'btn-small',
-			format: 'MM/DD/YYYY',
-			separator: ' to ',
-			locale: {
-				applyLabel: 'Submit',
-				fromLabel: 'From',
-				toLabel: 'To',
-				customRangeLabel: 'Custom Range',
-				daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
-				monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-				firstDay: 1
-			}
-		 },
-		 function(start, end) {
-		  console.log("Callback has been called!");
-		  $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
-		 }
-	  );
-	  //Set the initial state of the picker label
-	  $('#reportrange span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
-	  
-		$('#sel2Multi').select2({
-			placeholder: 'Select a Vendor',
-			allowClear: true
+		$('#email-list li > .star > a').on('click', function() {
+			$(this).toggleClass('starred');
 		});
-		$('#sel3Multi').select2({
-			placeholder: 'Select a Plant',
-			allowClear: true
+		
+		$(".has-tooltip").each(function (index, el) {
+			$(el).tooltip({
+				placement: $(this).data("placement") || 'bottom'
+			});
 		});
-		$('#datepickerDateRange').daterangepicker();
+		
+		setHeightEmailContent();
+		
+		initEmailScroller();
 	});
+	
+	$(window).smartresize(function(){
+		setHeightEmailContent();
+		
+		initEmailScroller();
+	});
+	
+	function setHeightEmailContent() {
+		if ($( document ).width() >= 992) {
+			var windowHeight = $(window).height();
+			var staticContentH = $('#header-navbar').outerHeight() + $('#email-header').outerHeight();
+			staticContentH += ($('#email-box').outerHeight() - $('#email-box').height());
+	
+			$('#email-detail').css('height', windowHeight - staticContentH);
+		}
+		else {
+			$('#email-detail').css('height', '');
+		}
+	}
+	
+	function initEmailScroller() {
+		if ($( document ).width() >= 992) {
+			$('#email-navigation').nanoScroller({
+		    	alwaysVisible: false,
+		    	iOSNativeScrolling: false,
+		    	preventPageScrolling: true,
+		    	contentClass: 'email-nav-nano-content'
+		    });
+			
+			$('#email-detail').nanoScroller({
+		    	alwaysVisible: false,
+		    	iOSNativeScrolling: false,
+		    	preventPageScrolling: true,
+		    	contentClass: 'email-detail-nano-content'
+		    });
+		}
+	}
 	</script>
 
    </body>
