@@ -88,3 +88,21 @@ padding-top:40px !important;
 .fixed-header #nav-col{
 padding-top:25px !important;
 }
+#login-logo {
+    background: none repeat scroll 0 0 transparent !important;
+    color: #fff;
+    display: block;
+    font-size: 2em;
+    font-weight: 400;
+    padding: 35px 0;
+    text-align: center;
+    text-transform: uppercase;
+}
+#login-full-wrapper {
+
+/*	background: url("../img/map2_with_bg.png") no-repeat scroll center center / cover rgba(0, 0, 0, 0) !important; */
+	background: url("../img/map2_with_bg.png") repeat-x scroll center 120px !important;
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
