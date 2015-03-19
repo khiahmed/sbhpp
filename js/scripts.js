@@ -129,6 +129,6 @@ $(".nav-stacked > li > ul ").css({"display":"block"});
 document.write('<script type="text/javascript" src="js/pace.min.js"></script>');
 document.write('<script type="text/javascript" src="js/jquery.dataTables.js"></script>');
 document.write('<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>');
-document.write('<script type="text/javascript" src="js/knockout-bootstrap.min.js"></script>');
+document.write('<script type="text/javascript" src="js/jquery.webui-popover.js"></script>');
 
 })(jQuery, 'smartresize');

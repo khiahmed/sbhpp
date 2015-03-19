@@ -12,6 +12,7 @@
 		<link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
 		<link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
 		<link rel="stylesheet" type="text/css" href="css/sbhpp.css">
+		<link rel="stylesheet" type="text/css" href="css/libs/jquery.webui-popover.css">
 		<link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
 		<link href='fonts/fonts.googleapis.com/cssf58a.css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
 		<link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
@@ -46,7 +47,11 @@
                      </ul>
                   </div>
                   <div class="nav-no-collapse pull-right" id="header-nav">
-                     <ul class="nav navbar-nav pull-right"> <li class="dropdown hidden-xs">
+                     <ul class="nav navbar-nav pull-right"> 
+					 <li > <a class="show-theme-option" href="#" data-toggle="modal" data-target="#theme-modal"> <i class="fa fa-magnet"></i> </a></li>
+					 <li class="dropdown hidden-xs">
+						   
+                           
                            <a class="btn dropdown-toggle" data-toggle="dropdown">
                            <i class="fa fa-warning">
                            </i>
@@ -334,295 +339,17 @@
 			
             <div class="main-box-body clearfix">
                 <div class="">
-				<div class="modal fade" id="status-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			
+				<div class="modal fade" id="theme-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 				  <div class="modal-dialog">
 					<div class="modal-content">
 					  <div class="modal-header">
 						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">RFQ Status Filter</h4>
+						<h4 class="modal-title" id="myModalLabel">Application Properties</h4>
 					  </div>
 					  <div class="modal-body">
-						<div class="checkbox-nice">
-						<input type="checkbox" id="checkbox-1" checked="checked"/>
-						<label for="checkbox-1">
-						Show All
-						</label>
-						</div>
-						<div class="checkbox-nice">
-						<input type="checkbox" id="checkbox-2" />
-						<label for="checkbox-2">
-						Open
-						</label>
-						</div>						
-						<div class="checkbox-nice">
-						<input type="checkbox" id="checkbox-3" />
-						<label for="checkbox-3">
-						Closed
-						</label>
-						</div>
+ <div id="theme-option-content" class="main-box clearfix">
 
-						<div class="checkbox-nice">
-						<input type="checkbox" id="checkbox-4" />
-						<label for="checkbox-4">
-						Awaiting for approval
-						</label>
-						</div>
-					  </div>
-					  <div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					  </div>
-					</div>
-				  </div>
-				</div>
-                
-				<div class="modal fade" id="vendor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-					<div class="modal-content">
-					  <div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">RFQ Vendor Filter</h4>
-					  </div>
-						<div class="modal-body">
-						<div class="form-group form-group-select2">
-						<label>use , commas for, multiple selection(s)</label>
-						<div class="form-group form-group-select2">
-							<select style="width:300px" id="sel2Multi" multiple>
-							<option value="United States">United States</option>
-							<option value="United Kingdom">United Kingdom</option>
-							<option value="Afghanistan">Afghanistan</option>
-							<option value="Albania">Albania</option>
-							<option value="Algeria">Algeria</option>
-							<option value="American Samoa">American Samoa</option>
-							<option value="Andorra">Andorra</option>
-							<option value="Angola">Angola</option>
-							<option value="Anguilla">Anguilla</option>
-							<option value="Antarctica">Antarctica</option>
-							<option value="Antigua and Barbuda">Antigua and Barbuda</option>
-							<option value="Argentina">Argentina</option>
-							<option value="Armenia">Armenia</option>
-							<option value="Aruba">Aruba</option>
-							<option value="Australia">Australia</option>
-							<option value="Austria">Austria</option>
-							<option value="Azerbaijan">Azerbaijan</option>
-							<option value="Slovakia">Slovakia</option>
-							</select>
-						</div>
-						</div>
-						</div>
-					  <div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					  </div>
-					</div>
-				  </div>
-				</div>  
-					
-				
-				<div class="modal fade" id="plant-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-					<div class="modal-content">
-					  <div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">RFQ Plant Filter</h4>
-					  </div>
-						<div class="modal-body">
-						<div class="form-group form-group-select2">
-						<label>use , commas for, multiple selection(s)</label>
-						<div class="form-group form-group-select2">
-							<select style="width:300px" id="sel3Multi" multiple>
-							<option value="United States">United States</option>
-							<option value="United Kingdom">United Kingdom</option>
-							<option value="Afghanistan">Afghanistan</option>
-							<option value="Albania">Albania</option>
-							<option value="Algeria">Algeria</option>
-							<option value="American Samoa">American Samoa</option>
-							<option value="Andorra">Andorra</option>
-							<option value="Angola">Angola</option>
-							<option value="Anguilla">Anguilla</option>
-							<option value="Antarctica">Antarctica</option>
-							<option value="Antigua and Barbuda">Antigua and Barbuda</option>
-							<option value="Argentina">Argentina</option>
-							<option value="Armenia">Armenia</option>
-							<option value="Aruba">Aruba</option>
-							<option value="Australia">Australia</option>
-							<option value="Austria">Austria</option>
-							<option value="Azerbaijan">Azerbaijan</option>
-							<option value="Slovakia">Slovakia</option>
-							</select>
-						</div>
-						</div>
-						</div>
-					  <div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					  </div>
-					</div>
-				  </div>
-				</div>  
-				
-				<div class="modal fade" id="date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-				  <div class="modal-dialog">
-					<div class="modal-content">
-					  <div class="modal-header">
-						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-						<h4 class="modal-title" id="myModalLabel">RFQ Due Date Filter</h4>
-					  </div>
-						<div class="modal-body">
-					<!--	<div class="input-group">
-							<span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
-							<input type="text" class="form-control" id="datepickerDateRange">
-						</div> -->
-					<div class="daterange-filter" id="reportrange">
-                    <i class="fa fa-calendar"></i>&nbsp;
-                    <span>February 16, 2015 - March 17, 2015</span> <b class="caret"></b>
-                </div>
-						</div>
-					  <div class="modal-footer">
-						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-						<button type="button" class="btn btn-primary">Save changes</button>
-					  </div>
-					</div>
-				  </div>
-				</div>  
-												
-
-				<table class="table table-bordered table-striped table-condensed" id="table1">
-                        <thead>
-							<tr class="success">
-								<th>#</th>
-								<th><a>Status</a>
-								<a  class="btn btn-primary btn-sm" href="#popupBottom" data-toggle="modal-popover" data-placement="bottom"><strong class="caret"></strong></a>
-								</th><div id="popupBottom" class="popover">
-								<div class="arrow"></div>
-								<h3 class="popover-title">Bottom</h3>
-								<div class="popover-content">
-<div class="checkbox-nice">
-						<input type="checkbox" id="checkbox-1" checked="checked"/>
-						<label for="checkbox-1">
-						Show All
-						</label>
-						</div>
-						<div class="checkbox-nice">
-						<input type="checkbox" id="checkbox-2" />
-						<label for="checkbox-2">
-						Open
-						</label>
-						</div>						
-						<div class="checkbox-nice">
-						<input type="checkbox" id="checkbox-3" />
-						<label for="checkbox-3">
-						Closed
-						</label>
-						</div>
-
-						<div class="checkbox-nice">
-						<input type="checkbox" id="checkbox-4" />
-						<label for="checkbox-4">
-						Awaiting for approval
-						</label>
-						</div>
-								</div>
-								</div>
-								<!-- <button class="btn pull-right btn-primary btn-xs" data-id="table-status" data-toggle="modal" data-target="#status-modal"><i class="fa  fa-magic"></i></button>-->
-								<th><a>Vendor</a> <button class="btn pull-right btn-primary btn-xs" data-id="table-vendor" data-toggle="modal" data-target="#vendor-modal"><i class="fa  fa-magic"></i></button></th>
-								<th><a>Plant</a>  <button class="btn pull-right btn-primary btn-xs" data-id="table-plant" data-toggle="modal" data-target="#plant-modal"><i class="fa  fa-magic"></i></button></th>
-								<th><a>Due Date</a> <button class="btn pull-right btn-primary btn-xs" data-id="table-plant" data-toggle="modal" data-target="#date-modal"><i class="fa  fa-magic"></i></button> </th>
-								<th>Collective No</th>
-								<th>RFQ No</th>
-								<th>RFQ Description</th>
-								<th>RFQ Date</th>
-							</tr>
-
-                        </thead>
-						<tbody>
- <tr>					<td>1</td>
-                        <td>Approved</td>
-                        <td>Deepak Jain</td>
-                        <td>ABC</td>
-                        <td>11/10/2015</td>
-                        <td>12345</td>
-                        <td>RFQ110002</td>
-                        <td>All description here</td>
-                        <td>11/10/2015</td>
-                      </tr>
-                      <tr>
-					  <td>2</td>
-                        <td>Approved</td>
-                        <td>Deepak Jain</td>
-                        <td>ABC</td>
-                        <td>11/10/2015</td>
-                        <td>12345</td>
-                        <td>RFQ110002</td>
-                        <td>All description here</td>
-                        <td>11/10/2015</td>
-                      </tr>
-                      <tr>
-						<td>3</td>
-                        <td>Awaiting for approval</td>
-                        <td>Deepak Jain</td>
-                        <td>ABC</td>
-                        <td>11/10/2015</td>
-                        <td>12345</td>
-                        <td>RFQ110002</td>
-                        <td>All description here</td>
-                        <td>11/10/2015</td>
-                      </tr>
-                      <tr>
-					  <td>4</td>
-                        <td>Approved</td>
-                        <td>Deepak Jain</td>
-                        <td>ABC</td>
-                        <td>11/10/2015</td>
-                        <td>12345</td>
-                        <td>RFQ110002</td>
-                        <td>All description here</td>
-                        <td>11/10/2015</td>
-                      </tr>
-                      <tr>
-					  <td>5</td>
-                        <td>Approved</td>
-                        <td>Deepak Jain</td>
-                        <td>ABC</td>
-                        <td>11/10/2015</td>
-                        <td>12345</td>
-                        <td>RFQ110002</td>
-                        <td>All description here</td>
-                        <td>11/10/2015</td>
-                      </tr>
-                      <tr>
-					  <td>6</td>
-                        <td>Approved</td>
-                        <td>Deepak Jain</td>
-                        <td>ABC</td>
-                        <td>11/10/2015</td>
-                        <td>12345</td>
-                        <td>RFQ110002</td>
-                        <td>All description here</td>
-                        <td>11/10/2015</td>
-                      </tr>
-						</tbody>
-
-				  </table>
-                </div>
-
-            </div>
-        </div>
-    </div>
-</div>
-                  <div class="row">
-                     <div class="col-lg-12">
-					 
-					
-				
-					 <div class="row">
-                           <div class="col-lg-12">
-                              <div class="main-box clearfix">
-                                 <header class="main-box-header clearfix">
-                                    <h2>
-                                      Theme Options
-                                    </h2>
-                                 </header>
                                  <div class="main-box-body clearfix">
                                   					 <div id="config-tool" class="">
 
@@ -706,7 +433,248 @@
  
                                  </div>
                               </div>
-                           </div>
+                          
+					  </div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					  </div>
+					</div>
+				  </div>
+				</div>
+               
+								
+								<div id="status-filter-content" style="display:none"   >
+								<div class="popover-content">
+<div class="checkbox-nices">
+						<input type="checkbox" id="checkbox-1" checked="checked"/>
+						<label for="checkbox-1">
+						Show All
+						</label>
+						</div>
+						<div class="checkbox-nices">
+						<input type="checkbox" id="checkbox-2" />
+						<label for="checkbox-2">
+						Open
+						</label>
+						</div>						
+						<div class="checkbox-nices">
+						<input type="checkbox" id="checkbox-3" />
+						<label for="checkbox-3">
+						Closed
+						</label>
+						</div>
+
+						<div class="checkbox-nices">
+						<input type="checkbox" id="checkbox-4" />
+						<label for="checkbox-4">
+						Awaiting for approval
+						</label>
+						</div>
+								</div>
+								</div>
+           
+				<div  id="vendor-filter-content">
+						<div class="form-group form-group-select2">
+						<label>use , commas for, multiple selection(s)</label>
+						<div class="form-group form-group-select2">
+							<select style="width:300px" id="sel2Multi" multiple>
+							<option value="United States">United States</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="Afghanistan">Afghanistan</option>
+							<option value="Albania">Albania</option>
+							<option value="Algeria">Algeria</option>
+							<option value="American Samoa">American Samoa</option>
+							<option value="Andorra">Andorra</option>
+							<option value="Angola">Angola</option>
+							<option value="Anguilla">Anguilla</option>
+							<option value="Antarctica">Antarctica</option>
+							<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+							<option value="Argentina">Argentina</option>
+							<option value="Armenia">Armenia</option>
+							<option value="Aruba">Aruba</option>
+							<option value="Australia">Australia</option>
+							<option value="Austria">Austria</option>
+							<option value="Azerbaijan">Azerbaijan</option>
+							<option value="Slovakia">Slovakia</option>
+							</select>
+						</div>
+						</div>
+				</div>
+					
+				
+				<div class="modal fade" id="plant-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">RFQ Plant Filter</h4>
+					  </div>
+						<div class="modal-body">
+						<div class="form-group form-group-select2">
+						<label>use , commas for, multiple selection(s)</label>
+						<div class="form-group form-group-select2">
+							<select style="width:300px" id="sel3Multi" multiple>
+							<option value="United States">United States</option>
+							<option value="United Kingdom">United Kingdom</option>
+							<option value="Afghanistan">Afghanistan</option>
+							<option value="Albania">Albania</option>
+							<option value="Algeria">Algeria</option>
+							<option value="American Samoa">American Samoa</option>
+							<option value="Andorra">Andorra</option>
+							<option value="Angola">Angola</option>
+							<option value="Anguilla">Anguilla</option>
+							<option value="Antarctica">Antarctica</option>
+							<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+							<option value="Argentina">Argentina</option>
+							<option value="Armenia">Armenia</option>
+							<option value="Aruba">Aruba</option>
+							<option value="Australia">Australia</option>
+							<option value="Austria">Austria</option>
+							<option value="Azerbaijan">Azerbaijan</option>
+							<option value="Slovakia">Slovakia</option>
+							</select>
+						</div>
+						</div>
+						</div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					  </div>
+					</div>
+				  </div>
+				</div>  
+				
+				<div class="modal fade" id="date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+				  <div class="modal-dialog">
+					<div class="modal-content">
+					  <div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="myModalLabel">RFQ Due Date Filter</h4>
+					  </div>
+						<div class="modal-body">
+					<!--	<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
+							<input type="text" class="form-control" id="datepickerDateRange">
+						</div> -->
+					<div class="daterange-filter" id="reportrange">
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    <span>February 16, 2015 - March 17, 2015</span> <b class="caret"></b>
+                </div>
+						</div>
+					  <div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="btn btn-primary">Save changes</button>
+					  </div>
+					</div>
+				  </div>
+				</div>  
+
+															
+
+				<table class="table table-bordered table-striped table-condensed" id="table1">
+                        <thead>
+							<tr class="success">
+								<th>#</th>
+								<th><a>Status</a><a class="btn btn-default pull-right btn-tool show-popup-status-filter" data-placement="bottom" href="#"  ><strong class="caret"></strong></a>
+						
+								</th>
+							
+								<!-- <button class="btn pull-right btn-primary btn-xs" data-id="table-status" data-toggle="modal" data-target="#status-modal"><i class="fa  fa-magic"></i></button>-->
+								<th><a>Vendor</a> <a class="btn btn-default pull-right btn-tool show-popup-vendor-filter" data-placement="bottom" href="#"  ><strong class="caret"></strong></a>
+								<th><a>Plant</a>  <button class="btn pull-right btn-primary btn-xs" data-id="table-plant" data-toggle="modal" data-target="#plant-modal"><i class="fa  fa-magic"></i></button></th>
+								<th><a>Due Date</a> <button class="btn pull-right btn-primary btn-xs" data-id="table-plant" data-toggle="modal" data-target="#date-modal"><i class="fa  fa-magic"></i></button> </th>
+								<th>Collective No</th>
+								<th>RFQ No</th>
+								<th>RFQ Description</th>
+								<th>RFQ Date</th>
+							</tr>
+
+                        </thead>
+						<tbody>
+ <tr>					<td>1</td>
+                        <td>Approved</td>
+                        <td>Deepak Jain</td>
+                        <td>ABC</td>
+                        <td>11/10/2015</td>
+                        <td>12345</td>
+                        <td>RFQ110002</td>
+                        <td>All description here</td>
+                        <td>11/10/2015</td>
+                      </tr>
+                      <tr>
+					  <td>2</td>
+                        <td>Approved</td>
+                        <td>Deepak Jain</td>
+                        <td>ABC</td>
+                        <td>11/10/2015</td>
+                        <td>12345</td>
+                        <td>RFQ110002</td>
+                        <td>All description here</td>
+                        <td>11/10/2015</td>
+                      </tr>
+                      <tr>
+						<td>3</td>
+                        <td>Awaiting for approval</td>
+                        <td>Deepak Jain</td>
+                        <td>ABC</td>
+                        <td>11/10/2015</td>
+                        <td>12345</td>
+                        <td>RFQ110002</td>
+                        <td>All description here</td>
+                        <td>11/10/2015</td>
+                      </tr>
+                      <tr>
+					  <td>4</td>
+                        <td>Approved</td>
+                        <td>Deepak Jain</td>
+                        <td>ABC</td>
+                        <td>11/10/2015</td>
+                        <td>12345</td>
+                        <td>RFQ110002</td>
+                        <td>All description here</td>
+                        <td>11/10/2015</td>
+                      </tr>
+                      <tr>
+					  <td>5</td>
+                        <td>Approved</td>
+                        <td>Deepak Jain</td>
+                        <td>ABC</td>
+                        <td>11/10/2015</td>
+                        <td>12345</td>
+                        <td>RFQ110002</td>
+                        <td>All description here</td>
+                        <td>11/10/2015</td>
+                      </tr>
+                      <tr>
+					  <td>6</td>
+                        <td>Approved</td>
+                        <td>Deepak Jain</td>
+                        <td>ABC</td>
+                        <td>11/10/2015</td>
+                        <td>12345</td>
+                        <td>RFQ110002</td>
+                        <td>All description here</td>
+                        <td>11/10/2015</td>
+                      </tr>
+						</tbody>
+
+				  </table>
+                </div>
+			</div>
+        </div>
+    </div>
+</div>
+                  <div class="row">
+                     <div class="col-lg-12">
+					 
+					
+				
+					 <div class="row">
+                           <div class="col-lg-12">
+						   
+                             
+						  </div>
                         </div>
                  
 					</div>
@@ -790,8 +758,29 @@
 			placeholder: 'Select a Plant',
 			allowClear: true
 		});
-$('dialog').modalPopover('toggle');
+		var settings = {
+						trigger:'click',
+						width:320,						
+						multi:true,						
+						closeable:false,
+						style:'z-index:-1',
+						delay:300,
+						padding:true
+				};
+
+		var status = $('#status-filter-content').html();
+		statusfilter = {content:status};
+		var vendor = $('#vendor-filter-content').html();
+		vendorfilter = {content:vendor};
+		$('a.show-popup-status-filter').webuiPopover('destroy').webuiPopover($.extend({},settings,statusfilter));
+		$('a.show-popup-vendor-filter').webuiPopover('destroy').webuiPopover($.extend({},settings,vendorfilter));
+		
+		//$('a.show-pop-table').webuiPopover({title:'Status Filter',content:$('#popupBottom').html(),placement:'bottom'},{closeable:false});
+	
+			
+
 	});
 	</script>
+		
    </body>
 </html>
