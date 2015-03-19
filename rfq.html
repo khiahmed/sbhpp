@@ -485,12 +485,46 @@
 					</div>
 				  </div>
 				</div>  
-				
+												
+
 				<table class="table table-bordered table-striped table-condensed" id="table1">
                         <thead>
 							<tr class="success">
 								<th>#</th>
-								<th><a>Status</a> <button class="btn pull-right btn-primary btn-xs" data-id="table-status" data-toggle="modal" data-target="#status-modal"><i class="fa  fa-magic"></i></button></th>
+								<th><a>Status</a>
+								<a  class="btn btn-primary btn-sm" href="#popupBottom" data-toggle="modal-popover" data-placement="bottom"><strong class="caret"></strong></a>
+								</th><div id="popupBottom" class="popover">
+								<div class="arrow"></div>
+								<h3 class="popover-title">Bottom</h3>
+								<div class="popover-content">
+<div class="checkbox-nice">
+						<input type="checkbox" id="checkbox-1" checked="checked"/>
+						<label for="checkbox-1">
+						Show All
+						</label>
+						</div>
+						<div class="checkbox-nice">
+						<input type="checkbox" id="checkbox-2" />
+						<label for="checkbox-2">
+						Open
+						</label>
+						</div>						
+						<div class="checkbox-nice">
+						<input type="checkbox" id="checkbox-3" />
+						<label for="checkbox-3">
+						Closed
+						</label>
+						</div>
+
+						<div class="checkbox-nice">
+						<input type="checkbox" id="checkbox-4" />
+						<label for="checkbox-4">
+						Awaiting for approval
+						</label>
+						</div>
+								</div>
+								</div>
+								<!-- <button class="btn pull-right btn-primary btn-xs" data-id="table-status" data-toggle="modal" data-target="#status-modal"><i class="fa  fa-magic"></i></button>-->
 								<th><a>Vendor</a> <button class="btn pull-right btn-primary btn-xs" data-id="table-vendor" data-toggle="modal" data-target="#vendor-modal"><i class="fa  fa-magic"></i></button></th>
 								<th><a>Plant</a>  <button class="btn pull-right btn-primary btn-xs" data-id="table-plant" data-toggle="modal" data-target="#plant-modal"><i class="fa  fa-magic"></i></button></th>
 								<th><a>Due Date</a> <button class="btn pull-right btn-primary btn-xs" data-id="table-plant" data-toggle="modal" data-target="#date-modal"><i class="fa  fa-magic"></i></button> </th>
@@ -756,9 +790,8 @@
 			placeholder: 'Select a Plant',
 			allowClear: true
 		});
-
+$('dialog').modalPopover('toggle');
 	});
 	</script>
-
    </body>
 </html>
