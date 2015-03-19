@@ -121,7 +121,7 @@ $.fn.removeClassPrefix = function(prefix) {
     jQuery.fn[sr] = function(fn) {
         return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
     };
-	//$(".nav-stacked > li > ul ").css({"display":"block"});
+	$(".nav-stacked > li > ul ").css({"display":"block"});
 document.write('<script type="text/javascript" src="js/pace.min.js"></script>');
 document.write('<script type="text/javascript" src="js/jquery.dataTables.js"></script>');
 document.write('<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>');

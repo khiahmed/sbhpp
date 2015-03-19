@@ -70,3 +70,21 @@ box-shadow: inset 0px 0px 22px 0px #ABABAB;
     margin-left: 15px !important;
     position: relative;
 }
+.dataTables_length, .dataTables_filter{
+display:none;
+}
+#config-tool {
+    position: relative !important;
+    right: 0 !important;
+    top: 0 !important;
+    width: auto !important;
+    z-index: 1000 !important;
+}
+
+.fixed-header #content-wrapper{
+padding-top:40px !important;
+}
+
+.fixed-header #nav-col{
+padding-top:25px !important;
+}

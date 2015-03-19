@@ -329,10 +329,7 @@
         <div class="main-box clearfix">
             <header class="main-box-header clearfix">
                 <h2 class="pull-left">RFQ Status</h2>
-                <div class="pull-right daterange-filter" id="reportrange">
-                    <i class="icon-calendar"></i>
-                    <span>February 16, 2015 - March 17, 2015</span> <b class="caret"></b>
-                </div>
+
             </header>
 			
             <div class="main-box-body clearfix">
@@ -472,10 +469,14 @@
 						<h4 class="modal-title" id="myModalLabel">RFQ Due Date Filter</h4>
 					  </div>
 						<div class="modal-body">
-						<div class="input-group">
-<span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
-<input type="text" class="form-control" id="datepickerDateRange">
-</div>
+					<!--	<div class="input-group">
+							<span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
+							<input type="text" class="form-control" id="datepickerDateRange">
+						</div> -->
+					<div class="daterange-filter" id="reportrange">
+                    <i class="fa fa-calendar"></i>&nbsp;
+                    <span>February 16, 2015 - March 17, 2015</span> <b class="caret"></b>
+                </div>
 						</div>
 					  <div class="modal-footer">
 						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -570,37 +571,110 @@
 
 				  </table>
                 </div>
-                <ul class="pagination pull-right">
-                    <li><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                    <li><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#">5</a></li>
-                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                </ul>
+
             </div>
         </div>
     </div>
 </div>
                   <div class="row">
                      <div class="col-lg-12">
-					 <!--
+					 
+					
+				
 					 <div class="row">
                            <div class="col-lg-12">
                               <div class="main-box clearfix">
                                  <header class="main-box-header clearfix">
                                     <h2>
-                                       Box Header
+                                      Theme Options
                                     </h2>
                                  </header>
                                  <div class="main-box-body clearfix">
-                                    Content...
+                                  					 <div id="config-tool" class="">
+
+
+    <div id="config-tool-options">
+        <h4>Layout Options</h4>
+        <ul>
+            <li>
+                <div class="checkbox-nice">
+                    <input type="checkbox" id="config-fixed-header" />
+                    <label for="config-fixed-header">
+                        Fixed Header
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox-nice">
+                    <input type="checkbox" id="config-fixed-sidebar" />
+                    <label for="config-fixed-sidebar">
+                        Fixed Left Menu
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox-nice">
+                    <input type="checkbox" id="config-fixed-footer" />
+                    <label for="config-fixed-footer">
+                        Fixed Footer
+                    </label>
+                </div>
+            </li>
+            <li>
+                <div class="checkbox-nice">
+                    <input type="checkbox" id="config-boxed-layout" />
+                    <label for="config-boxed-layout">
+                        Boxed Layout
+                    </label>
+                </div>
+            </li>
+
+        </ul>
+        <br/>
+        <h4>Skin Color</h4>
+        <ul id="skin-colors" class="clearfix">
+            <li>
+                <a class="skin-changer" data-skin="" data-toggle="tooltip" title="Default" style="background-color: #34495e;">
+                </a>
+            </li>
+            <li>
+                <a class="skin-changer" data-skin="theme-white" data-toggle="tooltip" title="White/Green" style="background-color: #2ecc71;">
+                </a>
+            </li>
+            <li>
+                <a class="skin-changer blue-gradient" data-skin="theme-blue-gradient" data-toggle="tooltip" title="Gradient">
+                </a>
+            </li>
+            <li>
+                <a class="skin-changer" data-skin="theme-turquoise" data-toggle="tooltip" title="Green Sea" style="background-color: #1abc9c;">
+                </a>
+            </li>
+            <li>
+                <a class="skin-changer" data-skin="theme-amethyst" data-toggle="tooltip" title="Amethyst" style="background-color: #9b59b6;">
+                </a>
+            </li>
+            <li>
+                <a class="skin-changer" data-skin="theme-blue" data-toggle="tooltip" title="Blue" style="background-color: #2980b9;">
+                </a>
+            </li>
+            <li>
+                <a class="skin-changer" data-skin="theme-red" data-toggle="tooltip" title="Red" style="background-color: #e74c3c;">
+                </a>
+            </li>
+            <li>
+                <a class="skin-changer" data-skin="theme-whbl" data-toggle="tooltip" title="White/Blue" style="background-color: #3498db;">
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+ 
                                  </div>
                               </div>
                            </div>
                         </div>
-                    -->
+                 
 					</div>
                   </div>
                   <footer id="footer-bar" class="row">
@@ -619,11 +693,18 @@
 	  <script src="js/moment.min.js"></script>
 <script src="js/daterangepicker.js"></script>
       <script src="js/scripts.js"></script>
+	   <script src="js/demo-skin-changer.js"></script>
+	   <script src="js/demo.js"></script>
+
 	  <script src="js/jquery.nanoscroller.min.js"></script>
+	  
+<script src="js/demo-rtl.js"></script>
+	  
 	   <script src="js/select2.min.js"></script>
+
 <script type="text/javascript">
 	$(document).ready(function() {
-		$("#table1").dataTable();
+		$("#table1").dataTable({"bPaginate": false});
 		$('#reportrange').daterangepicker({
 			startDate: moment().subtract('days', 29),
 			endDate: moment(),
@@ -675,7 +756,7 @@
 			placeholder: 'Select a Plant',
 			allowClear: true
 		});
-		$('#datepickerDateRange').daterangepicker();
+
 	});
 	</script>
 
