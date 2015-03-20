@@ -106,3 +106,17 @@ padding-top:25px !important;
     position: absolute;
     width: 100%;
 }
+.btn-tool{
+	padding:0px 3px !important;
+	margin:0 !important;
+}
+ #config-tool-options {
+    background: none !important;
+	padding:0 !important;
+	box-shadow:none !important;
+
+}
+ .main-box{
+ border:0 !important;
+ box-shadow: none  !important;
+}
