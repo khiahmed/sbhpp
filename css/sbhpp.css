@@ -120,3 +120,26 @@ padding-top:25px !important;
  border:0 !important;
  box-shadow: none  !important;
 }
+
+.form-control{
+	width: 200px;
+}
+.color-red{
+	color: red;
+	font-weight: bold;
+}
+.filter{
+	padding-bottom: 20px;
+}
+
+#filter_table {
+    border-collapse: collapse;
+}
+
+#filter_table td {
+    padding-top: .5em;
+    padding-bottom: .5em;
+}
+.sprite-img { background:url(../img/sprite-img.png) no-repeat 0 0; display:block;}
+.gtlst-ico { background-position:-81px -41px; width: 18px; height:13px; margin:2px 5px 0 0; float:left; }
+.grn-btn, .grn-btn:hover, .grn-btn:focus { background: url("../img/grn-btn.jpg") repeat-x left center; border-radius: 5px; color: #fff; font-size: 13px; margin: 0 0 0 5px; padding: 7px 10px 6px; margin-right:10px; }
