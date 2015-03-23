@@ -433,22 +433,35 @@
                              
 							 <div class="filter">
 							  <div class="row">
-									<label>Plant Code:</label>
-									<select class='form-control sselect input-small'>
-										<option selected>54545455</option>
-										<option>54545456</option>
-										<option>54545457</option>
-										<option>54545458</option>
-									</select>
-							 </div>
-							 <div class="row">
+									<div class="col-sm-3">
+										<label>Plant Code:</label>
+										<div class="form-group form-group-select2">
+										<label>use , commas for, multiple selection(s)</label>
+										<div class="form-group form-group-select2 modalSelect">
+											<select style="width:300px" id="selfilter1Multi" multiple>
+											<option selected>54545455</option>
+											<option>54545456</option>
+											<option>54545457</option>
+											<option>54545458</option>
+										</select>                                                 
+													</div>
+												</div>   
+									</div>
+							
+							 <div class="col-sm-3 space">
 									<label>Material Code:</label>
-									<select  class='form-control sselect input-small'>
+									<div class="form-group form-group-select2">
+									<label>use , commas for, multiple selection(s)</label>
+									<div class="form-group form-group-select2 modalSelect">
+										<select style="width:300px" id="selfilter2Multi" multiple>
 										<option selected>54545455</option>
 										<option>54545456</option>
 										<option>54545457</option>
 										<option>54545458</option>
-									</select>
+										</select>                                                 
+										</div>
+									</div>   
+							 </div>
 							 </div>
 							 <div class="row button-top">
 								<button class="btn btn-primary"><i class=" fa fa-list"></i> Get List</button>
@@ -759,6 +772,14 @@
          		placeholder: 'Select a PO No',
          		allowClear: true
          	});
+			$("#selfilter1Multi").select2({
+				placeholder: '',
+         		allowClear: true
+			});
+			$("#selfilter2Multi").select2({
+				placeholder: '',
+         		allowClear: true
+			});
 			$('.sselect').select2({
 				placeholder: 'Select a Description',
 
