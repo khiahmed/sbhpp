@@ -120,3 +120,17 @@ padding-top:25px !important;
  border:0 !important;
  box-shadow: none  !important;
 }
+
+.filter{
+	padding-bottom: 30px;
+}
+
+.sselect{
+box-shadow:0 !important;
+border:0 !important;
+margin:0 !important;
+padding:0 !important;
+}
+.button-top{
+	padding-top: 10px;
+}
