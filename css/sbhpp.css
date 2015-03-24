@@ -137,5 +137,8 @@ padding:0 !important;
 
 .h4_bold{
 	font-weight: bold;
-}
+}#email-list li {
 
+    padding-left: 50px !important;
+
+}
