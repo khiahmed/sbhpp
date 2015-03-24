@@ -202,32 +202,37 @@
                                        <i class="fa fa-inbox"></i> Inbox
                                        </a>
                                     </li>
-                                    <li >
+                                    <!--<li >
                                        <a href="email-compose.html">
                                        <i class="fa fa-envelope"></i> Compose Mail
                                        </a>
-                                    </li>
+                                    </li>-->
                                  </ul>
                               </li>
-                              <li class="">
-                                 <a href="#" class="dropdown-toggle">
-                                 <i class="fa fa-truck"></i>
-                                 <span>PO & Shipment</span>
-                                 <i class="fa fa-angle-right drop-icon"></i>
-                                 </a>
-                                 <ul class="submenu" style="display: none;">
-                                    <li>
-                                       <a href="#">
-                                       Purchase order
-                                       </a>
-                                    </li>
-                                    <li>
-                                       <a href="#">
-                                       Shipment
-                                       </a>
-                                    </li>
-                                 </ul>
-                              </li>
+                             <li class="">
+										<a href="#" class="dropdown-toggle">
+										<i class="fa fa-truck"></i>
+										<span>PO & Shipment</span>
+										<i class="fa fa-angle-right drop-icon"></i>
+										</a>
+										<ul class="submenu" style="display: none;">
+										<li>
+										<a href="#">
+											Purchase order Act
+										</a>
+										</li>
+										<li>
+										<a href="#">
+											Purchase order Shipment
+										</a>
+										</li>
+										<li>
+										<a href="#">
+										Shipment
+										</a>
+										</li>
+										</ul>
+								</li>
                               <li>
                                  <a href="#" class="dropdown-toggle">
                                  <i class="fa fa-file-text"></i>
@@ -295,20 +300,7 @@
                                     </li>
                                  </ul>
                               </li>
-                              <li class="">
-                                 <a href="#" class="dropdown-toggle">
-                                    <!-- <i class="fa  fa-file-archive-o"></i>-->	
-                                    <span>Audit Trail</span>
-                                    <!--<i class="fa fa-angle-right drop-icon"></i>-->
-                                 </a>
-                              </li>
-                              <li class="">
-                                 <a href="#" class="dropdown-toggle">
-                                    <!-- <i class="fa  fa-file-archive-o"></i>-->	
-                                    <span>Admin Control Panel</span>
-                                    <!--<i class="fa fa-angle-right drop-icon"></i>-->
-                                 </a>
-                              </li>
+                            
                            </ul>
                         </div>
                      </div>
@@ -321,7 +313,7 @@
                      <div class="col-lg-12">
                         <div class="main-box clearfix">
                            <header class="main-box-header clearfix">
-                              <h2 class="pull-left">Vendor Purchase</h2>
+                              <h2 class="pull-left h4_bold">Vendor Purchase</h2>
                            </header>
                            <div class="main-box-body clearfix">
                               <div class="">
@@ -346,7 +338,7 @@
                                        </div>
                                     </div>
                                  </div>
-                              </div>
+                              
                               <div class="modal fade" id="poNoNOT-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                  <div class="modal-dialog">
                                     <div class="modal-content">
@@ -399,7 +391,7 @@
                                        </div>
                                     </div>
                                  </div>
-                              </div>
+                              
                               <div class="modal fade" id="poNoACC-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                  <div class="modal-dialog">
                                     <div class="modal-content">
@@ -433,28 +425,43 @@
                              
 							 <div class="filter">
 							  <div class="row">
-									<label>Plant Code:</label>
-									<select class='form-control sselect input-small'>
+									<div class="col-sm-4">
+										<h5 class="h4_bold">Plant Code:</h5>
+										<div class="form-group form-group-select2">
+										<label>use , commas for, multiple selection(s)</label>
+										<div class="form-group form-group-select2 modalSelect">
+											<select style="width:300px" id="selfilter1Multi" multiple>
+											<option selected>54545455</option>
+											<option>54545456</option>
+											<option>54545457</option>
+											<option>54545458</option>
+										</select>                                                 
+													</div>
+												</div>   
+									</div>
+							
+							 <div class="col-sm-3 space">
+									<h5 class="h4_bold">Material Code:</h5>
+									<div class="form-group form-group-select2">
+									<label>use , commas for, multiple selection(s)</label>
+									<div class="form-group form-group-select2 modalSelect">
+										<select style="width:300px" id="selfilter2Multi" multiple>
 										<option selected>54545455</option>
 										<option>54545456</option>
 										<option>54545457</option>
 										<option>54545458</option>
-									</select>
+										</select>                                                 
+										</div>
+									</div>   
 							 </div>
-							 <div class="row">
-									<label>Material Code:</label>
-									<select  class='form-control sselect input-small'>
-										<option selected>54545455</option>
-										<option>54545456</option>
-										<option>54545457</option>
-										<option>54545458</option>
-									</select>
 							 </div>
 							 <div class="row button-top">
 								<button class="btn btn-primary"><i class=" fa fa-list"></i> Get List</button>
 							    <button class="btn btn-default">Reset</button>
 							 </div>
 							 </div>
+							 
+							 
                               <div class="panel-group" id="accordion">
                                  <div class="panel panel-default">
                                     <div class="panel-heading">
@@ -564,6 +571,7 @@
                                     </div>
                                     <div id="collapseTwo" class="panel-collapse collapse">
                                        <div class="panel-body">
+										<div class="table-responsive">
                                           <table class="table table-bordered table-striped table-condensed" id="table2">
                                                 <thead>
                                                 <tr class="success">
@@ -618,6 +626,7 @@
                                                 </tr>
                                              </tbody>
                                           </table>
+										  </div>
                                        </div>
                                     </div>
                                  </div>
@@ -627,7 +636,6 @@
                      </div>
                   </div>
                </div>
-            </div>
             <div class="row">
                <div class="col-lg-12">
                   <div class="row">
@@ -759,6 +767,14 @@
          		placeholder: 'Select a PO No',
          		allowClear: true
          	});
+			$("#selfilter1Multi").select2({
+				placeholder: '',
+         		allowClear: true
+			});
+			$("#selfilter2Multi").select2({
+				placeholder: '',
+         		allowClear: true
+			});
 			$('.sselect').select2({
 				placeholder: 'Select a Description',
 
