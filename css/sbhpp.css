@@ -142,3 +142,11 @@ padding:0 !important;
     padding-left: 50px !important;
 
 }
+
+.intr{
+display:;
+}
+.table tbody > tr > td:first-child {
+    font-size: 0.975em !important;
+
+}
