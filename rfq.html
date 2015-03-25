@@ -46,7 +46,7 @@
                   </div>
                   <div class="nav-no-collapse pull-right" id="header-nav">
                      <ul class="nav navbar-nav pull-right">
-						
+						<li class="dropdown hidden-xs"><a href="#" data-toggle="modal" data-target="#theme-modal"><i class="fa fa-magnet"></i></a> </li>
 
                         <li class="dropdown hidden-xs">
                            <a class="btn dropdown-toggle" data-toggle="dropdown">
@@ -297,21 +297,7 @@
                                  </ul>
                               </li>
 							  
-							  <li class="">
-                                 <a href="#" class="dropdown-toggle">
-                                <!-- <i class="fa  fa-file-archive-o"></i>-->	
-                                 <span>Audit Trail</span>
-                                 <!--<i class="fa fa-angle-right drop-icon"></i>-->
-                                 </a>
-                              </li>
-							  
-							   <li class="">
-                                 <a href="#" class="dropdown-toggle">
-                                <!-- <i class="fa  fa-file-archive-o"></i>-->	
-                                 <span>Admin Control Panel</span>
-                                 <!--<i class="fa fa-angle-right drop-icon"></i>-->
-                                 </a>
-                              </li>
+							 
                            </ul>
                         </div>
                      </div>
@@ -562,9 +548,107 @@
                                     </div>
                                  </div>
                                  
-							
-								 
-								 
+									
+
+								<div class="modal fade" id="theme-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">								 
+                                    <div class="modal-dialog">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                             <h4 class="modal-title" id="myModalLabel">RFQ Description Filter</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                            						   
+                              <div class="main-box clearfix">
+
+                                 <div class="main-box-body clearfix">
+                                    <div id="config-tool" class="">
+                                       <div id="config-tool-options">
+                                          <h4>Layout Options</h4>
+                                          <ul>
+                                             <li>
+                                                <div class="checkbox-nice">
+                                                   <input type="checkbox" id="config-fixed-header" />
+                                                   <label for="config-fixed-header">
+                                                   Fixed Header
+                                                   </label>
+                                                </div>
+                                             </li>
+                                             <li>
+                                                <div class="checkbox-nice">
+                                                   <input type="checkbox" id="config-fixed-sidebar" />
+                                                   <label for="config-fixed-sidebar">
+                                                   Fixed Left Menu
+                                                   </label>
+                                                </div>
+                                             </li>
+                                             <li>
+                                                <div class="checkbox-nice">
+                                                   <input type="checkbox" id="config-fixed-footer" />
+                                                   <label for="config-fixed-footer">
+                                                   Fixed Footer
+                                                   </label>
+                                                </div>
+                                             </li>
+                                             <li>
+                                                <div class="checkbox-nice">
+                                                   <input type="checkbox" id="config-boxed-layout" />
+                                                   <label for="config-boxed-layout">
+                                                   Boxed Layout
+                                                   </label>
+                                                </div>
+                                             </li>
+                                          </ul>
+                                          <br/>
+                                          <h4>Skin Color</h4>
+                                          <ul id="skin-colors" class="clearfix">
+                                             <li>
+                                                <a class="skin-changer" data-skin="" data-toggle="tooltip" title="Default" style="background-color: #34495e;">
+                                                </a>
+                                             </li>
+                                             <li>
+                                                <a class="skin-changer" data-skin="theme-white" data-toggle="tooltip" title="White/Green" style="background-color: #2ecc71;">
+                                                </a>
+                                             </li>
+                                             <li>
+                                                <a class="skin-changer blue-gradient" data-skin="theme-blue-gradient" data-toggle="tooltip" title="Gradient">
+                                                </a>
+                                             </li>
+                                             <li>
+                                                <a class="skin-changer" data-skin="theme-turquoise" data-toggle="tooltip" title="Green Sea" style="background-color: #1abc9c;">
+                                                </a>
+                                             </li>
+                                             <li>
+                                                <a class="skin-changer" data-skin="theme-amethyst" data-toggle="tooltip" title="Amethyst" style="background-color: #9b59b6;">
+                                                </a>
+                                             </li>
+                                             <li>
+                                                <a class="skin-changer" data-skin="theme-blue" data-toggle="tooltip" title="Blue" style="background-color: #2980b9;">
+                                                </a>
+                                             </li>
+                                             <li>
+                                                <a class="skin-changer" data-skin="theme-red" data-toggle="tooltip" title="Red" style="background-color: #e74c3c;">
+                                                </a>
+                                             </li>
+                                             <li>
+                                                <a class="skin-changer" data-skin="theme-whbl" data-toggle="tooltip" title="White/Blue" style="background-color: #3498db;">
+                                                </a>
+                                             </li>
+                                          </ul>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+ 
+                                          </div>
+                                          <div class="modal-footer">
+                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                             <button type="button" class="btn btn-primary">Save changes</button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+
 								 <table class="table table-bordered table-striped table-condensed" id="table1">
                                     <thead>
                                        <tr class="success">

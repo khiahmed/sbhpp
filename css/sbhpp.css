@@ -150,3 +150,9 @@ display:;
     font-size: 0.975em !important;
 
 }
+
+.table thead > tr > th {
+    border-bottom: 2px solid #e7ebee;
+    font-size: 0.875em;
+    text-transform: capitalize !important;
+}
