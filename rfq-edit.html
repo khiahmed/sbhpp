@@ -310,15 +310,15 @@
                      <div class="col-lg-12">
                         <div class="main-box clearfix">
                            <header class="main-box-header clearfix">
-                              <h2 class="pull-left">RFQ Status <a id="make-small-nav" class="btn">
-                           <i class="fa fa-bars">
+                              <h2 class="pull-left"><a href="#" class="btn btn-default make-small-nav">
+                           <i class="fa fa-arrows-h">
                            </i>
-                           </a> </h2>
+                           </a>  RFQ Status </h2>
 							  
                            </header>
                            <div class="main-box-body clearfix">
-                              <div class="">								 
-								 <table class="table table-bordered table-striped table-condensed" id="example">
+                              <div class="table-responsive">								 
+								 <table class="table table-bordered table-striped table-condensed" id="table1">
                                     <thead>
                                        <tr class="success">
 										  <th ></th> </th>
@@ -327,12 +327,13 @@
                                           <th >Material Description</th>
                                           <th >Forecating volume</th>
                                           <th >Unit of Measurment</th>
-										  <th >Unit Price per lb</th>
+										  <th nowrap >Unit Price per lb</th>
 										  <th >Currency</th>
 										  <th >Packing Per lb</th>
 										  <th >Freight Per lb</th>
 										  <th >Remarks</th>
 										  <th >Total</th>
+										  <th >Actions</th>
 										  
 										  
                                        </tr>
@@ -351,6 +352,7 @@
 											<td>0.00</td>
 											<td>"This is Remarks"</td>
 											<td>0.00</td>
+											<td><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
 
 										</tr>
 										<tr>
@@ -367,6 +369,7 @@
 											<td>0.00</td>
 											<td>"This is Remarks"</td>
 											<td>0.00</td>
+											<td><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
 										</tr>
 										</tbody>
                                  </table>
@@ -379,7 +382,56 @@
                      <div class="col-lg-12">
                         <div class="row">
                            <div class="col-lg-12">
-							<!-- -->                          
+							<!-- -->     
+							<form method="post">
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  <div class="modal-dialog">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="myModalLabel">RFQ Edit</h4>
+								  </div>
+								  <div class="modal-body">
+								
+									<div class="form-group">
+										<label>Unit Price Per lb:									
+										</label>
+										<input type="text" class="form-control" value="1.00">
+									</div>
+									<div class="form-group">
+										<label>Currency:USD
+										</label>
+										
+									</div>
+									<div class="form-group">
+										<input type="checkbox">										<label>Extra Charge</label>
+										
+									</div>
+									<div class="form-group">
+										<label>Packing Per lb:									
+										</label>
+										<input type="text" class="form-control" value="1.00">
+									</div>
+									<div class="form-group">
+										<label>Freight Perlb:									
+										</label>
+										<input type="text" class="form-control" value="1.00">
+									</div>
+									<div class="form-group">
+										<label>Remarks:									
+										</label>
+										<input type="text" class="form-control" value="1.00">
+									</div>
+							
+								  </div>
+								  <div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="submit" class="btn btn-primary">Save changes</button>
+								  </div>
+								</div>
+							  </div>
+							</div>							
+							</form>
 						   </div>
                         </div>
                      </div>
@@ -404,109 +456,15 @@
       <script src="js/jquery.nanoscroller.min.js"></script>
       <script src="js/jquery.dataTables.min.js"></script>
       <script src="js/select2.min.js"></script>
-      <script src="js/dataTables.tableTools.min.js"></script>
-      <script src="js/dataTables.editor.min.js"></script>
+
 
 
 
       <script type="text/javascript">
-		var editor; // use a global for the submit and return data rendering in the examples
+
  
 $(document).ready(function() {
-    editor = new $.fn.dataTable.Editor( {
-        table: "#example",
-        fields: [ {
-                label: "First name:",
-                name: "first_name"
-            }, {
-                label: "Last name:",
-                name: "last_name"
-            }, {
-                label: "Position:",
-                name: "position"
-            }, {
-                label: "Office:",
-                name: "office"
-            }, {
-                label: "Extension:",
-                name: "extn"
-            }, {
-                label: "Start date:",
-                name: "start_date",
-                type: "date"
-            }, {
-                label: "Salary:",
-                name: "salary"
-            }
-        ]
-    } );
- 
-    editor
-        .on( 'open', function ( e, type ) {
-            if ( type === 'inline' ) {
-                // Listen for a tab key event when inline editing
-                $(document).on( 'keydown.editor', function ( e ) {
-                    if ( e.keyCode === 9 ) {
-                        e.preventDefault();
- 
-                        // Find the cell that is currently being edited
-                        var cell = $('div.DTE').parent();
- 
-                        if ( e.shiftKey && cell.prev().length && cell.prev().index() !== 0 ) {
-                            // One cell to the left (skipping the first column)
-                            cell.prev().click();
-                        }
-                        else if ( e.shiftKey ) {
-                            // Up to the previous row
-                            cell.parent().prev().children().last(0).click();
-                        }
-                        else if ( cell.next().length ) {
-                            // One cell to the right
-                            cell.next().click();
-                        }
-                        else {
-                            // Down to the next row
-                            cell.parent().next().children().eq(1).click();
-                        }
-                    }
-                } );
-            }
-        } )
-        .on( 'close', function () {
-            $(document).off( 'keydown.editor' );
-        } );
- 
-    $('#example').on( 'click', 'tbody td:not(:first-child)', function (e) {
-        editor.inline( this, {
-            submitOnBlur: true
-        } );
-    } );
- 
-    $('#example').DataTable( {
-        dom: "Tfrtip",
-        ajax: "../php/staff.php",
-        columns: [
-            { data: null, defaultContent: '', orderable: false },
-            { data: "first_name" },
-            { data: "last_name" },
-            { data: "position" },
-            { data: "office" },
-            { data: "start_date" },
-            { data: "salary", render: $.fn.dataTable.render.number( ',', '.', 0, '$' ) }
-        ],
-        order: [ 1, 'asc' ],
-        tableTools: {
-            sRowSelect: "os",
-            sRowSelector: 'td:first-child',
-            aButtons: [
-                { sExtends: "editor_create", editor: editor },
-                { sExtends: "editor_edit",   editor: editor },
-                { sExtends: "editor_remove", editor: editor }
-            ]
-        }
-    } );
-
-			
+			$("#table1").dataTable({"bPaginate": false});
 			$('#reportrange').daterangepicker({
          		startDate: moment().subtract('days', 29),
          		endDate: moment(),

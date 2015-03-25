@@ -65,6 +65,9 @@ $('.dropdown-menu').find('form').click(function (e) {
     $('#make-small-nav').click(function(e) {
         $('#page-wrapper').toggleClass('nav-small');
     });
+	    $('.make-small-nav').click(function(e) {
+        $('#page-wrapper').toggleClass('nav-small');
+    });
     $(window).smartresize(function() {
         if ($(document).width() <= 991) {
             $('#page-wrapper').removeClass('nav-small');
