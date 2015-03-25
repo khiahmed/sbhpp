@@ -324,69 +324,65 @@
                      <div class="col-lg-12">
                         <div class="main-box clearfix">
                            <header class="main-box-header clearfix">
-                              <h2 class="pull-left">RFQ Status</h2>
+                              <h2 class="pull-left">RFQ Status <a id="make-small-nav" class="btn">
+                           <i class="fa fa-bars">
+                           </i>
+                           </a> </h2>
+							  
                            </header>
                            <div class="main-box-body clearfix">
                               <div class="">								 
-								 <table class="table table-bordered table-striped table-condensed" id="table1">
+								 <table class="table table-bordered table-striped table-condensed" id="example">
                                     <thead>
                                        <tr class="success">
-										  <th></th>
-                                          <th>Plant</th>
-                                          <th>Material Number</th>
-                                          <th>Material Description</th>
-                                          <th>Forecating volume</th>
-                                          <th>Unit of Measurment</th>
+										  <th ></th> </th>
+                                          <th >Plant</th>
+                                          <th >Material Number</th>
+                                          <th >Material Description</th>
+                                          <th >Forecating volume</th>
+                                          <th >Unit of Measurment</th>
+										  <th >Unit Price per lb</th>
+										  <th >Currency</th>
+										  <th >Packing Per lb</th>
+										  <th >Freight Per lb</th>
+										  <th >Remarks</th>
+										  <th >Total</th>
+										  
+										  
                                        </tr>
                                     </thead>
 									<tbody>
 										<tr>
-											<td><a href="javascript:" class="expand-row" data-id="1"><i class="fa fa-plus-circle"></i></a></td>
 											<td>1000</td>
 											<td>ABCD1234</td>
 											<td>Station Gauge</td>
-											<td>56.00</td>
-											<td>#No</td>
-										</tr>
-										<tr id="tr1"  class="intr">
-											<td colspan="6">
-												<table class="table">
-													<tr>
-														<td>
-														Unit Price per lb:100<br/>
-														
-														Currency:Usd
-														</td>
-														<td>Unit Price per lb:100</td>
-														<td>Total:100</td>
-													</tr>
-												</table>
-											</td>
+											<td>150213-000178: Cases are not auto closing for no seller response150213-000178: Cases are not auto closing for no seller response</td>
+											<td>100.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>"This is Remarks"</td>
+											<td>0.00</td>
+
 										</tr>
 										<tr>
-											<td><a href="javascript:" class="expand-row" data-id="2"><i class="fa fa-plus-circle"></i></a></td>
+											
 											<td>1000</td>
 											<td>ABCD1234</td>
 											<td>Station Gauge</td>
-											<td>56.00</td>
-											<td>#No</td>
+											<td>150213-000178: Cases are not auto closing for no seller response</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>"This is Remarks"</td>
+											<td>0.00</td>
 										</tr>
-										<tr id="tr2"  class="intr">
-											<td colspan="6">
-												<table class="table">
-													<tr>
-														<td>
-														Unit Price per lb:100<br/>
-														
-														Currency:Usd
-														</td>
-														<td>Unit Price per lb:100</td>
-														<td>Total:700</td>
-													</tr>
-												</table>
-											</td>
-										</tr>
-									</tbody>
+										</tbody>
                                  </table>
                               </div>
                            </div>
@@ -412,6 +408,7 @@
          </div>
       </div>
       <script src="js/jquery.js"></script>
+
       <script src="js/bootstrap.js"></script>
       <script src="js/moment.min.js"></script>
       <script src="js/daterangepicker.js"></script>
@@ -419,19 +416,112 @@
       <script src="js/demo-skin-changer.js"></script>
       <script src="js/demo.js"></script>
       <script src="js/jquery.nanoscroller.min.js"></script>
-      <script src="js/demo-rtl.js"></script>
+      <script src="js/jquery.dataTables.min.js"></script>
       <script src="js/select2.min.js"></script>
+      <script src="js/dataTables.tableTools.min.js"></script>
+      <script src="js/dataTables.editor.min.js"></script>
+
+
+
       <script type="text/javascript">
-         $(document).ready(function() {
-         //	$("#table1").dataTable({"bPaginate": false});
+		var editor; // use a global for the submit and return data rendering in the examples
+ 
+$(document).ready(function() {
+    editor = new $.fn.dataTable.Editor( {
+        table: "#example",
+        fields: [ {
+                label: "First name:",
+                name: "first_name"
+            }, {
+                label: "Last name:",
+                name: "last_name"
+            }, {
+                label: "Position:",
+                name: "position"
+            }, {
+                label: "Office:",
+                name: "office"
+            }, {
+                label: "Extension:",
+                name: "extn"
+            }, {
+                label: "Start date:",
+                name: "start_date",
+                type: "date"
+            }, {
+                label: "Salary:",
+                name: "salary"
+            }
+        ]
+    } );
+ 
+    editor
+        .on( 'open', function ( e, type ) {
+            if ( type === 'inline' ) {
+                // Listen for a tab key event when inline editing
+                $(document).on( 'keydown.editor', function ( e ) {
+                    if ( e.keyCode === 9 ) {
+                        e.preventDefault();
+ 
+                        // Find the cell that is currently being edited
+                        var cell = $('div.DTE').parent();
+ 
+                        if ( e.shiftKey && cell.prev().length && cell.prev().index() !== 0 ) {
+                            // One cell to the left (skipping the first column)
+                            cell.prev().click();
+                        }
+                        else if ( e.shiftKey ) {
+                            // Up to the previous row
+                            cell.parent().prev().children().last(0).click();
+                        }
+                        else if ( cell.next().length ) {
+                            // One cell to the right
+                            cell.next().click();
+                        }
+                        else {
+                            // Down to the next row
+                            cell.parent().next().children().eq(1).click();
+                        }
+                    }
+                } );
+            }
+        } )
+        .on( 'close', function () {
+            $(document).off( 'keydown.editor' );
+        } );
+ 
+    $('#example').on( 'click', 'tbody td:not(:first-child)', function (e) {
+        editor.inline( this, {
+            submitOnBlur: true
+        } );
+    } );
+ 
+    $('#example').DataTable( {
+        dom: "Tfrtip",
+        ajax: "../php/staff.php",
+        columns: [
+            { data: null, defaultContent: '', orderable: false },
+            { data: "first_name" },
+            { data: "last_name" },
+            { data: "position" },
+            { data: "office" },
+            { data: "start_date" },
+            { data: "salary", render: $.fn.dataTable.render.number( ',', '.', 0, '$' ) }
+        ],
+        order: [ 1, 'asc' ],
+        tableTools: {
+            sRowSelect: "os",
+            sRowSelector: 'td:first-child',
+            aButtons: [
+                { sExtends: "editor_create", editor: editor },
+                { sExtends: "editor_edit",   editor: editor },
+                { sExtends: "editor_remove", editor: editor }
+            ]
+        }
+    } );
+
 			
-			$(".expand-row").click(function(){
-				shotr=$(this).attr('data-id');
-			
-				$("#tr"+shotr).slideToggle();
-			});
-			
-         	$('#reportrange').daterangepicker({
+			$('#reportrange').daterangepicker({
          		startDate: moment().subtract('days', 29),
          		endDate: moment(),
          		minDate: '01/01/1990',
