@@ -391,17 +391,16 @@
                                          <th  class="btn-primary" style="text-align: center; font-weight: bold;" colspan="3"><a>Requested</a></th>
                                          <th rowspan="2"><a>Effective Date</a></th>
                                          <th rowspan="2"><a>Remarks</a></th>
-                                         <th></th>
+                                         <th rowspan="2"><a>Actions</a></th>
                                        </tr>
                                        <tr class="success">
-									      <th><a> Material Price</a></th>
-                                          <th><a> Pack Price</a></th>
-                                          <th><a> Freight Price</a></th>
-										  <th><a> Material Price</a></th>
-                                          <th><a> Packing Price</a></th>
-										  <th><a> Freight Price</a></th>
-										  <th></th>
-                                       </tr>
+									      <th> Material Price</a></th>
+                                          <th> Pack Price</a></th>
+                                          <th> Freight Price</a></th>
+										  <th> Material Price</a></th>
+                                          <th> Packing Price</a></th>
+										  <th> Freight Price</a></th>
+									   </tr>
                                     </thead>
                                     <tbody>
                                        <tr>
@@ -415,15 +414,51 @@
 											<td>40</td>
 											<td>Pending</td>
 											<td>
-												<span>800</span>
+												800
+												
+											</td>
+											<td>
+												800
+												
+											</td>
+											<td>
+												800
+												
+											</td>
+											<td>
+												<span>10/2/2014</span>
+												
+											</td>
+											<td>In Progress</td>
+											<td>
+												<a data-toggle="modal" data-target="#myModal1" href="#" >
+													<i class="glyphicon glyphicon-paperclip"></i>
+												</a> &nbsp;
+                                             <a data-toggle="modal" data-target="#myModal" href="#" >
+												<i class='glyphicon glyphicon-edit'></i>
+												</a>
+											</td>
+										</tr>
+                                       <tr>
+											<td>100802</td>
+											<td>ABC</td>
+											<td>600000342</td>
+											<td>80020007</td>
+											<td>Resin</td>
+											<td>450</td>
+											<td>30</td>
+											<td>40</td>
+											<td>Pending</td>
+											<td>
+												800
 												<span style="display:none"><input type='text' value='800' size='2'></span>
 											</td>
 											<td>
-												<span>800</span>
+												800
 												<span style="display:none"><input type='text' value='800' size='2'></span>
 											</td>
 											<td>
-												<span>800</span>
+												800
 												<span style="display:none"><input type='text' value='800' size='2'></span>
 											</td>
 											<td>
@@ -432,11 +467,12 @@
 											</td>
 											<td>In Progress</td>
 											<td>
-												<a>
-													<span class="glyphicon glyphicon-paperclip"></span>
+												<a data-toggle="modal" data-target="#myModal1" href="#" >
+													<i class="glyphicon glyphicon-paperclip"></i>
+												</a> &nbsp;
+                                                <a data-toggle="modal" data-target="#myModal" href="#" >
+												<i class='glyphicon glyphicon-edit'></i>
 												</a>
-												<span class='glyphicon glyphicon-edit'></span>
-												<span style="display:none"><input id="upfile" type="file" value="upload" multiple></span>
 											</td>
 										</tr>
                                        <tr>
@@ -450,50 +486,15 @@
 											<td>40</td>
 											<td>Pending</td>
 											<td>
-												<span>800</span>
+												800
 												<span style="display:none"><input type='text' value='800' size='2'></span>
 											</td>
 											<td>
-												<span>800</span>
+												800
 												<span style="display:none"><input type='text' value='800' size='2'></span>
 											</td>
 											<td>
-												<span>800</span>
-												<span style="display:none"><input type='text' value='800' size='2'></span>
-											</td>
-											<td>
-												<span>10/2/2014</span>
-												<span style="display:none"><input type='text' value='Material Price' size='10'></span>
-											</td>
-											<td>In Progress</td>
-											<td>
-												<a>
-													<span class="glyphicon glyphicon-paperclip"></span>
-												</a>
-												<span class='glyphicon glyphicon-edit'></span>
-												<span style="display:none"><input id="upfile" type="file" value="upload" multiple></span>
-											</td>
-										</tr>
-                                       <tr>
-											<td>100002</td>
-											<td>ABC</td>
-											<td>600000342</td>
-											<td>80020007</td>
-											<td>Resin</td>
-											<td>450</td>
-											<td>30</td>
-											<td>40</td>
-											<td>Pending</td>
-											<td>
-												<span>800</span>
-												<span style="display:none"><input type='text' value='800' size='2'></span>
-											</td>
-											<td>
-												<span>800</span>
-												<span style="display:none"><input type='text' value='800' size='2'></span>
-											</td>
-											<td>
-												<span>800</span>
+												800
 												<span style="display:none"><input type='text' value='800' size='2'></span>
 											</td>
 											<td>
@@ -502,16 +503,76 @@
 											</td>
 											<td>In Progress</td>
 											<td>
-												<a>
-													<span class="glyphicon glyphicon-paperclip"></span>
+												<a data-toggle="modal" data-target="#myModal1" href="#" >
+													<i class="glyphicon glyphicon-paperclip"></i>
+												</a> &nbsp;
+                                              <a data-toggle="modal" data-target="#myModal" href="#" >
+												<i class='glyphicon glyphicon-edit'></i>
 												</a>
-												<span class='glyphicon glyphicon-edit'></span>
-												<span style="display:none"><input id="upfile" type="file" value="upload" multiple></span>
 											</td>
 										</tr>
                                     </tbody>
                                  </table>
-                              </div>
+                                       
+                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Edit</h4>
+      </div>
+      <div class="modal-body">
+<table width="100%" border="0" class="table table-bordered table-striped" >
+										<thead>
+                                         <tr >
+                                           <th  style="text-align: center; font-weight: bold;" colspan="3"><a>Requested</a></th>
+                                           <th width="20%" rowspan="2"><a>Effective Date</a></th>
+                                           <th width="13%" rowspan="2"><a>Remarks</a></th>
+                                         </tr>
+                                         <tr>
+                                           <th width="22%"> Material Price</a></th>
+                                           <th width="27%"> Packing Price</a></th>
+                                           <th width="18%"> Freight Price</a></th>
+										</thead>
+                                        <tbody>
+                                         <tr>
+                                           <td><input type="text" class="form-control" name="textfield" value="1.00" id="textfield"></td>
+                                           <td><input type="text" class="form-control" name="textfield2" value="1.00"  id="textfield2"></td>
+                                           <td><input type="text" class="form-control" name="textfield3" value="1.00"  id="textfield3"></td>
+                                           <td><input type="text" class="form-control" name="textfield4"  value="1.00"  id="textfield4"></td>
+                                           <td><input type="text" class="form-control" name="textfield5" value="1.00"  id="textfield5"></td>
+                                           </tr>
+                                           </tbody>
+                                </table>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+                              <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Attachments</h4>
+      </div>
+      <div class="modal-body">
+		<legend>Attach Multiple Files <small class="alert-info">Use CTRL & select Multiple Files </small></legend>
+        <label>Select files</label>
+        <input type="file" multiple name="file1">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+                             </div>
                            </div>
                         </div>
                      </div>
