@@ -146,8 +146,11 @@ padding:0 !important;
 .intr{
 display:;
 }
+
 .table tbody > tr > td:first-child {
-    font-size: 0.975em !important;
+    font-size: 0.875em !important;
+	color:#212121 !important;
+	font-weight:500 !important;
 
 }
 

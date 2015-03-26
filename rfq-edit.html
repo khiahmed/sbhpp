@@ -219,7 +219,7 @@
                                  <ul class="submenu" style="display: none;">
                                     <li>
                                        <a href="#">
-                                       Purchase order
+                                       PO Ship
                                        </a>
                                     </li>
                                     <li>
@@ -297,21 +297,7 @@
                                  </ul>
                               </li>
 							  
-							  <li class="">
-                                 <a href="#" class="dropdown-toggle">
-                                <!-- <i class="fa  fa-file-archive-o"></i>-->	
-                                 <span>Audit Trail</span>
-                                 <!--<i class="fa fa-angle-right drop-icon"></i>-->
-                                 </a>
-                              </li>
-							  
-							   <li class="">
-                                 <a href="#" class="dropdown-toggle">
-                                <!-- <i class="fa  fa-file-archive-o"></i>-->	
-                                 <span>Admin Control Panel</span>
-                                 <!--<i class="fa fa-angle-right drop-icon"></i>-->
-                                 </a>
-                              </li>
+							 
                            </ul>
                         </div>
                      </div>
@@ -324,63 +310,76 @@
                      <div class="col-lg-12">
                         <div class="main-box clearfix">
                            <header class="main-box-header clearfix">
-                              <h2 class="pull-left">RFQ Status <a id="make-small-nav" class="btn">
-                           <i class="fa fa-bars">
+                              <h2 class="pull-left"><a href="#" class="btn btn-default make-small-nav">
+                           <i class="fa fa-arrows-h">
                            </i>
-                           </a> </h2>
+                           </a>  RFQ Status </h2>
 							  
                            </header>
                            <div class="main-box-body clearfix">
-                              <div class="">								 
-								 <table class="table table-bordered table-striped table-condensed" id="example">
+                              <div class="table-responsive">								 
+								 <table class="table table-bordered table-striped table-condensed" id="table1">
                                     <thead>
                                        <tr class="success">
-										  <th ></th> </th>
+
                                           <th >Plant</th>
                                           <th >Material Number</th>
                                           <th >Material Description</th>
                                           <th >Forecating volume</th>
                                           <th >Unit of Measurment</th>
-										  <th >Unit Price per lb</th>
-										  <th >Currency</th>
-										  <th >Packing Per lb</th>
-										  <th >Freight Per lb</th>
+										   <th >Currency</th>
+										  <th nowrap >Unit Price per Unit</th>
+										  <th>Packing Type</th>
+										  <th >Packing Per Unit</th>
+										  <th >Freight Type</th>
+										  <th >Freight Per Unit</th>
+										   <th >Total</th>
 										  <th >Remarks</th>
-										  <th >Total</th>
+										 
+										  <th >Actions</th>
 										  
 										  
                                        </tr>
                                     </thead>
 									<tbody>
 										<tr>
-											<td>1000</td>
+											
 											<td>ABCD1234</td>
 											<td>Station Gauge</td>
-											<td>150213-000178: Cases are not auto closing for no seller response150213-000178: Cases are not auto closing for no seller response</td>
-											<td>100.00</td>
+											<td>56.00 </td>
+											<td>#NO</td>
+											<td>USD</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
-											<td>"This is Remarks"</td>
-											<td>0.00</td>
+											<td>6,880</td>
+											<td>ABCD</td>
+											<td><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
 
 										</tr>
 										<tr>
-											
+
 											<td>1000</td>
+
+											
+											
+
 											<td>ABCD1234</td>
 											<td>Station Gauge</td>
-											<td>150213-000178: Cases are not auto closing for no seller response</td>
+											<td>56.00 </td>
+											<td>#NO</td>
+											<td>USD</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
-											<td>0.00</td>
-											<td>"This is Remarks"</td>
-											<td>0.00</td>
+											<td>6,880</td>
+											<td>ABCD</td>
+											<td><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
+
 										</tr>
 										</tbody>
                                  </table>
@@ -393,7 +392,82 @@
                      <div class="col-lg-12">
                         <div class="row">
                            <div class="col-lg-12">
-							<!-- -->                          
+							<!-- -->     
+							<form method="post">
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  <div class="modal-dialog">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="myModalLabel">RFQ Edit</h4>
+								  </div>
+								  <div class="modal-body">
+								
+									<div class="form-group">
+										<label>Unit Price Per Unit:									
+										</label>
+										<input type="text" class="form-control" value="1.00">
+									</div>
+									<div class="form-group">
+										<label>Packing Per Unit:</label>
+										<div class="form-group form-group-select2">
+											<!--<label>use , commas for, multiple selection(s)</label>-->
+											<div class="form-group form-group-select2 modalSelect">
+												<select style="width:300px" id="sel1Multi" multiple>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+												</select>                                                 
+											</div>
+										</div>       
+									</div>
+									<div class="form-group">
+										<label>Packing Per Unit:									
+										</label>
+										<input type="text" class="form-control" value="1.00">
+									</div>
+									<div class="form-group">
+										<label>Freight Type</label>
+										<div class="form-group form-group-select2">
+											<!--<label>use , commas for, multiple selection(s)</label>-->
+											<div class="form-group form-group-select2 modalSelect">
+												<select style="width:300px" id="sel2Multi" multiple>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+												</select>                                                 
+											</div>
+										</div>       
+									</div>
+									<div class="form-group">
+										<label>Freight Per Unit:</label>
+										<input type="text" class="form-control" value="1.00">
+									</div>
+									<div class="form-group">
+										<label>Total :</label>
+										<span>6000</span>
+									</div>
+									<div class="form-group">
+										<label>Remarks:									
+										</label>
+										<input type="text" class="form-control" value="ABCD">
+									</div>
+							
+								  </div>
+								  <div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="submit" class="btn btn-primary">Save changes</button>
+								  </div>
+								</div>
+							  </div>
+							</div>							
+							</form>
 						   </div>
                         </div>
                      </div>
@@ -418,109 +492,15 @@
       <script src="js/jquery.nanoscroller.min.js"></script>
       <script src="js/jquery.dataTables.min.js"></script>
       <script src="js/select2.min.js"></script>
-      <script src="js/dataTables.tableTools.min.js"></script>
-      <script src="js/dataTables.editor.min.js"></script>
+
 
 
 
       <script type="text/javascript">
-		var editor; // use a global for the submit and return data rendering in the examples
+
  
 $(document).ready(function() {
-    editor = new $.fn.dataTable.Editor( {
-        table: "#example",
-        fields: [ {
-                label: "First name:",
-                name: "first_name"
-            }, {
-                label: "Last name:",
-                name: "last_name"
-            }, {
-                label: "Position:",
-                name: "position"
-            }, {
-                label: "Office:",
-                name: "office"
-            }, {
-                label: "Extension:",
-                name: "extn"
-            }, {
-                label: "Start date:",
-                name: "start_date",
-                type: "date"
-            }, {
-                label: "Salary:",
-                name: "salary"
-            }
-        ]
-    } );
- 
-    editor
-        .on( 'open', function ( e, type ) {
-            if ( type === 'inline' ) {
-                // Listen for a tab key event when inline editing
-                $(document).on( 'keydown.editor', function ( e ) {
-                    if ( e.keyCode === 9 ) {
-                        e.preventDefault();
- 
-                        // Find the cell that is currently being edited
-                        var cell = $('div.DTE').parent();
- 
-                        if ( e.shiftKey && cell.prev().length && cell.prev().index() !== 0 ) {
-                            // One cell to the left (skipping the first column)
-                            cell.prev().click();
-                        }
-                        else if ( e.shiftKey ) {
-                            // Up to the previous row
-                            cell.parent().prev().children().last(0).click();
-                        }
-                        else if ( cell.next().length ) {
-                            // One cell to the right
-                            cell.next().click();
-                        }
-                        else {
-                            // Down to the next row
-                            cell.parent().next().children().eq(1).click();
-                        }
-                    }
-                } );
-            }
-        } )
-        .on( 'close', function () {
-            $(document).off( 'keydown.editor' );
-        } );
- 
-    $('#example').on( 'click', 'tbody td:not(:first-child)', function (e) {
-        editor.inline( this, {
-            submitOnBlur: true
-        } );
-    } );
- 
-    $('#example').DataTable( {
-        dom: "Tfrtip",
-        ajax: "../php/staff.php",
-        columns: [
-            { data: null, defaultContent: '', orderable: false },
-            { data: "first_name" },
-            { data: "last_name" },
-            { data: "position" },
-            { data: "office" },
-            { data: "start_date" },
-            { data: "salary", render: $.fn.dataTable.render.number( ',', '.', 0, '$' ) }
-        ],
-        order: [ 1, 'asc' ],
-        tableTools: {
-            sRowSelect: "os",
-            sRowSelector: 'td:first-child',
-            aButtons: [
-                { sExtends: "editor_create", editor: editor },
-                { sExtends: "editor_edit",   editor: editor },
-                { sExtends: "editor_remove", editor: editor }
-            ]
-        }
-    } );
-
-			
+			$("#table1").dataTable({"bPaginate": false});
 			$('#reportrange').daterangepicker({
          		startDate: moment().subtract('days', 29),
          		endDate: moment(),
@@ -605,11 +585,293 @@ $(document).ready(function() {
 		   $('#reportrange1 span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
 			
 			$('#sel1Multi').select2({
-         		placeholder: 'Select a Vendor',
+         		placeholder: 'Select a Packing Type',
          		allowClear: true
          	});
          	$('#sel2Multi').select2({
-         		placeholder: 'Select a Plant',
+         		placeholder: 'Select a Freight Type',
+         		allowClear: true
+         	});
+         	$('#sel3Multi').select2({
+         		placeholder: 'Select a Collective No',
+         		allowClear: true
+         	});
+			$('#sel4Multi').select2({
+         		placeholder: 'Select a RFQ No',
+         		allowClear: true
+         	});
+			$('#sel5Multi').select2({
+         		placeholder: 'Select a RFQ Description',
+         		allowClear: true
+         	});
+         
+         });
+      </script>
+   </body>
+</html>
+                                          <th >Plant</th>
+                                          <th >Material Number</th>
+                                          <th >Material Description</th>
+                                          <th >Forecating volume</th>
+                                          <th >Unit of Measurment</th>
+										   <th >Currency</th>
+										  <th nowrap >Unit Price per Unit</th>
+										  <th>Packing Type</th>
+										  <th >Packing Per Unit</th>
+										  <th >Freight Type</th>
+										  <th >Freight Per Unit</th>
+										   <th >Total</th>
+										  <th >Remarks</th>
+										 
+										  <th >Actions</th>
+										  
+										  
+                                       </tr>
+                                    </thead>
+									<tbody>
+										<tr>
+											
+											<td>ABCD1234</td>
+											<td>Station Gauge</td>
+											<td>56.00 </td>
+											<td>#NO</td>
+											<td>USD</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>6,880</td>
+											<td>ABCD</td>
+											<td><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
+
+										</tr>
+										<tr>
+											<td>1000</td>
+											<td>ABCD1234</td>
+											<td>Station Gauge</td>
+											<td>56.00 </td>
+											<td>#NO</td>
+											<td>USD</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>0.00</td>
+											<td>6,880</td>
+											<td>ABCD</td>
+											<td><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
+
+										</tr>
+										</tbody>
+                                 </table>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="row">
+                           <div class="col-lg-12">
+							<!-- -->     
+							<form method="post">
+							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							  <div class="modal-dialog">
+								<div class="modal-content">
+								  <div class="modal-header">
+									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+									<h4 class="modal-title" id="myModalLabel">RFQ Edit</h4>
+								  </div>
+								  <div class="modal-body">
+								
+									<div class="form-group">
+										<label>Unit Price Per Unit:									
+										</label>
+										<input type="text" class="form-control" value="1.00">
+									</div>
+									<div class="form-group">
+										<label>Packing Per Unit:</label>
+										<div class="form-group form-group-select2">
+											<!--<label>use , commas for, multiple selection(s)</label>-->
+											<div class="form-group form-group-select2 modalSelect">
+												<select style="width:300px" id="sel1Multi" multiple>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+												</select>                                                 
+											</div>
+										</div>       
+									</div>
+									<div class="form-group">
+										<label>Packing Per Unit:									
+										</label>
+										<input type="text" class="form-control" value="1.00">
+									</div>
+									<div class="form-group">
+										<label>Freight Type</label>
+										<div class="form-group form-group-select2">
+											<!--<label>use , commas for, multiple selection(s)</label>-->
+											<div class="form-group form-group-select2 modalSelect">
+												<select style="width:300px" id="sel2Multi" multiple>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+													<option value="0.00">0.00</option>
+												</select>                                                 
+											</div>
+										</div>       
+									</div>
+									<div class="form-group">
+										<label>Freight Per Unit:</label>
+										<input type="text" class="form-control" value="1.00">
+									</div>
+									<div class="form-group">
+										<label>Total :</label>
+										<span>6000</span>
+									</div>
+									<div class="form-group">
+										<label>Remarks:									
+										</label>
+										<input type="text" class="form-control" value="ABCD">
+									</div>
+							
+								  </div>
+								  <div class="modal-footer">
+									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+									<button type="submit" class="btn btn-primary">Save changes</button>
+								  </div>
+								</div>
+							  </div>
+							</div>							
+							</form>
+						   </div>
+                        </div>
+                     </div>
+                  </div>
+                  <footer id="footer-bar" class="row">
+                     <p id="footer-copyright" class="col-xs-12">
+                        &copy; 2015&nbsp;&nbsp;|&nbsp;&nbsp;all right reserved&nbsp;&nbsp;|&nbsp;&nbsp;sbhpp
+                     </p>
+                  </footer>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="js/jquery.js"></script>
+
+      <script src="js/bootstrap.js"></script>
+      <script src="js/moment.min.js"></script>
+      <script src="js/daterangepicker.js"></script>
+      <script src="js/scripts.js"></script>
+      <script src="js/demo-skin-changer.js"></script>
+      <script src="js/demo.js"></script>
+      <script src="js/jquery.nanoscroller.min.js"></script>
+      <script src="js/jquery.dataTables.min.js"></script>
+      <script src="js/select2.min.js"></script>
+
+
+
+
+      <script type="text/javascript">
+
+ 
+$(document).ready(function() {
+			$("#table1").dataTable({"bPaginate": false});
+			$('#reportrange').daterangepicker({
+         		startDate: moment().subtract('days', 29),
+         		endDate: moment(),
+         		minDate: '01/01/1990',
+         		maxDate: '12/31/2022',
+         		dateLimit: { days: 60 },
+         		showDropdowns: true,
+         		showWeekNumbers: true,
+         		timePicker: false,
+         		timePickerIncrement: 1,
+         		timePicker12Hour: true,
+         		ranges: {
+         			'Today': [moment(), moment()],
+         			'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+         			'Last 7 Days': [moment().subtract('days', 6), moment()],
+         			'Last 30 Days': [moment().subtract('days', 29), moment()],
+         			'This Month': [moment().startOf('month'), moment().endOf('month')],
+         			'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+         		},
+         		opens: 'left',
+         		buttonClasses: ['btn btn-default'],
+         		applyClass: 'btn-small btn-primary',
+         		cancelClass: 'btn-small',
+         		format: 'MM/DD/YYYY',
+         		separator: ' to ',
+         		locale: {
+         			applyLabel: 'Submit',
+         			fromLabel: 'From',
+         			toLabel: 'To',
+         			customRangeLabel: 'Custom Range',
+         			daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+         			monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+         			firstDay: 1
+         		}
+         	 },
+         	 function(start, end) {
+         	  console.log("Callback has been called!");
+         	  $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+         	 }
+           );
+		   $('#reportrange1').daterangepicker({
+         		startDate: moment().subtract('days', 29),
+         		endDate: moment(),
+         		minDate: '01/01/1990',
+         		maxDate: '12/31/2022',
+         		dateLimit: { days: 60 },
+         		showDropdowns: true,
+         		showWeekNumbers: true,
+         		timePicker: false,
+         		timePickerIncrement: 1,
+         		timePicker12Hour: true,
+         		ranges: {
+         			'Today': [moment(), moment()],
+         			'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+         			'Last 7 Days': [moment().subtract('days', 6), moment()],
+         			'Last 30 Days': [moment().subtract('days', 29), moment()],
+         			'This Month': [moment().startOf('month'), moment().endOf('month')],
+         			'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+         		},
+         		opens: 'left',
+         		buttonClasses: ['btn btn-default'],
+         		applyClass: 'btn-small btn-primary',
+         		cancelClass: 'btn-small',
+         		format: 'MM/DD/YYYY',
+         		separator: ' to ',
+         		locale: {
+         			applyLabel: 'Submit',
+         			fromLabel: 'From',
+         			toLabel: 'To',
+         			customRangeLabel: 'Custom Range',
+         			daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+         			monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+         			firstDay: 1
+         		}
+         	 },
+         	 function(start, end) {
+         	  console.log("Callback has been called!");
+			  $('#reportrange1 span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+         	 }
+           );
+           //Set the initial state of the picker label
+		   $('#reportrange1 span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+			
+			$('#sel1Multi').select2({
+         		placeholder: 'Select a Packing Type',
+         		allowClear: true
+         	});
+         	$('#sel2Multi').select2({
+         		placeholder: 'Select a Freight Type',
          		allowClear: true
          	});
          	$('#sel3Multi').select2({
