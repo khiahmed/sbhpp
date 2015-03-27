@@ -26,10 +26,36 @@
 	body{
 	background:none !important;
 	}
-	#login-box-inner{
-	margin-top:100px !important;
-	}
 	</style>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<!--<script>
+		var global={};
+		global["windowHeight"]=0;
+		
+		$(document).ready(function(){
+			initializeBanner();
+			$(window).resize(whenResized);
+		});
+		var whenResized = function(){
+				initializeBanner();
+			}
+		var initializeBanner = function(){
+				getSettingValues();	
+				applySettingValues();
+			}
+		var getSettingValues = function(){
+				global.windowHeight = $(window).height();
+				
+			}
+		
+		var applySettingValues = function(){
+				var $targetBox = $('.centerMe');
+				var targetBoxHeight = $targetBox.height(); 
+				var targetBoxMarginTop =(global.windowHeight - targetBoxHeight)/2; 
+				$targetBox.css('margin-top',targetBoxMarginTop + 'px');
+			}
+	</script>-->
 </head>
 
 <body id="login-page-full"  class="pace-done theme-white">
@@ -37,7 +63,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12">
-                    <div id="login-box">
+                    <div id="login-box" class="centerMe">
                         <div id="login-box-holder">
                             <div class="row">
                                 <div class="col-xs-12">
