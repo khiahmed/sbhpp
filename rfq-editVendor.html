@@ -322,7 +322,23 @@
 							  
                            </header>
                            <div class="main-box-body clearfix">
-                              <div class="table-responsive">								 
+						    <div class="row">
+								<div class="col-sm-12">
+									<button class="btn btn-default">Reset</button>
+								</div>
+							 </div>
+                              <div class="table-responsive">	
+								 <table class="table table-bordered table-striped table-condensed">
+										<tr class="success">
+											<th>RFQ No#<div style="color:#AB9D9D">6000004259</div></th>
+											<th>Start Date<div style="color:#AB9D9D">23/10/2014</div></th>
+											<th>End Date<div style="color:#AB9D9D">23/10/2014</div></th>
+											<th>Deadline Date<div style="color:#AB9D9D">23/10/2014</div></th>
+											<th>Payment Term<div style="color:#AB9D9D">P001-Payment Within 15 Days</div></th>
+											<th>Icon Term<div style="color:#AB9D9D">1001-Cost and Fright</div></th>
+											<th>Status<div style="color:#AB9D9D">Open</div></th>
+										</tr>
+									</table>
 								 <table class="table table-bordered table-striped table-condensed" id="table1">
                                     <thead>
                                        <tr class="success">
@@ -332,17 +348,15 @@
                                           <th >Forecating volume</th>
                                           <th >Unit of Measurment</th>
 										   <th >Currency</th>
-										  <th nowrap >Unit Price per Unit</th>
+										  <th >Unit Price per Unit</th>
 										  <th>Packing Type</th>
 										  <th >Packing Per Unit</th>
 										  <th >Freight Type</th>
 										  <th >Freight Per Unit</th>
 										   <th >Total</th>
-										  <th >Remarks</th>
-										 
+										  <th >Remarks</th> 
 										  <th >Actions</th>
-										  
-										  
+										  <th>No Quote</th>
                                        </tr>
                                     </thead>
 									<tbody>
@@ -361,7 +375,7 @@
 											<td>6,880</td>
 											<td>ABCD</td>
 											<td><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
-
+											<td> <div class="checkbox"> <input type="checkbox"/></div> </td>
 										</tr>
 										<tr>
 											<td>1000</td>
@@ -378,11 +392,15 @@
 											<td>6,880</td>
 											<td>ABCD</td>
 											<td><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
-
+											<td> <div class="checkbox"> <input type="checkbox"/></div> </td>
 										</tr>
 										</tbody>
                                  </table>
                               </div>
+							   <div class="clearfix">
+									<p id="loadmore" align="center">&nbsp;</p>
+									<button class="btn btn-default col-lg-offset-4 col-md-offset-4 " id="btnload">Load More</button>
+								</div>
                            </div>
                         </div>
                      </div>
@@ -401,63 +419,83 @@
 									<h4 class="modal-title" id="myModalLabel">RFQ Edit</h4>
 								  </div>
 								  <div class="modal-body">
-								
-									<div class="form-group">
-										<label>Unit Price Per Unit:									
-										</label>
-										<input type="text" class="form-control" value="1.00">
-									</div>
-									<div class="form-group">
-										<label>Packing Per Unit:</label>
-										<div class="form-group form-group-select2">
-											<!--<label>use , commas for, multiple selection(s)</label>-->
-											<div class="form-group form-group-select2 modalSelect">
-												<select style="width:300px" id="sel1Multi" multiple>
-													<option value="0.00">0.00</option>
-													<option value="0.00">0.00</option>
-													<option value="0.00">0.00</option>
-													<option value="0.00">0.00</option>
-													<option value="0.00">0.00</option>
-													<option value="0.00">0.00</option>
-												</select>                                                 
+									<div class="row">
+											<div class="col-sm-5">
+												<div class="form-group" style="width:200px;">
+													<label>Unit Price Per Unit:									
+													</label>
+													<input type="text" class="form-control" value="1.00">
+												</div>
 											</div>
-										</div>       
-									</div>
-									<div class="form-group">
-										<label>Packing Per Unit:									
-										</label>
-										<input type="text" class="form-control" value="1.00">
-									</div>
-									<div class="form-group">
-										<label>Freight Type</label>
-										<div class="form-group form-group-select2">
-											<!--<label>use , commas for, multiple selection(s)</label>-->
-											<div class="form-group form-group-select2 modalSelect">
-												<select style="width:300px" id="sel2Multi" multiple>
-													<option value="0.00">0.00</option>
-													<option value="0.00">0.00</option>
-													<option value="0.00">0.00</option>
-													<option value="0.00">0.00</option>
-													<option value="0.00">0.00</option>
-													<option value="0.00">0.00</option>
-												</select>                                                 
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label>Packing Per Unit:</label>
+												<div class="form-group form-group-select2">
+													<!--<label>use , commas for, multiple selection(s)</label>-->
+													<div class="form-group form-group-select2 modalSelect">
+														<select style="width:300px" id="sel1Multi" multiple>
+															<option value="0.00">0.00</option>
+															<option value="0.00">0.00</option>
+															<option value="0.00">0.00</option>
+															<option value="0.00">0.00</option>
+															<option value="0.00">0.00</option>
+															<option value="0.00">0.00</option>
+														</select>                                                 
+													</div>
+												</div>       
 											</div>
-										</div>       
+										</div>
 									</div>
-									<div class="form-group">
-										<label>Freight Per Unit:</label>
-										<input type="text" class="form-control" value="1.00">
+									<div class="row">
+										<div class="col-sm-5">
+										<div class="form-group">
+											<label>Packing Per Unit:									
+											</label>
+											<input type="text" class="form-control" style="width:200px;" value="1.00">
+										</div>
+										</div>
+										<div class="col-sm-3">
+											<div class="form-group">
+												<label>Freight Type</label>
+												<div class="form-group form-group-select2">
+													<!--<label>use , commas for, multiple selection(s)</label>-->
+													<div class="form-group form-group-select2 modalSelect">
+														<select style="width:300px" id="sel2Multi" multiple>
+															<option value="0.00">0.00</option>
+															<option value="0.00">0.00</option>
+															<option value="0.00">0.00</option>
+															<option value="0.00">0.00</option>
+															<option value="0.00">0.00</option>
+															<option value="0.00">0.00</option>
+														</select>                                                 
+													</div>
+												</div>       
+											</div>
+										</div>
 									</div>
-									<div class="form-group">
-										<label>Total :</label>
-										<span>6000</span>
-									</div>
-									<div class="form-group">
-										<label>Remarks:									
-										</label>
-										<input type="text" class="form-control" value="ABCD">
-									</div>
-							
+									<div class="row">
+										<div class="col-sm-5">
+											<div class="form-group">
+												<label>Freight Per Unit:</label>
+												<input type="text" class="form-control" style="width:200px;" value="1.00">
+											</div>
+										</div>
+										
+										<div class="col-sm-5">
+											<div class="form-group">
+												<label>Remarks:									
+												</label>
+												<input type="text" class="form-control" style="width:200px;" value="ABCD">
+											</div>
+										</div>
+										 <div class="col-sm-1">
+											<div class="form-group">
+												<label>Total </label>
+												<span>6000</span>
+											</div>
+										</div>
+								  </div>
+								 
 								  </div>
 								  <div class="modal-footer">
 									<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

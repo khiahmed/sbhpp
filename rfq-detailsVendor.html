@@ -321,8 +321,29 @@
                            </a>  RFQ Status </h2>
 							  
                            </header>
+						   
                            <div class="main-box-body clearfix">
+						    <div class="row">
+								<div class="col-sm-1">
+									<button class="btn btn-default">Reset</button>
+								</div>
+								<div class="col-sm-5">
+									<label>Download as Excel</label>
+									<img src="img/images.jpg"/>
+								</div>
+							 </div>
                               <div class="table-responsive">								 
+									<table class="table table-bordered table-striped table-condensed">
+										<tr class="success">
+											<th>RFQ No#<div style="color:#AB9D9D">6000004259</div></th>
+											<th>Start Date<div style="color:#AB9D9D">23/10/2014</div></th>
+											<th>End Date<div style="color:#AB9D9D">23/10/2014</div></th>
+											<th>Deadline Date<div style="color:#AB9D9D">23/10/2014</div></th>
+											<th>Payment Term<div style="color:#AB9D9D">P001-Payment Within 15 Days</div></th>
+											<th>Icon Term<div style="color:#AB9D9D">1001-Cost and Fright</div></th>
+											<th>Status<div style="color:#AB9D9D">Open</div></th>
+										</tr>
+									</table>
 								 <table class="table table-bordered table-striped table-condensed" id="table1">
                                     <thead>
                                        <tr class="success">
@@ -332,13 +353,14 @@
                                           <th >Forecating volume</th>
                                           <th >Unit of Measurment</th>
 										   <th >Currency</th>
-										  <th nowrap >Unit Price per Unit</th>
+										  <th>Unit Price per Unit</th>
 										  <th>Packing Type</th>
 										  <th >Packing Per Unit</th>
 										  <th >Freight Type</th>
 										  <th >Freight Per Unit</th>
 										   <th >Total</th>
 										  <th >Remarks</th>
+										  <th>No Quote</th>
                                        </tr>
                                     </thead>
 									<tbody>
@@ -356,7 +378,7 @@
 											<td>0.00</td>
 											<td>6,880</td>
 											<td>ABCD</td>
-											
+											<td> <div class="checkbox"> <input type="checkbox"/></div> </td>
 
 										</tr>
 										<tr>
@@ -373,12 +395,16 @@
 											<td>0.00</td>
 											<td>6,880</td>
 											<td>ABCD</td>
-											
+											<td> <div class="checkbox"> <input type="checkbox"/></div> </td>
 
 										</tr>
 										</tbody>
                                  </table>
                               </div>
+							  <div class="clearfix">
+										<p id="loadmore" align="center">&nbsp;</p>
+										<button class="btn btn-default col-lg-offset-4 col-md-offset-4 " id="btnload">Load More</button>
+									</div>
                            </div>
                         </div>
                      </div>
