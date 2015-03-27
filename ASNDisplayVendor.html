@@ -477,7 +477,7 @@
 										  <th><a>Tracking No 1</a></th>
 										  <th><a>Carrier 2</a></th>
 										  <th><a>Tracking No 2</a></th>
-										  <th></th>
+										  <th><a>Actions</a></th>
                                        </tr>
                                     </thead>
                                     <tbody>
@@ -501,12 +501,11 @@
 												<span style="display:none"><input type='text' value='100001456' size='12'></span>
 											</td>
 											<td>
-												<a>
-													<span class="glyphicon glyphicon-paperclip"></span>
-												</a>
-												<span class='glyphicon glyphicon-edit' style="display:inline;"></span>
+												<a data-toggle="modal" data-target="#myModal1" href="#" ><i class="glyphicon glyphicon-paperclip"></i></a> 		
+												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a>
+												
 												<span style="display:none;"><button>Save</button></span>
-												<span style="display:none"><input id="upfile" type="file" value="upload" multiple></span>
+												
 											</td>
 										</tr>
 										<tr>
@@ -529,16 +528,79 @@
 												<span style="display:none"><input type='text' value='100001456' size='12'></span>
 											</td>
 											<td>
-												<a>
-													<span class="glyphicon glyphicon-paperclip"></span>
-												</a>
-												<span class='glyphicon glyphicon-edit' style="display:inline;"></span>
+												<a data-toggle="modal" data-target="#myModal1" href="#" ><i class="glyphicon glyphicon-paperclip"></i></a> 		
+												<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a>
 												<span style="display:none;"><button>Save</button></span>
-												<span style="display:none"><input id="upfile" type="file" value="upload" multiple></span>
 											</td>
 										</tr>
                                     </tbody>
                                  </table>
+									<div class="clearfix">
+										<p id="loadmore" align="center">&nbsp;</p>
+										<button class="btn btn-default col-lg-offset-4 col-md-offset-4 " id="btnload">Load More</button>
+									</div>
+									
+									<div class="row">
+									 <div class="col-lg-12">
+										<div class="row">
+										   <div class="col-lg-12">
+											<!-- -->     
+											<form method="post">
+											<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+											  <div class="modal-dialog">
+												<div class="modal-content">
+												  <div class="modal-header">
+													<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+													<h4 class="modal-title" id="myModalLabel">ASN Edit</h4>
+												  </div>
+												  <div class="modal-body">
+													<div class="row">
+														<div class="col-sm-5">
+															<div class="form-group" style="width:200px;">
+																<label>Carrier 2:		
+																</label>
+																<input type="text" class="form-control" value="1.00">
+															</div>
+														</div>
+														<div class="col-sm-3">
+															<div class="form-group" style="width:200px;">
+																<label>Tracking No 2:										
+																</label>
+																<input type="text" class="form-control" value="1.00">
+															</div>
+														</div>
+													</div>
+												  </div>
+												  <div class="modal-footer">
+													<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+													<button type="submit" class="btn btn-primary">Save changes</button>
+												  </div>
+												</div>
+											  </div>
+											</div>							
+											</form>
+										   </div>
+										</div>
+									 </div>
+								  </div>
+								  
+								  <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									  <div class="modal-dialog">
+										<div class="modal-content">
+
+										  <div class="modal-body">
+											<legend>Attach Multiple Files <small class="alert-info">Use CTRL & select Multiple Files </small></legend>
+											<label>Select files</label>
+											<input type="file" multiple name="file1">
+										  </div>
+										  <div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button type="button" class="btn btn-primary">Save changes</button>
+										  </div>
+										</div>
+									  </div>
+								</div>
+								  
                               </div>
                             </div>
                         </div>
