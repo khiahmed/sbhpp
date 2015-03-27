@@ -322,35 +322,29 @@
                                             <div class="modal fade" id="status-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
-                                                        <div class="modal-header">
+                                                        <!--<div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                             <h4 class="modal-title" id="myModalLabel">RFQ Status Filter</h4>
-                                                        </div>
+                                                        </div>-->
                                                         <div class="modal-body">
-                                                            <div class="checkbox-nice">
-                                                                <input type="checkbox" id="checkbox-1" checked="checked"/>
-                                                                <label for="checkbox-1">
-                                                                    Show All
-                                                                </label>
-                                                            </div>
-                                                            <div class="checkbox-nice">
-                                                                <input type="checkbox" id="checkbox-2" />
-                                                                <label for="checkbox-2">
-                                                                    Open
-                                                                </label>
-                                                            </div>
-                                                            <div class="checkbox-nice">
-                                                                <input type="checkbox" id="checkbox-3" />
-                                                                <label for="checkbox-3">
-                                                                    Closed
-                                                                </label>
-                                                            </div>
-                                                            <div class="checkbox-nice">
-                                                                <input type="checkbox" id="checkbox-4" />
-                                                                <label for="checkbox-4">
-                                                                    Awaiting for approval
-                                                                </label>
-                                                            </div>
+                                                            <div class="radio">
+															<input type="radio" id="checkbox-1" checked="checked" name="status"/>
+															<label for="checkbox-1">
+															Show All
+															</label>
+														 </div>
+														 <div class="radio">
+															<input type="radio" id="checkbox-2" name="status"/>
+															<label for="checkbox-2">
+															Open
+															</label>
+														 </div>
+														 <div class="radio">
+															<input type="radio" id="checkbox-3" name="status"/>
+															<label for="checkbox-3">
+															Closed
+															</label>
+														 </div>
                                                         </div>
                                                         <div class="modal-footer">
                                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -362,10 +356,10 @@
                                             <div class="modal fade" id="date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
-                                                        <div class="modal-header">
+                                                        <!--<div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                             <h4 class="modal-title" id="myModalLabel">RFQ Due Date Filter</h4>
-                                                        </div>
+                                                        </div>-->
                                                         <div class="modal-body">
                                                             <!--	<div class="input-group">
                                                                <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
@@ -386,10 +380,10 @@
                                             <div class="modal fade" id="rfqNo-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
-                                                        <div class="modal-header">
+                                                        <!--<div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                             <h4 class="modal-title" id="myModalLabel">RFQ No Filter</h4>
-                                                        </div>
+                                                        </div>-->
                                                          <div class="modal-body">
 															<div class="form-group form-group-select2">
 																<label>use , commas for, multiple selection(s)</label>
@@ -413,41 +407,13 @@
                                                 </div>
                                             </div>
 
-                                            <div class="modal fade" id="rfqDescription-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                                <div class="modal-dialog">
-                                                    <div class="modal-content">
-                                                        <div class="modal-header">
-                                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                                            <h4 class="modal-title" id="myModalLabel">RFQ Description Filter</h4>
-                                                        </div>
-                                                        <div class="modal-body">
-                                                            <div class="form-group form-group-select2">
-                                                                <label>use , commas for, multiple selection(s)</label>
-                                                                <div class="form-group form-group-select2">
-                                                                    <select style="width:300px" id="sel2Multi" multiple>
-                                                                        <option value="2">All description here</option>
-                                                                        <option value="2">All description here</option>
-                                                                        <option value="2">All description here</option>
-                                                                        <option value="2">All description here</option>
-                                                                        <option value="2">All description here</option>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                        <div class="modal-footer">
-                                                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                                            <button type="button" class="btn btn-primary">Save changes</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
                                             <div class="modal fade" id="rfqDate-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                                 <div class="modal-dialog">
                                                     <div class="modal-content">
-                                                        <div class="modal-header">
+                                                        <!--<div class="modal-header">
                                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
                                                             <h4 class="modal-title" id="myModalLabel">RFQ Due Date Filter</h4>
-                                                        </div>
+                                                        </div>-->
                                                         <div class="modal-body">
                                                             <div class="daterange-filter" id="reportrange1">
                                                                 <i class="fa fa-calendar"></i>&nbsp;
@@ -476,42 +442,7 @@
                                                                 <div class="main-box-body clearfix">
                                                                     <div id="config-tool" class="">
                                                                         <div id="config-tool-options">
-                                                                            <h4>Layout Options</h4>
-                                                                            <ul>
-                                                                                <li>
-                                                                                    <div class="checkbox-nice">
-                                                                                        <input type="checkbox" id="config-fixed-header" />
-                                                                                        <label for="config-fixed-header">
-                                                                                            Fixed Header
-                                                                                        </label>
-                                                                                    </div>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <div class="checkbox-nice">
-                                                                                        <input type="checkbox" id="config-fixed-sidebar" />
-                                                                                        <label for="config-fixed-sidebar">
-                                                                                            Fixed Left Menu
-                                                                                        </label>
-                                                                                    </div>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <div class="checkbox-nice">
-                                                                                        <input type="checkbox" id="config-fixed-footer" />
-                                                                                        <label for="config-fixed-footer">
-                                                                                            Fixed Footer
-                                                                                        </label>
-                                                                                    </div>
-                                                                                </li>
-                                                                                <li>
-                                                                                    <div class="checkbox-nice">
-                                                                                        <input type="checkbox" id="config-boxed-layout" />
-                                                                                        <label for="config-boxed-layout">
-                                                                                            Boxed Layout
-                                                                                        </label>
-                                                                                    </div>
-                                                                                </li>
-                                                                            </ul>
-                                                                            <br/>
+                                                                          
                                                                             <h4>Skin Color</h4>
                                                                             <ul id="skin-colors" class="clearfix">
                                                                                 <li>
@@ -561,14 +492,19 @@
                                                 </div>
                                             </div>
 
-
+											<div class="row">
+											<div class="col-sm-12">
+												<button class="btn btn-default">Reset</button>
+											</div>
+										 </div>
+										 
                                             <table class="table table-bordered table-striped table-condensed" id="table1">
                                                 <thead>
                                                     <tr class="success">
                                                         <th><a>Status</a> <button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-status" data-toggle="modal" data-target="#status-modal"><i class="fa  fa-magic"></i></button></th>
                                                         <th><a>Due Date</a> <button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-date" data-toggle="modal" data-target="#date-modal"><i class="fa  fa-magic"></i></button> </th>
                                                         <th><a>RFQ No</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-rfqNo" data-toggle="modal" data-target="#rfqNo-modal"><i class="fa  fa-magic"></i></button> </th>
-                                                        <th><a>RFQ Description</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-rfqDescription" data-toggle="modal" data-target="#rfqDescription-modal"><i class="fa  fa-magic"></i></button> </th>
+                                                        <th><a>RFQ Description</a></th>
                                                         <th><a>RFQ Date</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-rfqDate" data-toggle="modal" data-target="#rfqDate-modal"><i class="fa  fa-magic"></i></button> </th>
                                                     </tr>
                                                 </thead>
@@ -576,7 +512,7 @@
                                                     <tr>
                                                         <td>
                                                             <div>
-                                                                <span class="dot1"></span>Open </span>
+                                                                <span class="dot1"></span>Open</span>
                                                                 <div>
                                                                     </td>
                                                                     <td>06/02/15</td>
@@ -621,6 +557,10 @@
                                                                     </tr>
                                                                     </tbody>
                                                                     </table>
+																	 <div class="clearfix">
+																		<p id="loadmore" align="center">&nbsp;</p>
+																		<button class="btn btn-default col-lg-offset-4 col-md-offset-4 " id="btnload">Load More</button>
+																	</div>
                                                                 </div>
                                                             </div>
                                                             </div>
