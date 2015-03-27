@@ -162,6 +162,7 @@ var applySettingValues = function(){
 		$targetBox.css('margin-top',targetBoxMarginTop + 'px');
 		$targetBox.fadeIn(2000);
 	}
+<<<<<<< HEAD
 //Center me END
 
 //Accordion icon change
@@ -176,3 +177,7 @@ $(document).ready(function(){
 					});	
 });
 //Accordion icon change END
+=======
+	
+//Center me End
+>>>>>>> 72f4229abdc4bd4887192576472a9423bf4186bc

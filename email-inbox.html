@@ -511,6 +511,11 @@
                             </div>
                         </li>
                     </ul>
+                    <div class="clearfix">
+                    <p id="loadmore" align="center">&nbsp;</p>
+                    <button class="btn btn-default col-lg-offset-4 col-md-offset-4 " id="btnload">Load More</button>
+                    </div>
+                    <div ></div>
                 </div>
                 <div class="nano-pane">
                     <div class="nano-slider" style="height: 134px; transform: translate(0px, 0px);"></div>
@@ -561,6 +566,9 @@
 	   
 <script>
 	$(document).ready(function() {
+		$("#btnload").click(function(e) {
+            $("#loadmore").html('<img src="http://www.angelgioielli.com/catalog/view/javascript/jquery/pitstop/pitstop/res/wait_1.gif">');
+        });
 		$('#email-list li > .star > a').on('click', function() {
 			$(this).toggleClass('starred');
 		});
