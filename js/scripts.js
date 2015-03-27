@@ -162,4 +162,5 @@ var applySettingValues = function(){
 		$targetBox.css('margin-top',targetBoxMarginTop + 'px');
 		$targetBox.fadeIn(2000);
 	}
+	
 //Center me End
