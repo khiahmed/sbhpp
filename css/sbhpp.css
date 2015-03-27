@@ -101,7 +101,7 @@ padding-top:25px !important;
 #login-full-wrapper {
 
 /*	background: url("../img/map2_with_bg.png") no-repeat scroll center center / cover rgba(0, 0, 0, 0) !important; */
-	background: url("../img/map2_with_bg.png") repeat-x scroll center 120px !important;
+	background: url("../img/map2_with_bg.png") repeat-x scroll center !important;
     height: 100%;
     position: absolute;
     width: 100%;
@@ -158,4 +158,7 @@ display:;
     border-bottom: 2px solid #e7ebee;
     font-size: 0.875em;
     text-transform: capitalize !important;
+}
+.centerMe{
+	display:none;
 }

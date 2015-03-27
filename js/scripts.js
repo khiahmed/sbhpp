@@ -134,3 +134,32 @@ document.write('<script type="text/javascript" src="js/jquery.dataTables.js"></s
 document.write('<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>');
 
 })(jQuery, 'smartresize');
+
+//Center me 
+var global={};
+global["windowHeight"]=0;
+
+$(document).ready(function(){
+	initializeBanner();
+	$(window).resize(whenResized);
+});
+var whenResized = function(){
+		initializeBanner();
+	}
+var initializeBanner = function(){
+		getSettingValues();	
+		applySettingValues();
+	}
+var getSettingValues = function(){
+		global.windowHeight = $(window).height();
+		
+	}
+
+var applySettingValues = function(){
+		var $targetBox = $('.centerMe');
+		var targetBoxHeight = $targetBox.height(); 
+		var targetBoxMarginTop =(global.windowHeight - targetBoxHeight)/2; 
+		$targetBox.css('margin-top',targetBoxMarginTop + 'px');
+		$targetBox.fadeIn(2000);
+	}
+//Center me End
