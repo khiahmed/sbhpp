@@ -424,26 +424,26 @@
                               
                              
 							 <div class="filter">
-							  <div class="row">
-									<div class="col-sm-4">
-										<h5 class="h4_bold">Plant Code:</h5>
-										<div class="form-group form-group-select2">
+							 <div class="row">
+								<div class="col-lg-1 col-md-2 col-sm-2 col-xs-2">
+									<h5 class="h4_bold">Plant:</h5></div>
+								<div class="col-lg-4">
+									<div class="form-group form-group-select2">
 										<!--<label>use , commas for, multiple selection(s)</label>-->
 										<div class="form-group form-group-select2 modalSelect">
 											<select style="width:300px" id="selfilter1Multi" multiple>
-											<option selected>54545455</option>
-											<option>54545456</option>
-											<option>54545457</option>
-											<option>54545458</option>
-										</select>                                                 
-													</div>
-												</div>   
+												<option selected>54545455</option>
+												<option>54545456</option>
+												<option>54545457</option>
+												<option>54545458</option>
+											</select>                                                 
+										</div>
 									</div>
-							
-							 <div class="col-sm-3 space">
-									<h5 class="h4_bold">Material Code:</h5>
-									<div class="form-group form-group-select2">
-									<!--<label>use , commas for, multiple selection(s)</label>-->
+								</div>
+							 	
+								<div class="col-lg-1 col-md-2 col-sm-2 col-xs-2">
+									<h5 class="h4_bold">Material:</h5></div>
+								<div class="col-lg-4">
 									<div class="form-group form-group-select2 modalSelect">
 										<select style="width:300px" id="selfilter2Multi" multiple>
 										<option selected>54545455</option>
@@ -452,12 +452,15 @@
 										<option>54545458</option>
 										</select>                                                 
 										</div>
-									</div>   
+									</div>
+								</div>
 							 </div>
-							 </div>
+			
 							 <div class="row button-top">
-								<button class="btn btn-primary"><i class=" fa fa-list"></i> Get List</button>
-							    <button class="btn btn-default">Reset</button>
+								<div class="col-xs-12">
+									<button class="btn btn-primary"><i class=" fa fa-list"></i> Get List</button>
+									<button class="btn btn-default">Reset</button>
+								</div>
 							 </div>
 							 </div>
 							 
@@ -483,13 +486,13 @@
                                                       <th><a>Status</a></th>
                                                       <th><a>Vendor Remarks</a></th>
                                                       <th><a>Buyer Remarks</a></th>
-                                                      <th></th>
+                                                      <th style="display:none"></th>
                                                    </tr>
                                                 </thead>
                                                 <tbody>
                                                    <tr>
                                                       <td>600002458</td>
-                                                      <td>10-02-15</td>
+                                                      <td>02-10-15</td>
                                                       <td>
                                                          <select class='form-control sselect'>
 															<option selected>Clarification</option>
@@ -504,7 +507,7 @@
                                                    </tr>
                                                    <tr>
                                                       <td>600002458</td>
-                                                      <td>10-02-15</td>
+                                                      <td>02-10-15</td>
                                                       <td>
                                                          <select class='form-control sselect'>
 															<option selected>Clarification</option>
@@ -517,7 +520,7 @@
                                                    </tr>
                                                    <tr>
                                                       <td>600002458</td>
-                                                      <td>10-02-15</td>
+                                                      <td>02-10-15</td>
                                                       <td>
                                                          <select class='form-control sselect'>
 															<option selected>Clarification</option>
@@ -530,7 +533,7 @@
                                                    </tr>
                                                    <tr>
                                                       <td>600002458</td>
-                                                      <td>10-02-15</td>
+                                                      <td>02-10-15</td>
                                                       <td>
                                                          <select class='form-control sselect'>
 															<option selected>Clarification</option>
@@ -543,7 +546,7 @@
                                                    </tr>
                                                    <tr>
                                                       <td>600002458</td>
-                                                      <td>10-02-15</td>
+                                                      <td>02-10-15</td>
                                                       <td>
                                                          <select class='form-control sselect'>
 															<option selected>Clarification</option>
@@ -556,7 +559,10 @@
                                                    </tr>
                                                 </tbody>
                                              </table>
+											 <button id="btnload" class="btn btn-default pull-left ">Load More</button>
                                           </div>
+										  
+
                                        </div>
                                     </div>
                                  </div>
@@ -580,52 +586,54 @@
                                                    <th ><a>Vendor Remarks</a></th>
 												   <th ><a>Buyer Remarks</a></th>                                        
                                                    <th ><a>Acknowledge Date</a></th>
-                                                   <th ></th>
+                                                   <th style="display:none"></th>
                                                 </tr>
                                              </thead>
                                              <tbody>
                                                 <tr>
                                                    <td>600002458</td>
-                                                   <td>10-02-15</td>
+                                                   <td>02-10-15</td>
                                                    <td>ABC Comment</td>
                                                    <td>ABC Comment</td>
-                                                   <td>10-02-15</td>
+                                                   <td>02-10-15</td>
                                                    <td><input type="button" class="btn btn-default btn-black" value="Create ASN" /></td>
                                                 </tr>
                                                 <tr>
                                                    <td>600002458</td>
-                                                   <td>10-02-15</td>
+                                                   <td>02-10-15</td>
                                                    <td>ABC Comment</td>
                                                    <td>ABC Comment</td>
-                                                   <td>10-02-15</td>
+                                                   <td>02-10-15</td>
                                                    <td><input type="button" class="btn btn-default btn-black" value="Create ASN" /></td>
                                                 </tr>
                                                 <tr>
                                                    <td>600002458</td>
-                                                   <td>10-02-15</td>
+                                                   <td>02-10-15</td>
                                                    <td>ABC Comment</td>
                                                    <td>ABC Comment</td>
-                                                   <td>10-02-15</td>
+                                                   <td>02-10-15</td>
                                                    <td><input type="button" class="btn btn-default btn-black" value="Create ASN" /></td>
                                                 </tr>
                                                 <tr>
                                                    <td>600002458</td>
-                                                   <td>10-02-15</td>
+                                                   <td>02-10-15</td>
                                                    <td>ABC Comment</td>
                                                    <td>ABC Comment</td>
-                                                   <td>10-02-15</td>
+                                                   <td>02-10-15</td>
                                                    <td><input type="button" class="btn btn-default btn-black" value="Create ASN" /></td>
                                                 </tr>
                                                 <tr>
                                                    <td>600002458</td>
-                                                   <td>10-02-15</td>
+                                                   <td>02-10-15</td>
                                                    <td>ABC Comment</td>
                                                    <td>ABC Comment</td>
-                                                   <td>10-02-15</td>
+                                                   <td>02-10-15</td>
                                                    <td><input type="button" class="btn btn-default btn-black" value="Create ASN" /></td>
                                                 </tr>
                                              </tbody>
                                           </table>
+										  
+											 <button id="btnload" class="btn btn-default pull-left ">Load More</button>
 										  </div>
                                        </div>
                                     </div>
