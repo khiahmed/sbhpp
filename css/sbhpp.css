@@ -154,3 +154,7 @@ display:;
 .centerMe{
 	display:none;
 }
+.table-text-field{
+	width: 100%;
+	height: 30px;
+}
