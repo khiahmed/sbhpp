@@ -47,9 +47,9 @@ box-shadow: inset 0px 0px 22px 0px #ABABAB;
 }
 .navbar-collapse.collapse {
     display: block !important;
-    height: auto !important;
+    height: auto ;
     padding-bottom: 0;
-    overflow: visible !important;
+    overflow: visible ;
 }
 .navbar-nav {
     float: left !important;
