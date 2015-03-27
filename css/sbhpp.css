@@ -45,12 +45,7 @@ box-shadow: inset 0px 0px 22px 0px #ABABAB;
     box-shadow: none;
     width: auto;
 }
-.navbar-collapse.collapse {
-    display: block !important;
-    height: auto ;
-    padding-bottom: 0;
-    overflow: visible ;
-}
+
 .navbar-nav {
     float: left !important;
     margin: 0;
@@ -137,11 +132,8 @@ padding:0 !important;
 
 .h4_bold{
 	font-weight: bold;
-}#email-list li {
-
-    padding-left: 50px !important;
-
 }
+
 
 .intr{
 display:;
