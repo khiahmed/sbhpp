@@ -162,4 +162,17 @@ var applySettingValues = function(){
 		$targetBox.css('margin-top',targetBoxMarginTop + 'px');
 		$targetBox.fadeIn(2000);
 	}
-//Center me End
+//Center me END
+
+//Accordion icon change
+$(document).ready(function(){
+	var $accordion = $(".panel-group");
+	var $accordionPanel = $accordion.find('.accordion-toggle');
+	$accordionPanel.click(function(){  
+						var isCollapsed = $(this).hasClass('collapsed');
+						var $targetIcon =$(this).find('.glyphicon');
+						$targetIcon.toggleClass('glyphicon-minus',isCollapsed);
+						$targetIcon.toggleClass('glyphicon-plus',!isCollapsed);
+					});	
+});
+//Accordion icon change END
