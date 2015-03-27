@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="css/libs/daterangepicker.css" type="text/css"/>
 <link rel="stylesheet" href="css/libs/dataTables.tableTools.css" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="css/libs/jquery.nouislider.css">
+<link rel="stylesheet" href="css/libs/select2.css" type="text/css"/>
 </head>
 <body class="pace-done theme-white">
 <div id="theme-wrapper">
@@ -68,16 +69,15 @@
                 <li class=""> <a href="#" class="dropdown-toggle"> <i class="fa fa-envelope"> </i> <span> Mail Box </span> <span class="count badge badge-info"> 8 </span> <i class="fa fa-angle-right drop-icon"></i> </a>
                   <ul class="submenu email" style="display: none;">
                     <li class="" > <a href="email-inbox.html"> <i class="fa fa-inbox"></i> Inbox </a> </li>
-                    <!--<li >
-                                       <a href="email-compose.html">
-                                       <i class="fa fa-envelope"></i> Compose Mail
-                                       </a>
-                                    </li>-->
+                    <li >
+					   <a href="email-compose.html">
+					   <i class="fa fa-envelope"></i> Compose Mail
+					   </a>
+					</li>
                   </ul>
                 </li>
                 <li class=""> <a href="#" class="dropdown-toggle"> <i class="fa fa-truck"></i> <span>PO & Shipment</span> <i class="fa fa-angle-right drop-icon"></i> </a>
                   <ul class="submenu" style="display: none;">
-				    <li> <a href="#"> PO Act </a> </li>
                     <li> <a href="#"> PO Ship </a> </li>
                     <li> <a href="#"> Shipment </a> </li>
                   </ul>
@@ -121,217 +121,223 @@
                     <div class="col-lg-4">
                       <label class="lead">Year / Month</label>
                     </div>
-						 <div class="col-lg-4">
-						  <div id="yearSlider" class="slider-range"></div>
-						  <span class="slider-label"></span> 
-						 </div>
-						
-						<div class="col-lg-4">
-						  <div id="monthSlider" class="slider-range"></div>
-						  <span class="slider-label"></span> 
-						  <!--<select class="form-control" name="month"><option>Month (All)</option><option>December</option></select> -->
-						 </div>
-                  </div>
-                  <div class="row">
-                    <div class="col-lg-4">
-                      <label class="lead">Purch organization</label>
-                    </div>
-                    <div class="col-lg-4">
-                      <select class="form-control" name="organization">
-                        <option>C100 - org Description </option>
-                        <option>C100 - org Description </option>
-                        <option>C400 - org Description </option>
-                        <option>C800 - org Description </option>
+                    <!--<div class="col-lg-4">
+                      <select class="form-control" name="year">
+                        <option>2015</option>
+                        <option>2014</option>
                       </select>
+                    </div>-->
+					
+					 <div class="col-lg-4">
+                      <div id="yearSlider" class="slider-range"></div>
+                      <span class="slider-label"></span> 
+					 </div>
+					
+                    <div class="col-lg-4">
+                      <div id="monthSlider" class="slider-range"></div>
+                      <span class="slider-label"></span> 
+                      <!--<select class="form-control" name="month"><option>Month (All)</option><option>December</option></select> -->
+					 </div>
+                    </div>
+					 <div class="row">
+                    <div class="col-sm-2">
+                      <label class="lead">Vendor</label>
+                    </div>
+                    <div class="col-lg-6">
+                       <div class="form-group form-group-select2">
+							<div class="form-group form-group-select2">
+							   <select style="width:300px" id="sel1Multi" multiple>
+								  <option value="vendor1">Vendor1</option>
+								  <option value="vendor2">Vendor2</option>
+								  <option value="vendor3">Vendor3</option>
+								  <option value="vendor4">Vendor4</option>
+								  <option value="vendor5">Vendor5</option>
+								 </select>                                                   
+							</div>
+						 </div>
                     </div>
                     <div class="col-lg-4">
                       <button class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
                       <button class="btn btn-default"><i class="fa fa-rotate-left"></i> Reset</button>
                     </div>
                   </div>
+     
                 </div>
               </div>
               <div class="main-box-body clearfix">
                 <div class="table-responsive">
                   <table class="table table-bordered table-striped table-condensed" id="table1" width="100%" border="0">
                     <tr class="success">
-                      <td width="3%">&nbsp;</td>
-					  <td colspan="2" style=" text-align:center; font-weight:bolder">JAN - 2015 (3)</td>
-                      <td colspan="2" style=" text-align:center; font-weight:bolder">FEB - 2015 (3)</td>
-                      <td colspan="2" style=" text-align:center; font-weight:bolder">March - 2015 (2)</td>
-                      <td colspan="2" style=" text-align:center; font-weight:bolder">April - 2015 (2)</td>
-                      <td colspan="2" style=" text-align:center; font-weight:bolder">May - 2015 (3)</td>
-                      <td colspan="2" style=" text-align:center; font-weight:bolder">June - 2015 (2)</td>
-                      <td colspan="2" style=" text-align:center; font-weight:bolder">July - 2015 (2)</td>
-                      <td colspan="2" style=" text-align:center; font-weight:bolder">August - 2015 (2)</td>
-                      <td colspan="2" style=" text-align:center; font-weight:bolder">September - 2015 (3)</td>
-                      <td colspan="2" style=" text-align:center; font-weight:bolder">October - 2015 (2)</td>
-                      <td colspan="2" style=" text-align:center; font-weight:bolder">November - 2015 (2)</td>
-                      <td nowrap colspan="2" style=" text-align:center; font-weight:bolder">December - 2015 (2)</td>
+                      <td>&nbsp;</td>
+					  <td colspan="3" style=" text-align:center; font-weight:bolder">Jan - 2015<div style="border-top:1px solid #ddd;">Observations</div></td>
+                      <td colspan="3" style=" text-align:center; font-weight:bolder">FEB - 2015<div style="border-top:1px solid #ddd;">Observations</div></td>
+                      <td colspan="3" style=" text-align:center; font-weight:bolder">March - 2015<div style="border-top:1px solid #ddd;">Observations</div></td>
+                      <td colspan="3" style=" text-align:center; font-weight:bolder">April - 2015 <div style="border-top:1px solid #ddd;">Observations</div></td>
+                      <td colspan="3" style=" text-align:center; font-weight:bolder">May - 2015 <div style="border-top:1px solid #ddd;">Observations</div></td>
+                      <td colspan="3" style=" text-align:center; font-weight:bolder">June - 2015<div style="border-top:1px solid #ddd;">Observations</div></td>
+                      <td colspan="3" style=" text-align:center; font-weight:bolder">July - 2015 <div style="border-top:1px solid #ddd;">Observations</div></td>
+                      <td colspan="3" style=" text-align:center; font-weight:bolder">August - 2015 <div style="border-top:1px solid #ddd;">Observations</div></td>
+                      <td colspan="3" style=" text-align:center; font-weight:bolder">September - 2015 <div style="border-top:1px solid #ddd;">Observations</div></td>
+                      <td colspan="3" style=" text-align:center; font-weight:bolder">October - 2015 <div style="border-top:1px solid #ddd;">Observations</div></td>
+                      <td colspan="3" style=" text-align:center; font-weight:bolder">November - 2015 <div style="border-top:1px solid #ddd;">Observations</div></td>
+                      <td colspan="3" style=" text-align:center; font-weight:bolder">December - 2015 <div style="border-top:1px solid #ddd;">Observations</div></td>
                     </tr>
                     <tr class="success">
-                      <td nowrap>Vendor Name</td>
-                      <td width="11%" nowrap>Auditor Name</td>
-                      <td width="7%" nowrap>Date</td>
-                      <td width="13%" nowrap>Auditor Name</td>
-                      <td width="12%" nowrap>Date</td>
-                      <td width="12%" nowrap>Auditor Name</td>
-                      <td width="7%" nowrap>Date</td>
-                      <td width="11%" nowrap>Auditor Name</td>
-                      <td width="7%" nowrap>Date</td>
-                      <td width="13%" nowrap>Auditor Name</td>
-                      <td width="12%" nowrap>Date</td>
-                      <td width="12%" nowrap>Auditor Name</td>
-                      <td width="7%" nowrap>Date</td>
-                      <td width="14%" nowrap>Auditor Name</td>
-                      <td width="10%" nowrap>Date</td>
-                      <td width="11%" nowrap>Auditor Name</td>
-                      <td width="7%" nowrap>Date</td>
-                      <td width="13%" nowrap>Auditor Name</td>
-                      <td width="12%" nowrap>Date</td>
-                      <td width="12%" nowrap>Auditor Name</td>
-                      <td width="7%" nowrap>Date</td>
-                      <td width="14%" nowrap>Auditor Name</td>
-                      <td width="10%" nowrap>Date</td>
-					  <td width="14%" nowrap>Auditor Name</td>
-                      <td width="10%" nowrap>Date</td>
+                      <td nowrap>Vendor</td>
+                      <td nowrap>Open</td>
+                      <td nowrap>Close</td>
+                      <td nowrap>Total</td>
+                      <td nowrap>Open</td>
+                      <td nowrap>Close</td>
+                      <td nowrap>Total</td>
+					  <td nowrap>Open</td>
+                      <td nowrap>Close</td>
+                      <td nowrap>Total</td>
+					  <td nowrap>Open</td>
+                      <td nowrap>Close</td>
+                      <td nowrap>Total</td>
+					  <td nowrap>Open</td>
+                      <td nowrap>Close</td>
+                      <td nowrap>Total</td>
+					  <td nowrap>Open</td>
+                      <td nowrap>Close</td>
+                      <td nowrap>Total</td>
+					  <td nowrap>Open</td>
+                      <td nowrap>Close</td>
+                      <td nowrap>Total</td>
+					  <td nowrap>Open</td>
+                      <td nowrap>Close</td>
+                      <td nowrap>Total</td>
+					  <td nowrap>Open</td>
+                      <td nowrap>Close</td>
+                      <td nowrap>Total</td>
+					  <td nowrap>Open</td>
+                      <td nowrap>Close</td>
+                      <td nowrap>Total</td>
+					  <td nowrap>Open</td>
+                      <td nowrap>Close</td>
+                      <td nowrap>Total</td>
+					   <td nowrap>Open</td>
+                      <td nowrap>Close</td>
+                      <td nowrap>Total</td>
                     </tr>
                     <tr>
-     
-                      <td>IGML S001</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-					  <td>&nbsp;</td>
-                      <td>&nbsp;</td>
+                      <td>Vendor1</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>5</td>
+                      <td>2</td>
+                      <td>3</td>
+                      <td>5</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+					  <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+					   <td></td>
+					   <td></td>
+                      <td></td>
+					   <td></td>
+
                     </tr>
                     <tr>
-                      <td>IGML S001</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-					  <td>&nbsp;</td>
-                      <td>&nbsp;</td>
+                      <td>Vendor2</td>
+                      <td>4</td>
+                      <td>2</td>
+                      <td>6</td>
+                      <td>4</td>
+                      <td>2</td>
+                      <td>6</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+					  <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+					   <td></td>
+					   <td></td>
+                      <td></td>
+					   <td></td>
                     </tr>
                     <tr>
-    
-                      <td>IGML S001</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-					  <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-					  <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                    </tr>
-                    <tr>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>&nbsp;</td>
-                      <td>Deepak Jain</td>
-                      <td>11.10.2015</td>
-					  <td>&nbsp;</td>
-                      <td>&nbsp;</td>
+                      <td>Vendor3</td>
+                      <td>6</td>
+                      <td>4</td>
+                      <td>10</td>
+                      <td>6</td>
+                      <td>4</td>
+                      <td>10</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+					  <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+					   <td></td>
+					   <td></td>
+                      <td></td>
+					   <td></td>
                     </tr>
                   </table>
                   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -473,6 +479,10 @@
 		$('#yearSlider').val([6, 9], true);
 		
         });
+		$('#sel1Multi').select2({
+         		placeholder: 'Select a Vendor',
+         		allowClear: true
+         	});
       </script>
 </body>
 </html>
