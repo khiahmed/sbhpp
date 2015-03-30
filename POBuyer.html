@@ -214,8 +214,8 @@
                             <div class="col-lg-12">
                                 <div class="main-box clearfix">
                                     <header class="main-box-header clearfix">
-                                        <h2 class="pull-left">Purchase Order  Buyer</h2>
-                                    </header>
+									  <h2 class="pull-left h4_bold">Purchase Order</h2>
+								   </header>
                                     <div class="main-box-body clearfix">
                                         <div class="">
                                          
@@ -526,14 +526,14 @@
                                                                     <thead>
                                                                         <tr class="success">
 																			<th><a>Vendor</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-NOTvendor" data-toggle="modal" data-target="#vendorNOT-modal"><i class="fa  fa-magic"></i></button></th>
-																			<th nowrap><a>Plant Code</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-NOTplant" data-toggle="modal" data-target="#plantNOT-modal"><i class="fa  fa-magic"></i></button></th>
-                                                                            <th><a>P.O. No.</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-NOTpono" data-toggle="modal" data-target="#ponoNOT-modal"><i class="fa  fa-magic"></i></button></th>
-                                                                            <th nowrap><a>P.O. Date</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-NOTPOdate" data-toggle="modal" data-target="#podateNOT-modal"><i class="fa  fa-magic"></i></button></th>
-																			<th nowrap><a>Material Code</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-NOTmaterial" data-toggle="modal" data-target="#materialNOT-modal"><i class="fa  fa-magic"></i></button></th>
+																			<th nowrap><a data-toggle="tooltip" data-placement="top" title="" data-original-title="Plant Code">Plant </a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-NOTplant" data-toggle="modal" data-target="#plantNOT-modal"><i class="fa  fa-magic"></i></button></th>
+                                                                            <th><a>PO No.</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-NOTpono" data-toggle="modal" data-target="#ponoNOT-modal"><i class="fa  fa-magic"></i></button></th>
+                                                                            <th nowrap><a>PO Date</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-NOTPOdate" data-toggle="modal" data-target="#podateNOT-modal"><i class="fa  fa-magic"></i></button></th>
+																			<th nowrap><a data-toggle="tooltip" data-placement="top" title="" data-original-title="Material Code">Material</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-NOTmaterial" data-toggle="modal" data-target="#materialNOT-modal"><i class="fa  fa-magic"></i></button></th>
                                                                             <th ><a>Status</a></th>
                                                                             <th><a>Vendor Remarks</a></th>
                                                                             <th nowrap ><a>Buyer Remarks</a></th>
-                                                                            <th style="display:none"></th>
+                                                                            <th >Actions</th>
                                                                         </tr>
                                                                     </thead>
                                                                     <tbody>
@@ -543,17 +543,10 @@
                                                                             <td>600002458</td>
                                                                             <td>02-10-15</td>
 																			<td>600002458</td>
-                                                                            <td nowrap>
-																				
-																					<select class='form-control sselect'>
-																						<option selected>Clarification</option>
-																						<option>Not Acknowledge</option>
-																					</select>
-																			
-                                                                            </td>
-                                                                            <td><input class="table-text-field" type="text"></input></td>
-                                                                            <td>ABC Comment</td>
-																			<td><input type="button" class="btn btn-default" id="row1" value="Save" /></td>
+																			<td>Not Acknowledge</td>
+																			<td>ABC Comment</td>
+                                                                            <td>ABC Data</td>
+																			<td><input type="button" class="btn btn-danger" id="row1" value="Save" disabled /></td>
 																			</tr>
 																			<tr>
 																			<td>ABC</td>
@@ -561,16 +554,20 @@
                                                                             <td>600002458</td>
                                                                             <td>02-10-15</td>
 																			<td>600002458</td>
-                                                                            <td>
-																				
-																					<select class='form-control sselect'>
-																						<option >Clarification</option>
-																						<option selected>Not Acknowledge</option>
-																					</select>
-																				
-                                                                            </td>
+																			<td>Not Acknowledge</td>
+																			<td>ABC Comment</td>
+                                                                            <td>ABC Data</td>
+																			<td><input type="button" class="btn btn-danger" id="row1" value="Save" disabled /></td>
+																			</tr>
+                                                                        <tr>
+																			<td>ABC</td>
+																			<td>GA2458</td>
+                                                                            <td>600002458</td>
+                                                                            <td>02-10-15</td>
+																			<td>600002458</td>
+																			<td>Clarification</td>
+																			<td>ABC Comment</td>
                                                                             <td><input class="table-text-field" type="text"></input></td>
-                                                                            <td>ABC Comment</td>
 																			<td><input type="button" class="btn btn-default" id="row1" value="Save" /></td>
 																			</tr>
                                                                         <tr>
@@ -579,16 +576,9 @@
                                                                             <td>600002458</td>
                                                                             <td>02-10-15</td>
 																			<td>600002458</td>
-                                                                            <td>
-																				
-																					<select class='form-control sselect' >
-																						<option selected>Clarification</option>
-																						<option>Not Acknowledge</option>
-																					</select>
-																			
-                                                                            </td>
+                                                                            <td>Clarification</td>
+																			<td>ABC Comment</td>
                                                                             <td><input class="table-text-field" type="text"></input></td>
-                                                                            <td>ABC Comment</td>
 																			<td><input type="button" class="btn btn-default" id="row1" value="Save" /></td>
 																			</tr>
                                                                         <tr>
@@ -597,35 +587,10 @@
                                                                             <td>600002458</td>
                                                                             <td>02-10-15</td>
 																			<td>600002458</td>
-                                                                            <td>
-																				
-																					<select class='form-control sselect'>
-																						<option >Clarification</option>
-																						<option selected>Not Acknowledge</option>
-																					</select>
-																			
-                                                                            </td>
-                                                                            <td><input class="table-text-field" type="text"></input></td>
-                                                                            <td>ABC Comment</td>
-																			<td><input type="button" class="btn btn-default" id="row1" value="Save" /></td>
-																			</tr>
-                                                                        <tr>
-																			<td>ABC</td>
-																			<td>GA2458</td>
-                                                                            <td>600002458</td>
-                                                                            <td>02-10-15</td>
-																			<td>600002458</td>
-                                                                            <td>
-																				
-																					<select class='form-control sselect'>
-																						<option selected>Clarification</option>
-																						<option>Not Acknowledge</option>
-																					</select>
-																			
-                                                                            </td>
-                                                                            <td><input class="table-text-field" type="text"></input></td>
-                                                                            <td>ABC Comment</td>
-																			<td><input type="button" class="btn btn-default" id="row1" value="Save" /></td>
+																			<td>Not Acknowledge</td>
+																			<td>ABC Comment</td>
+                                                                            <td>ABC Data</td>
+																			<td><input type="button" class="btn btn-danger" id="row1" value="Save" disabled /></td>
 																			</tr>
                                                                     </tbody>
                                                                 </table>
@@ -650,8 +615,8 @@
                                                                         <tr class="success">
 																			<th><a>Vendor</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-ACCvendor" data-toggle="modal" data-target="#vendorACC-modal"><i class="fa  fa-magic"></i></button></th>
 																			<th><a>Plant Code</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-ACCplant" data-toggle="modal" data-target="#plantACC-modal"><i class="fa  fa-magic"></i></button></th>
-                                                                            <th><a>P.O. No.</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-ACCpono" data-toggle="modal" data-target="#ponoACC-modal"><i class="fa  fa-magic"></i></button></th>
-                                                                            <th><a>P.O. Date</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-ACCpodate" data-toggle="modal" data-target="#podateACC-modal"><i class="fa  fa-magic"></i></button></th>
+                                                                            <th><a>PO No.</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-ACCpono" data-toggle="modal" data-target="#ponoACC-modal"><i class="fa  fa-magic"></i></button></th>
+                                                                            <th><a>PO Date</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-ACCpodate" data-toggle="modal" data-target="#podateACC-modal"><i class="fa  fa-magic"></i></button></th>
 																			<th><a>Material Code</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-ACCmaterial" data-toggle="modal" data-target="#materialACC-modal"><i class="fa  fa-magic"></i></button></th>
                                                                             <th><a>Vendor Remarks</a></th>
                                                                             <th><a>Buyer Remarks</a></th>
@@ -669,9 +634,9 @@
 																				ABC Comment
                                                                             </td>
                                                                             <td>ABC Comment</td>
-                                                                            <td>ABC Comment</td>
+                                                                            <td>02-10-15</td>
 																			
-																			</tr>
+																		</tr>
 																			<tr>
 																			<td>ABC</td>
 																			<td>GA2458</td>
@@ -682,7 +647,7 @@
 																				
                                                                             </td>
                                                                             <td></td>
-                                                                            <td>ABC Comment</td>
+                                                                            <td>02-10-15</td>
 																			
 																			</tr>
                                                                         <tr>
@@ -695,7 +660,7 @@
 																				B Comment
                                                                             </td>
                                                                             <td>ABC Comment</td>
-                                                                            <td>ABC Comment</td>
+                                                                            <td>02-10-15</td>
 																			
 																			</tr>
                                                                         <tr>
@@ -708,7 +673,7 @@
 																				AXYZ Comment
                                                                             </td>
                                                                             <td></td>
-                                                                            <td>ABC Comment</td>
+                                                                            <td>02-10-15</td>
 																			
 																			</tr>
                                                                         <tr>
@@ -721,7 +686,7 @@
 																				
                                                                             </td>
                                                                             <td></td>
-                                                                            <td>ABC Comment</td>
+                                                                            <td>02-10-15</td>
 																			
 																			</tr>
 																			
@@ -735,7 +700,7 @@
 																				Random Comment
                                                                             </td>
                                                                             <td></td>
-                                                                            <td>ABC Comment</td>
+                                                                            <td>02-10-15</td>
 																			
 																			</tr>
                                                                     </tbody>
@@ -781,8 +746,23 @@
         <script src="js/select2.min.js"></script>
         <script type="text/javascript">
 			$(document).ready(function () {
-				$("#table1").dataTable({"bPaginate": false, "sDom": 'zrtSpi'});
-				$("#table2").dataTable({"bPaginate": false, "sDom": 'zrtSpi'});
+         	$("#table1").dataTable({
+										"bPaginate": false,
+										"sDom": 'zrtSpi',
+										columnDefs: [
+										   { orderable: false, targets: -1 },
+										   { orderable: false, targets: -2 },
+										   { orderable: false, targets: -3 }
+										]
+								});
+			$("#table2").dataTable({
+										"bPaginate": false,
+										"sDom": 'zrtSpi',
+										columnDefs: [
+										   { orderable: false, targets: -2 },
+										   { orderable: false, targets: -3 }
+										]
+								});
 				
 				$('#reportrange').daterangepicker({
 					startDate: moment().subtract('days', 29),
