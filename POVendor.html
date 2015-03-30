@@ -579,8 +579,8 @@
       <script src="js/select2.min.js"></script>
       <script type="text/javascript">
          $(document).ready(function() {
-         	$("#table1").dataTable({"bPaginate": false});
-			$("#table2").dataTable({"bPaginate": false});
+         	$("#table1").dataTable({"bPaginate": false, "sDom": 'zrtSpi'});
+			$("#table2").dataTable({"bPaginate": false, "sDom": 'zrtSpi'});
 			$("#save_table2, #table1_status, #table1_vendor, #table1_buyer, #save_table1").removeClass("sorting");
 			$("#table2_buyer,  #table2_vendor, #save_table2 ").removeClass("sorting");
 			$("#table1").on( 'click', function(){
