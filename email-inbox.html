@@ -43,101 +43,7 @@
                      </ul>
                   </div>
                   <div class="nav-no-collapse pull-right" id="header-nav">
-                     <ul class="nav navbar-nav pull-right"> <li class="dropdown hidden-xs">
-                           <a class="btn dropdown-toggle" data-toggle="dropdown">
-                           <i class="fa fa-warning">
-                           </i>
-                           <span class="count">
-                           8
-                           </span>
-                           </a>
-                           <ul class="dropdown-menu notifications-list">
-                              <li class="pointer">
-                                 <div class="pointer-inner">
-                                    <div class="arrow">
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="item-header">
-                                 You have 6 new notifications
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-comment">
-                                 </i>
-                                 <span class="content">
-                                 New comment on ‘Awesome P...
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-plus">
-                                 </i>
-                                 <span class="content">
-                                 New user registration
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-envelope">
-                                 </i>
-                                 <span class="content">
-                                 New Message from George
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-shopping-cart">
-                                 </i>
-                                 <span class="content">
-                                 New purchase
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-eye">
-                                 </i>
-                                 <span class="content">
-                                 New order
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item-footer">
-                                 <a href="#">
-                                 View all notifications
-                                 </a>
-                              </li>
-                           </ul>
-                        </li>
+                     <ul class="nav navbar-nav pull-right">
                         <li class="dropdown profile-dropdown" id="profile-dropdown">
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                            <img src="img/user.jpg" alt=""/>
@@ -326,8 +232,8 @@
                 <div class="visible-md visible-lg" id="email-header-title">
                     <i class="fa fa-inbox"></i> Inbox
                 </div>
-                <div id="email-header-tools">
-                    <div class="btn-group">
+                <div class="pull-right">
+
                         <button title="" type="button" class="btn btn-primary dropdown-toggle has-tooltip" data-toggle="dropdown" data-original-title="Select">
                             <i class="fa fa-square-o"></i> <span class="caret"></span>
                         </button>
@@ -338,7 +244,7 @@
                             <li><a href="#">Unread</a></li>
                           
                         </ul>
-                    </div>
+                   
                     <!--<div class="btn-group">
                         <button data-placement="bottom" data-toggle="tooltip" title="" type="button" class="btn btn-primary" data-original-title="Erase">
                             <i class="fa fa-trash-o"></i>
@@ -511,6 +417,11 @@
                             </div>
                         </li>
                     </ul>
+                    <div class="clearfix">
+                    <p id="loadmore" align="center">&nbsp;</p>
+                    <button class="btn btn-default col-lg-offset-4 col-md-offset-4 " id="btnload">Load More</button>
+                    </div>
+                    <div ></div>
                 </div>
                 <div class="nano-pane">
                     <div class="nano-slider" style="height: 134px; transform: translate(0px, 0px);"></div>
@@ -561,6 +472,9 @@
 	   
 <script>
 	$(document).ready(function() {
+		$("#btnload").click(function(e) {
+            $("#loadmore").html('<img src="http://www.angelgioielli.com/catalog/view/javascript/jquery/pitstop/pitstop/res/wait_1.gif">');
+        });
 		$('#email-list li > .star > a').on('click', function() {
 			$(this).toggleClass('starred');
 		});

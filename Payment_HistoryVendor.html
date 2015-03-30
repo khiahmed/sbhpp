@@ -46,8 +46,7 @@
                   </div>
                   <div class="nav-no-collapse pull-right" id="header-nav">
                      <ul class="nav navbar-nav pull-right">
-						<li class="dropdown hidden-xs"><a href="#" data-toggle="modal" data-target="#theme-modal"><i class="fa fa-magnet"></i></a> </li>
-
+				
                         <li class="dropdown profile-dropdown" id="profile-dropdown">
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                            <img src="img/user.jpg" alt=""/>
@@ -108,32 +107,37 @@
                                        <i class="fa fa-inbox"></i> Inbox
                                        </a>
                                     </li>
-                                    <li >
+                                   <!-- <li >
                                        <a href="email-compose.html">
                                        <i class="fa fa-envelope"></i> Compose Mail
                                        </a>
-                                    </li>
+                                    </li>-->
                                  </ul>
                               </li>
                               <li class="">
-                                 <a href="#" class="dropdown-toggle">
-                                 <i class="fa fa-truck"></i>
-                                 <span>PO & Shipment</span>
-                                 <i class="fa fa-angle-right drop-icon"></i>
-                                 </a>
-                                 <ul class="submenu" style="display: none;">
-                                    <li>
-                                       <a href="#">
-                                        PO Ship
-                                       </a>
-                                    </li>
-                                    <li>
-                                       <a href="#">
-                                       Shipment
-                                       </a>
-                                    </li>
-                                 </ul>
-                              </li>
+									<a href="#" class="dropdown-toggle">
+									<i class="fa fa-truck"></i>
+									<span>PO & Shipment</span>
+									<i class="fa fa-angle-right drop-icon"></i>
+									</a>
+									<ul class="submenu" style="display: none;">
+									<li>
+									<a href="#">
+										 PO Act
+									</a>
+									</li>
+									<li>
+									<a href="#">
+										 PO Ship
+									</a>
+									</li>
+									<li>
+									<a href="#">
+									Shipment
+									</a>
+									</li>
+									</ul>
+								</li>
                               <li>
                                  <a href="#" class="dropdown-toggle">
                                  <i class="fa fa-file-text"></i>
@@ -201,7 +205,6 @@
                                     </li>
                                  </ul>
                               </li>
-							  
 							 
                            </ul>
                         </div>
@@ -215,114 +218,18 @@
                      <div class="col-lg-12">
                         <div class="main-box clearfix">
                            <header class="main-box-header clearfix">
-                              <h2 class="pull-left">RFQ Status</h2>
+                              <h2 class="pull-left h4_bold">ASN Display</h2>
                            </header>
                            <div class="main-box-body clearfix">
                               <div class="">
-                                 <div class="modal fade" id="status-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								  <div class="modal fade" id="deli_date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                        <div class="modal-content">
-                                          <!--<div class="modal-header">
+                                          <div class="modal-header">
                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">RFQ Status Filter</h4>
-                                          </div>-->
+                                             <h4 class="modal-title" id="myModalLabel">Delivery Date Filter</h4>
+                                          </div>
                                           <div class="modal-body">
-                                             <div class="radio">
-                                                <input type="radio" id="checkbox-1" checked="checked" name="status"/>
-                                                <label for="checkbox-1">
-                                                Show All
-                                                </label>
-                                             </div>
-                                             <div class="radio">
-                                                <input type="radio" id="checkbox-2" name="status"/>
-                                                <label for="checkbox-2">
-                                                Open
-                                                </label>
-                                             </div>
-                                             <div class="radio">
-                                                <input type="radio" id="checkbox-3" name="status"/>
-                                                <label for="checkbox-3">
-                                                Closed
-                                                </label>
-                                             </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="modal fade" id="vendor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                       <div class="modal-content">
-                                          <!--<div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">RFQ Vendor Filter</h4>
-                                          </div>-->
-                                          <div class="modal-body">
-                                             <div class="form-group form-group-select2">
-                                                <label>use , commas for, multiple selection(s)</label>
-                                                <div class="form-group form-group-select2">
-                                                   <select style="width:300px" id="sel1Multi" multiple>
-                                                      <option value="DeepakJain">Deepak Jain</option>
-                                                      <option value="DeepakJain">Deepak Jain</option>
-                                                      <option value="DeepakJain">Deepak Jain</option>
-                                                      <option value="DeepakJain">Deepak Jain</option>
-                                                      <option value="DeepakJain">Deepak Jain</option>
-                                                      <option value="DeepakJain">Deepak Jain</option>
-                                                    </select>                                                 
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="modal fade" id="plant-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                       <div class="modal-content">
-                                          <!--<div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">RFQ Plant Filter</h4>
-                                          </div>-->
-                                          <div class="modal-body">
-                                             <div class="form-group form-group-select2">
-                                                <label>use , commas for, multiple selection(s)</label>
-                                                <div class="form-group form-group-select2">
-                                                   <select style="width:300px" id="sel2Multi" multiple>
-                                                      <option value="ABC">ABC</option>
-                                                      <option value="ABC">ABC</option>
-                                                      <option value="ABC">ABC</option>
-                                                      <option value="ABC">ABC</option>
-                                                      <option value="ABC">ABC</option>
-                                                      <option value="ABC">ABC</option>
-                                                   </select>
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="modal fade" id="date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                       <div class="modal-content">
-                                          <!--<div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">RFQ Due Date Filter</h4>
-                                          </div>-->
-                                          <div class="modal-body">
-                                             <!--	<div class="input-group">
-                                                <span class="input-group-addon"><i class="fa fa-calendar-o"></i></span>
-                                                <input type="text" class="form-control" id="datepickerDateRange">
-                                                </div> -->
                                              <div class="daterange-filter" id="reportrange">
                                                 <i class="fa fa-calendar"></i>&nbsp;
                                                 <span>February 16, 2015 - March 17, 2015</span> <b class="caret"></b>
@@ -335,28 +242,29 @@
                                        </div>
                                     </div>
                                  </div>
-								 
-								 
-								 <div class="modal fade" id="collective-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+							 <div class="modal fade" id="deli_code-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                        <div class="modal-content">
-                                          <!--<div class="modal-header">
+                                          <div class="modal-header">
                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">RFQ Collective Filter</h4>
-                                          </div>-->
+                                             <h4 class="modal-title" id="myModalLabel">Vendor Code Filter</h4>
+                                          </div>
                                           <div class="modal-body">
-                                             <div class="form-group form-group-select2">
-                                                <label>use , commas for, multiple selection(s)</label>
-                                                <div class="form-group form-group-select2">
-                                                   <select style="width:300px" id="sel3Multi" multiple>
-                                                      <option value="12345">12345</option>
-                                                      <option value="12345">12345</option>
-                                                      <option value="12345">12345</option>
-                                                      <option value="12345">12345</option>
-                                                      <option value="12345">12345</option>
-                                                      <option value="12345">12345</option>
-                                                   </select>
-                                                </div>
+                                             <div class="daterange-filter" id="reportrange1">
+                                                <h5 class="h4_bold">Vendor Code</h5>
+													<div class="form-group form-group-select2">
+														<!--<label>use , commas for, multiple selection(s)</label>-->
+														<div class="form-group form-group-select2 modalSelect">
+															<select style="width:300px" id="sel1Multi" multiple>
+																<option value="1000001">1000001</option>
+																<option value="1000001">1000001</option>
+																<option value="1000001">1000001</option>
+																<option value="1000001">1000001</option>
+																<option value="1000001">1000001</option>
+																<option value="1000001">1000001</option>
+															</select>                                                 
+														</div>
+													</div>    
                                              </div>
                                           </div>
                                           <div class="modal-footer">
@@ -365,47 +273,14 @@
                                           </div>
                                        </div>
                                     </div>
-                                 </div>
-								 
-								 
-								 <div class="modal fade" id="rfqNo-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                            </div>
+							<div class="modal fade" id="fin_year-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                        <div class="modal-content">
-                                          <!--<div class="modal-header">
+                                          <div class="modal-header">
                                              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">RFQ No Filter</h4>
-                                          </div>-->
-                                          <div class="modal-body">
-                                             <div class="form-group form-group-select2">
-                                                <label>use , commas for, multiple selection(s)</label>
-                                                <div class="form-group form-group-select2">
-                                                   <select style="width:300px" id="sel4Multi" multiple>
-                                                      <option value="RFQ110002">RFQ110002</option>
-                                                      <option value="RFQ110002">RFQ110002</option>
-                                                      <option value="RFQ110002">RFQ110002</option>
-                                                      <option value="RFQ110002">RFQ110002</option>
-                                                      <option value="RFQ110002">RFQ110002</option>
-                                                      <option value="RFQ110002">RFQ110002</option>
-                                                   </select>
-                                                </div>
-                                             </div>
+                                             <h4 class="modal-title" id="myModalLabel">Financial Year Filter</h4>
                                           </div>
-                                          <div class="modal-footer">
-                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 
-                       
-                                 <div class="modal fade" id="rfqDate-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                       <div class="modal-content">
-                                          <!--<div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">RFQ Due Date Filter</h4>
-                                          </div>-->
                                           <div class="modal-body">
                                              <div class="daterange-filter" id="reportrange1">
                                                 <i class="fa fa-calendar"></i>&nbsp;
@@ -418,158 +293,378 @@
                                           </div>
                                        </div>
                                     </div>
-                                 </div>
-                                 
-									
-
-								<div class="modal fade" id="theme-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">								 
+                            </div>
+							<div class="modal fade" id="po_date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog">
                                        <div class="modal-content">
+                                          <div class="modal-header">
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                             <h4 class="modal-title" id="myModalLabel">PO Date</h4>
+                                          </div>
                                           <div class="modal-body">
-                                            						   
-													  <div class="main-box clearfix">
-
-														 <div class="main-box-body clearfix">
-															<div id="config-tool" class="">
-															   <div id="config-tool-options">
-										  
-																  <h4>Skin Color</h4>
-																  <ul id="skin-colors" class="clearfix">
-																	 <li>
-																		<a class="skin-changer" data-skin="" data-toggle="tooltip" title="Default" style="background-color: #34495e;">
-																		</a>
-																	 </li>
-																	 <li>
-																		<a class="skin-changer" data-skin="theme-white" data-toggle="tooltip" title="White/Green" style="background-color: #2ecc71;">
-																		</a>
-																	 </li>
-																	 <li>
-																		<a class="skin-changer blue-gradient" data-skin="theme-blue-gradient" data-toggle="tooltip" title="Gradient">
-																		</a>
-																	 </li>
-																	 <li>
-																		<a class="skin-changer" data-skin="theme-turquoise" data-toggle="tooltip" title="Green Sea" style="background-color: #1abc9c;">
-																		</a>
-																	 </li>
-																	 <li>
-																		<a class="skin-changer" data-skin="theme-amethyst" data-toggle="tooltip" title="Amethyst" style="background-color: #9b59b6;">
-																		</a>
-																	 </li>
-																	 <li>
-																		<a class="skin-changer" data-skin="theme-blue" data-toggle="tooltip" title="Blue" style="background-color: #2980b9;">
-																		</a>
-																	 </li>
-																	 <li>
-																		<a class="skin-changer" data-skin="theme-red" data-toggle="tooltip" title="Red" style="background-color: #e74c3c;">
-																		</a>
-																	 </li>
-																	 <li>
-																		<a class="skin-changer" data-skin="theme-whbl" data-toggle="tooltip" title="White/Blue" style="background-color: #3498db;">
-																		</a>
-																	 </li>
-																  </ul>
-															   </div>
-															</div>
-														 </div>
-													  </div>
-												  </div>
-												  <div class="modal-footer">
+                                             <div class="daterange-filter" id="reportrange2">
+                                                <i class="fa fa-calendar"></i>&nbsp;
+                                                <span>February 16, 2015 - March 17, 2015</span> <b class="caret"></b>
+                                             </div>
+                                          </div>
+                                          <div class="modal-footer">
                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                              <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
-												  </div>
-											   </div>
-											</div>
-								</div>
-										 
-										 
-										 <div class="row">
-											<div class="col-sm-12">
-												<button class="btn btn-default "><i class="fa fa-filter"></i> Reset</button>
-											</div>
-										 </div>
-<div class="col-sm-10">
+                                          </div>
+                                       </div>
+                                    </div>
+                            </div>
+							<div class="modal fade" id="po_doc-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                             <h4 class="modal-title" id="myModalLabel">PO Document</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                             <div class="daterange-filter" id="reportrange1">
+                                                <h5 class="h4_bold">PO document No</h5>
+													<div class="form-group form-group-select2">
+														<!--<label>use , commas for, multiple selection(s)</label>-->
+														<div class="form-group form-group-select2 modalSelect">
+															<select style="width:300px" id="sel2Multi" multiple>
+																<option value="1000001">1000</option>
+																<option value="1000001">1000</option>
+																<option value="1000001">1000</option>
+																<option value="1000001">10001</option>
+																<option value="1000001">1000</option>
+																<option value="1000001">1000</option>
+															</select>                                                 
+														</div>
+													</div>
+                                             </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+                                          </div>
+                                       </div>
+                                    </div>
+                            </div>
+							<div class="modal fade" id="voice_no-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                             <h4 class="modal-title" id="myModalLabel">Invoice No Filter</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                             <div class="daterange-filter" id="reportrange1">
+                                                <h5 class="h4_bold">Invoice No</h5>
+													<div class="form-group form-group-select2">
+														<!--<label>use , commas for, multiple selection(s)</label>-->
+														<div class="form-group form-group-select2 modalSelect">
+															<select style="width:300px" id="sel3Multi" multiple>
+																<option value="1000001">10</option>
+																<option value="1000001">20</option>
+																<option value="1000001">30</option>
+																<option value="1000001">101</option>
+																<option value="1000001">100</option>
+																<option value="1000001">10</option>
+															</select>                                                 
+														</div>
+													</div>
+                                             </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+                                          </div>
+                                       </div>
+                                    </div>
+                            </div>
+							<div class="modal fade" id="invoice_no-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                             <h4 class="modal-title" id="myModalLabel">Invoice No Filter</h4>
+                                          </div>
+                                          <div class="modal-body">
+												<div class="daterange-filter" id="reportrange1">
+												
+														<h5 class="h4_bold">Invoice NO</h5>
+															<div class="form-group form-group-select2">
+																<!--<label>use , commas for, multiple selection(s)</label>-->
+																<div class="form-group form-group-select2 modalSelect">
+																	<select style="width:300px" id="sel4Multi" multiple>
+																		<option value="1000001">10</option>
+																		<option value="1000001">20</option>
+																		<option value="1000001">30</option>
+																		<option value="1000001">101</option>
+																		<option value="1000001">100</option>
+																		<option value="1000001">10</option>
+																	</select>                                                 
+																</div>
+															</div>
+													
+												</div>
+                                          </div>
+                                          <div class="modal-footer">
+                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+                                          </div>
+                                       </div>
+                                    </div>
+                            </div>
+							<div class="modal fade" id="invoice_date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                             <h4 class="modal-title" id="myModalLabel">Invoice Date Filter</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                             <div class="daterange-filter" id="reportrange4">
+                                                <i class="fa fa-calendar"></i>&nbsp;
+                                                <span>February 16, 2015 - March 17, 2015</span> <b class="caret"></b>
+                                             </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+                                          </div>
+                                       </div>
+                                    </div>
+                            </div>	 
+                            <div class="modal fade" id="status-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog">
+                                       <div class="modal-content">
+                                          <div class="modal-header">
+                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                             <h4 class="modal-title" id="myModalLabel">Status Filter</h4>
+                                          </div>
+                                          <div class="modal-body">
+                                             <div class="checkbox-nice">
+                                                <input type="checkbox" id="checkbox-1" checked="checked"/>
+                                                <label for="checkbox-1">
+                                                Show All
+                                                </label>
+                                             </div>
+                                             <div class="checkbox-nice">
+                                                <input type="checkbox" id="checkbox-2" />
+                                                <label for="checkbox-2">
+                                                Open
+                                                </label>
+                                             </div>
+                                             <div class="checkbox-nice">
+                                                <input type="checkbox" id="checkbox-3" />
+                                                <label for="checkbox-3">
+                                                Closed
+                                                </label>
+                                             </div>
+                                             <div class="checkbox-nice">
+                                                <input type="checkbox" id="checkbox-4" />
+                                                <label for="checkbox-4">
+                                                Awaiting for approval
+                                                </label>
+                                             </div>
+                                          </div>
+                                          <div class="modal-footer">
+                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>     
+                                 <div>
+									<div class="row">
+																
+									<div class="col-sm-3">
+										<h5 class="h4_bold">Plant Code</h5>
+										<div class="form-group form-group-select2">
+												<!--<label>use , commas for, multiple selection(s)</label>-->
+												<div class="form-group form-group-select2 modalSelect">
+													<select style="width:300px" id="sel5Multi" multiple>
+														<option value="54545455">54545455</option>
+														<option value="54545455">54545455</option>
+														<option value="54545455">54545455</option>
+														<option value="54545455">54545455</option>
+														<option value="54545455">54545455</option>
+														<option value="54545455">54545455</option>
+													</select>                                                 
+												</div>
+											</div>    
+									</div>
+									<div class="col-sm-12">
+										<button class="btn btn-default"><i class="fa fa-filter"></i> Reset</button>
+									</div>
+								 </div>
+							
+								 
+									<div class="table-responsive">
 								 <table class="table table-bordered table-striped table-condensed" id="table1">
                                     <thead>
                                        <tr class="success">
-                                          <th><a>Status</a> <button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-status" data-toggle="modal" data-target="#status-modal"><i class="fa  fa-magic"></i></button></th>
-                                          <th><a>Vendor</a> <button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-vendor" data-toggle="modal" data-target="#vendor-modal"><i class="fa  fa-magic"></i></button></th>
-                                          <th><a>Plant</a>  <button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-plant" data-toggle="modal" data-target="#plant-modal"><i class="fa  fa-magic"></i></button></th>
-                                          <th><a>Due Date</a> <button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-date" data-toggle="modal" data-target="#date-modal"><i class="fa  fa-magic"></i></button> </th>
-                                          <th><a>Collective No</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-collective" data-toggle="modal" data-target="#collective-modal"><i class="fa  fa-magic"></i></button> </th>
-                                          <th><a>RFQ No</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-rfqNo" data-toggle="modal" data-target="#rfqNo-modal"><i class="fa  fa-magic"></i></button> </th>
-                                          <th><a>RFQ Description</a></th>
-                                          <th><a>RFQ Date</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-rfqDate" data-toggle="modal" data-target="#rfqDate-modal"><i class="fa  fa-magic"></i></button> </th>
+                                          <th><a> Vendor code</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#deli_code-modal"><i class="fa  fa-magic"></i></button></th>
+                                          <th><a>vendor name</a></th>
+                                          <th><a> Financial year</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#fin_year-modal"><i class="fa  fa-magic"></i></button></th>
+                                          <th><a> PO Document</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#po_doc-modal"><i class="fa  fa-magic"></i></button></th>
+                                          <th><a> PO Date</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#po_date-modal"><i class="fa  fa-magic"></i></button></th>
+                                          <th><a>Supplier Invoice No</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#voice_no-modal"><i class="fa  fa-magic"></i></button></th>
+                                          <th><a>Supplier Invoice Date</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#deli_date-modal"><i class="fa  fa-magic"></i></button></th>
+										  <th><a> Invoice No</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#invoice_no-modal"><i class="fa  fa-magic"></i></button></th>
+										  <th><a> Invoice Date</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#invoice_date-modal"><i class="fa  fa-magic"></i></button></th>
+										  <th><a> Invoice Amount</a></th>
+										  <th><a>Currency</a></th>
+										  <th><a>TDS Amount</a></th>
+										  <th><a>Bank name</a></th>
+										  <th><a>Cheque No.</a></th>
+										  <th><a>Cheque Amount</a></th>
+										  <th><a>remarks</a></th>
+										  <th><a>status</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#status-modal"><i class="fa  fa-magic"></i></button></th>
+										  <th><a>Action</a></th>
                                        </tr>
                                     </thead>
                                     <tbody>
-                                       <tr>
-                                          <td>Open</td>
-                                          <td>Deepak Jain</td>
-                                          <td>ABC</td>
-                                          <td>11/10/2015</td>
-                                          <td>12345</td>
-                                          <td>RFQ110002</td>
-                                          <td>All description here</td>
-                                          <td>11/10/2015</td>
-                                       </tr>
-                                       <tr>
-                                          <td>Open</td>
-                                          <td>Deepak Jain</td>
-                                          <td>ABC</td>
-                                          <td>11/10/2015</td>
-                                          <td>12345</td>
-                                          <td>RFQ110002</td>
-                                          <td>All description here</td>
-                                          <td>11/10/2015</td>
-                                       </tr>
-                                       <tr>
-                                          <td>Close</td>
-                                          <td>Deepak Jain</td>
-                                          <td>ABC</td>
-                                          <td>11/10/2015</td>
-                                          <td>12345</td>
-                                          <td>RFQ110002</td>
-                                          <td>All description here</td>
-                                          <td>11/10/2015</td>
-                                       </tr>
-                                       <tr>
-                                          <td>Open</td>
-                                          <td>Deepak Jain</td>
-                                          <td>ABC</td>
-                                          <td>11/10/2015</td>
-                                          <td>12345</td>
-                                          <td>RFQ110002</td>
-                                          <td>All description here</td>
-                                          <td>11/10/2015</td>
-                                       </tr>
-                                       <tr>
-                                          <td>Close</td>
-                                          <td>Deepak Jain</td>
-                                          <td>ABC</td>
-                                          <td>11/10/2015</td>
-                                          <td>12345</td>
-                                          <td>RFQ110002</td>
-                                          <td>All description here</td>
-                                          <td>11/10/2015</td>
-                                       </tr>
-                                       <tr>
-                                          <td>Open</td>
-                                          <td>Deepak Jain</td>
-                                          <td>ABC</td>
-                                          <td>11/10/2015</td>
-                                          <td>12345</td>
-                                          <td>RFQ110002</td>
-                                          <td>All description here</td>
-                                          <td>11/10/2015</td>
-                                       </tr>
-                                    </tbody>
+										<tr>
+											<td>1000001</td>
+											<td>Deepak Jain</td>								
+											<td>2010</td>
+											<td>
+												<span>1000</span>
+												<span style="display:none"><input type='text' value='1000' size='6'></span>
+											</td>
+											<td>22/10/2015</td>
+											<td>50</td>
+											<td>22/10/2015</td>
+											<td>per qty</td>
+											<td>100</td>
+											<td>100</td>
+											<td>1000</td>
+											<td>100</td>
+											<td>XXX</td>
+											<td>MMA100001</td>
+											<td>1000</td>
+											<td>XXX</td>
+											<td>Open</td>
+											<td></td>
+										</tr>
+										
+										<tr>
+											<td>1000001</td>
+											<td>Rakesh Patail</td>
+											<td>2010</td>
+											<td>
+												<span>200</span>
+												<span style="display:none"><input type='text' value='200' size='12'></span></td>
+											<td>22/10/2015</td>
+											<td>50</td>
+											<td>22/10/2015</td>
+											<td>per qty</td>
+											<td>100</td>
+											<td>1000</td>
+											<td>1000</td>
+											<td>100</td>
+											<td>XXX</td>
+											<td>MMA100001</td>
+											<td>1000</td>
+											<td>XXX</td>
+											<td>Close</td>
+											<td></td>
+										</tr>
+										
+										<tr>
+											<td>10000001</td>	
+											<td>Chand Magesh</td>		
+											<td>2010</td>
+											<td>
+												<span>342</span>
+												<span style="display:none"><input type='text' value='342' size='12'></span>
+											</td>
+											<td>22/10/2015</td>
+											<td>50</td>
+											<td>22/10/2015</td>
+											<td>per qty</td>
+											<td>100</td>
+											<td>1000</td>
+											<td>1000</td>
+											<td>100</td>
+											<td>XXX</td>
+											<td>MMA100001</td>
+											<td>1000</td>
+											<td>XXX</td>
+											<td>Close</td>
+											<td></td>
+										</tr>
+										
+											<tr>
+												<td>10000001</td>	
+												<td>Ram Kumar</td>						
+												<td>2010</td>
+												<td>
+													<span>1342</span>
+													<span style="display:none"><input type='text' value='1342' size='12'></span>
+												</td>
+												<td>22/10/2015</td>
+												<td>50</td>
+												<td>22/10/2015</td>
+												<td>per qty</td>
+												<td>100</td>
+												<td>1000</td>
+												<td>1000</td>
+												<td>100</td>
+												<td>XXX</td>
+												<td>MMA100001</td>
+												<td>1000</td>
+												<td>XXX</td>
+												<td>Close</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>10000001</td>	
+												<td>Deepak Jain</td>
+												<td>2010</td>
+												<td>
+													<span>4200</span>
+													<span style="display:none"><input type='text' value='4200' size='12'></span>
+												</td>
+												<td>22/10/2015</td>
+												<td>50</td>
+												<td>22/10/2015</td>
+												<td>per qty</td>
+												<td>100</td>
+												<td>100</td>
+												<td>1000</td>
+												<td>100</td>
+												<td>XXX</td>
+												<td>MMA100001</td>
+												<td>1000</td>
+												<td>XXX</td>
+												<td>Close</td>
+												<td></td>
+											</tr>
+											<tr>
+												<td>10000001</td>
+												<td>Rakesh Patail</td>								
+												<td>2010</td>
+												<td>
+													<span>4200</span>
+													<span style="display:none"><input type='text' value='4200' size='12'></span>
+												</td>
+												<td>22/10/2015</td>
+												<td>50</td>
+												<td>22/10/2015</td>
+												<td>per qty</td>
+												<td>100</td>
+												<td>100</td>
+												<td>1000</td>
+												<td>100</td>
+												<td>XXX</td>
+												<td>MMA100001</td>
+												<td>1000</td>
+												<td>XXX</td>
+												<td>Open</td>
+												<td></td>
+											</tr>
+										</tbody>
                                  </table>
-								 </div>
-								    <div class="clearfix">
-										<p id="loadmore" align="center">&nbsp;</p>
-										<button class="btn btn-default col-lg-offset-4 col-md-offset-4 " id="btnload">Load More</button>
-									</div>
-                              </div>
+                                 </div>
                            </div>
                         </div>
                      </div>
@@ -604,7 +699,7 @@
       <script src="js/select2.min.js"></script>
       <script type="text/javascript">
          $(document).ready(function() {
-         	$("#table1").dataTable({"bPaginate": false,"sDom": 'zrtSpi'});
+         	$("#table1").dataTable({"bPaginate": false, "sDom": 'zrtSpi'});
          	$('#reportrange').daterangepicker({
          		startDate: moment().subtract('days', 29),
          		endDate: moment(),
@@ -685,30 +780,69 @@
 			  $('#reportrange1 span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
          	 }
            );
+		   $('#reportrange2').daterangepicker({
+         		startDate: moment().subtract('days', 29),
+         		endDate: moment(),
+         		minDate: '01/01/1990',
+         		maxDate: '12/31/2022',
+         		dateLimit: { days: 60 },
+         		showDropdowns: true,
+         		showWeekNumbers: true,
+         		timePicker: false,
+         		timePickerIncrement: 1,
+         		timePicker12Hour: true,
+         		ranges: {
+         			'Today': [moment(), moment()],
+         			'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+         			'Last 7 Days': [moment().subtract('days', 6), moment()],
+         			'Last 30 Days': [moment().subtract('days', 29), moment()],
+         			'This Month': [moment().startOf('month'), moment().endOf('month')],
+         			'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+         		},
+         		opens: 'left',
+         		buttonClasses: ['btn btn-default'],
+         		applyClass: 'btn-small btn-primary',
+         		cancelClass: 'btn-small',
+         		format: 'MM/DD/YYYY',
+         		separator: ' to ',
+         		locale: {
+         			applyLabel: 'Submit',
+         			fromLabel: 'From',
+         			toLabel: 'To',
+         			customRangeLabel: 'Custom Range',
+         			daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+         			monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+         			firstDay: 1
+         		}
+         	 },
+         	 function(start, end) {
+         	  console.log("Callback has been called!");
+			  $('#reportrange1 span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+         	 }
+           );
            //Set the initial state of the picker label
 		   $('#reportrange1 span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
 			
 			$('#sel1Multi').select2({
-         		placeholder: 'Select a Vendor',
+         		placeholder: 'Select a Vendor Code',
          		allowClear: true
          	});
-         	$('#sel2Multi').select2({
-         		placeholder: 'Select a Plant',
+			$('#sel2Multi').select2({
+         		placeholder: 'Select a PO Code',
          		allowClear: true
          	});
-         	$('#sel3Multi').select2({
-         		placeholder: 'Select a Collective No',
+			$('#sel3Multi').select2({
+         		placeholder: 'Select a Invoice Number',
          		allowClear: true
          	});
 			$('#sel4Multi').select2({
-         		placeholder: 'Select a RFQ No',
+         		placeholder: 'Select a Plant Code',
          		allowClear: true
          	});
 			$('#sel5Multi').select2({
-         		placeholder: 'Select a RFQ Description',
+         		placeholder: 'Select a PO Code',
          		allowClear: true
          	});
-         
          });
       </script>
    </body>

@@ -47,102 +47,6 @@
                   <div class="nav-no-collapse pull-right" id="header-nav">
                      <ul class="nav navbar-nav pull-right">
 						
-
-                        <li class="dropdown hidden-xs">
-                           <a class="btn dropdown-toggle" data-toggle="dropdown">
-                           <i class="fa fa-warning">
-                           </i>
-                           <span class="count">
-                           8
-                           </span>
-                           </a>
-                           <ul class="dropdown-menu notifications-list">
-                              <li class="pointer">
-                                 <div class="pointer-inner">
-                                    <div class="arrow">
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="item-header">
-                                 You have 6 new notifications
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-comment">
-                                 </i>
-                                 <span class="content">
-                                 New comment on ‘Awesome P...
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-plus">
-                                 </i>
-                                 <span class="content">
-                                 New user registration
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-envelope">
-                                 </i>
-                                 <span class="content">
-                                 New Message from George
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-shopping-cart">
-                                 </i>
-                                 <span class="content">
-                                 New purchase
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-eye">
-                                 </i>
-                                 <span class="content">
-                                 New order
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item-footer">
-                                 <a href="#">
-                                 View all notifications
-                                 </a>
-                              </li>
-                           </ul>
-                        </li>
                         <li class="dropdown profile-dropdown" id="profile-dropdown">
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                            <img src="img/user.jpg" alt=""/>
@@ -317,7 +221,31 @@
 							  
                            </header>
                            <div class="main-box-body clearfix">
-                              <div class="table-responsive">								 
+							 <div class="row">
+								<div class="col-sm-12">
+                                	<div class="btn-group pull-right">
+                                    
+                                    	<button class="btn btn-default"><i class="fa fa-filter"></i> Reset Filter</button>
+                                    	<button class="btn btn-default"><i class="fa  fa-file-excel-o"></i> Download as Excel</button>
+                                        
+                                        
+                                    </div>
+								
+									
+								</div>
+							 </div>
+                              <div class="table-responsive">	
+								<table class="table table-bordered table-striped table-condensed" style="margin-bottom:-1px !important">
+										<tr class="success">
+											<th>RFQ No#<div style="color:#AB9D9D">6000004259</div></th>
+											<th>Start Date<div style="color:#AB9D9D">23/10/2014</div></th>
+											<th>End Date<div style="color:#AB9D9D">23/10/2014</div></th>
+											<th>Deadline Date<div style="color:#AB9D9D">23/10/2014</div></th>
+											<th>Payment Term<div style="color:#AB9D9D">P001-Payment Within 15 Days</div></th>
+											<th>Icon Term<div style="color:#AB9D9D">1001-Cost and Fright</div></th>
+											<th>Status<div style="color:#AB9D9D">Open</div></th>
+										</tr>
+									</table>
 								 <table class="table table-bordered table-striped table-condensed" id="table1">
                                     <thead>
                                        <tr class="success">
@@ -327,13 +255,14 @@
                                           <th >Forecating volume</th>
                                           <th >Unit of Measurment</th>
 										   <th >Currency</th>
-										  <th nowrap >Unit Price per Unit</th>
+										  <th>Unit Price per Unit</th>
 										  <th>Packing Type</th>
 										  <th >Packing Per Unit</th>
 										  <th >Freight Type</th>
 										  <th >Freight Per Unit</th>
 										   <th >Total</th>
 										  <th >Remarks</th>
+										  <th>No Quote</th>
                                        </tr>
                                     </thead>
 									<tbody>
@@ -351,8 +280,7 @@
 											<td>0.00</td>
 											<td>6,880</td>
 											<td>ABCD</td>
-											
-
+											<td> <div class="checkbox"> <input type="checkbox"/></div> </td>
 										</tr>
 										<tr>
 											<td>1000</td>
@@ -368,12 +296,16 @@
 											<td>0.00</td>
 											<td>6,880</td>
 											<td>ABCD</td>
-											
-
+											<td> <div class="checkbox"> <input type="checkbox"/></div> </td>
 										</tr>
 										</tbody>
                                  </table>
+								  
                               </div>
+							  <div class="clearfix">
+										<p id="loadmore" align="center">&nbsp;</p>
+										<button class="btn btn-default col-lg-offset-4 col-md-offset-4 " id="btnload">Load More</button>
+									</div>
                            </div>
                         </div>
                      </div>
@@ -414,7 +346,7 @@
 
  
 $(document).ready(function() {
-			$("#table1").dataTable({"bPaginate": false});
+			$("#table1").dataTable({"bPaginate": false, "sDom": 'zrtSpi'});
 			$('#reportrange').daterangepicker({
          		startDate: moment().subtract('days', 29),
          		endDate: moment(),

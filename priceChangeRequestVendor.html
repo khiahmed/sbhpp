@@ -47,102 +47,6 @@
                   <div class="nav-no-collapse pull-right" id="header-nav">
                      <ul class="nav navbar-nav pull-right">
 						
-
-                        <li class="dropdown hidden-xs">
-                           <a class="btn dropdown-toggle" data-toggle="dropdown">
-                           <i class="fa fa-warning">
-                           </i>
-                           <span class="count">
-                           8
-                           </span>
-                           </a>
-                           <ul class="dropdown-menu notifications-list">
-                              <li class="pointer">
-                                 <div class="pointer-inner">
-                                    <div class="arrow">
-                                    </div>
-                                 </div>
-                              </li>
-                              <li class="item-header">
-                                 You have 6 new notifications
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-comment">
-                                 </i>
-                                 <span class="content">
-                                 New comment on ‘Awesome P...
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-plus">
-                                 </i>
-                                 <span class="content">
-                                 New user registration
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-envelope">
-                                 </i>
-                                 <span class="content">
-                                 New Message from George
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-shopping-cart">
-                                 </i>
-                                 <span class="content">
-                                 New purchase
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item">
-                                 <a href="#">
-                                 <i class="fa fa-eye">
-                                 </i>
-                                 <span class="content">
-                                 New order
-                                 </span>
-                                 <span class="time">
-                                 <i class="fa fa-clock-o">
-                                 </i>
-                                 13 min.
-                                 </span>
-                                 </a>
-                              </li>
-                              <li class="item-footer">
-                                 <a href="#">
-                                 View all notifications
-                                 </a>
-                              </li>
-                           </ul>
-                        </li>
                         <li class="dropdown profile-dropdown" id="profile-dropdown">
                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                            <img src="img/user.jpg" alt=""/>
@@ -219,14 +123,10 @@
 											<ul class="submenu" style="display: none;">
 											<li>
 											<a href="#">
-												PO Act
+												 PO Ship
 											</a>
 											</li>
-											<li>
-											<a href="#">
-												PO Shipment
-											</a>
-											</li>
+											
 											<li>
 											<a href="#">
 											Shipment
@@ -318,85 +218,30 @@
                            </header>
                            <div class="main-box-body clearfix">
                               <div class="">
-                                 
-                                 <div class="modal fade" id="plant-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                       <div class="modal-content">
-                                          <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">Plant Filter</h4>
-                                          </div>
-                                          <div class="modal-body">
-                                             <div class="form-group form-group-select2">
-                                                <label>use , commas for, multiple selection(s)</label>
-                                                <div class="form-group form-group-select2">
-                                                   <select style="width:300px" id="sel1Multi" multiple>
-                                                      <option value="6000325128">6000325128</option>
-                                                      <option value="6000325128">6000325128</option>
-                                                      <option value="6000325128">6000325128</option>
-                                                      <option value="6000325128">6000325128</option>
-                                                      <option value="6000325128">6000325128</option>
-                                                      <option value="6000325128">6000325128</option>
-                                                    </select>                                                 
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                             <button type="button" class="btn btn-primary">Save changes</button>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div class="modal fade" id="material-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                       <div class="modal-content">
-                                          <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">RFQ Plant Filter</h4>
-                                          </div>
-                                          <div class="modal-body">
-                                             <div class="form-group form-group-select2">
-                                                <label>use , commas for, multiple selection(s)</label>
-                                                <div class="form-group form-group-select2">
-                                                   <select style="width:300px" id="sel2Multi" multiple>
-                                                      <option value="1000325128">1000325128</option>
-                                                      <option value="1000325128">1000325128</option>
-                                                      <option value="1000325128">1000325128</option>
-                                                      <option value="1000325128">1000325128</option>
-                                                      <option value="1000325128">1000325128</option>
-                                                      <option value="1000325128">1000325128</option>
-                                                   </select>
-                                                </div>
-                                             </div>
-                                          </div>
-                                          <div class="modal-footer">
-                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                             <button type="button" class="btn btn-primary">Save changes</button>
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 
-                                 
-							
+
 								 
 								 
 								 <table class="table table-bordered table-striped table-condensed" id="table1">
                                     <thead>
-                                       <tr class="success">
-                                          <th><a>Plant Code</a> <button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-plant" data-toggle="modal" data-target="#plant-modal"><i class="fa  fa-magic"></i></button></th>
-                                          <th><a>Material Code</a> <button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-material" data-toggle="modal" data-target="#material-modal"><i class="fa  fa-magic"></i></button></th>
-                                          <th><a>Material Description</a></th>
-                                          <th><a>Existing Material Price</a></th>
-                                          <th><a>Existing Pack Price</a></th>
-                                          <th><a>Existing Freight Price</a></th>
-                                          <th><a>Requested Material Price</a></th>
-                                          <th><a>Requested Packing Price</a></th>
-										  <th><a>Requested Freight Price</a></th>
-										  <th><a>Effective Date</a></th>
-										  <th><a>Remarks</a></th>
+                                       <tr class="success" >
+                                         <th rowspan="2" valign="middle"><a data-toggle="tooltip" data-placement="top" title="PCR Number" > Plant</a></th>
+                                         <th rowspan="2" valign="middle"><a data-toggle="tooltip" data-placement="top" title="Plant Code">Material</a> </th>
+                                         <th rowspan="2" valign="middle"><a data-toggle="tooltip" data-placement="top" title="Material Description"> Description</a></th>
+                                         <th class="btn-primary" style="text-align: center; font-weight: bold;" colspan="3"><a >Existing Material</a></th>
+                                        
+                                         <th  class="btn-primary" style="text-align: center; font-weight: bold;" colspan="3"><a>Requested Material</a></th>
+                                         <th rowspan="2"><a data-toggle="tooltip" data-placement="top" title="Effective Date" >Date</a></th>
+                                         <th rowspan="2"><a>Remarks</a></th>
+                                         <th rowspan="2"><a>Actions</a></th>
                                        </tr>
+                                       <tr class="success">
+									      <th> Material Price</a></th>
+                                          <th> Pack Price</a></th>
+                                          <th> Freight Price</a></th>
+										  <th> Material Price</a></th>
+                                          <th> Packing Price</a></th>
+										  <th> Freight Price</a></th>
+									   </tr>
                                     </thead>
                                     <tbody>
                                        <tr>
@@ -405,106 +250,151 @@
 											<td>Resin</td>
 											<td>450</td>
 											<td>30</td>
-											<td>20</td>
+											<td>40</td>
+											<td>Pending</td>
 											<td>
-												<span>500</span>
-												<span style="display:none"><input type='text' value='500' size='2'></span>
+												800
+												
 											</td>
 											<td>
-												<span>40</span>
-												<span style="display:none"><input type='text' value='40' size='2'></span>
+												800
+												
 											</td>
 											<td>
-												<span>30</span>
-												<span style="display:none"><input type='text' value='30' size='2'></span>
+												<span>10/2/2014</span>
+												
+											</td>
+											<td>In Progress</td>
+											<td>
+												<a data-toggle="modal" data-target="#myModal1" href="#" >
+													<i class="glyphicon glyphicon-paperclip"></i>
+												</a> &nbsp;
+                                             <a data-toggle="modal" data-target="#myModal" href="#" >
+												<i class='glyphicon glyphicon-edit'></i>
+												</a>
+											</td>
+										</tr>
+                                       <tr>
+											<td>6000325127</td>
+											<td>1000325128</td>
+											<td>Resin</td>
+											<td>450</td>
+											<td>30</td>
+											<td>40</td>
+											<td>Pending</td>
+											<td>
+												800
+												<span style="display:none"><input type='text' value='800' size='2'></span>
+											</td>
+											<td>
+												800
+												<span style="display:none"><input type='text' value='800' size='2'></span>
 											</td>
 											<td>
 												<span>10/2/2014</span>
 												<span style="display:none"><input type='text' value='Material Price' size='10'></span>
 											</td>
+											<td>In Progress</td>
 											<td>
-												In-Process
-											</td>
-											<td>
-												<a>
-													<span class="leftt MR glyphicon glyphicon-paperclip"></span>
+												<a data-toggle="modal" data-target="#myModal1" href="#" >
+													<i class="glyphicon glyphicon-paperclip"></i>
+												</a> &nbsp;
+                                                <a data-toggle="modal" data-target="#myModal" href="#" >
+												<i class='glyphicon glyphicon-edit'></i>
 												</a>
-												<span class='glyphicon glyphicon-edit'></span>
-												<span style="display:none"><input id="upfile" type="file" value="upload" multiple></span>
 											</td>
 										</tr>
                                        <tr>
-											<td>6000325128</td>
-											<td>1000325128</td>
+											<td>60003251286</td>
+											<td>1080325128</td>
 											<td>Resin</td>
 											<td>450</td>
 											<td>30</td>
-											<td>20</td>
+											<td>40</td>
+											<td>Pending</td>
 											<td>
-												<span>500</span>
-												<span style='display:none;'><input type='text' value='500' size='2'></span>
+												800
+												<span style="display:none"><input type='text' value='800' size='2'></span>
 											</td>
 											<td>
-												<span>40</span>
-												<span style='display:none;'><input type='text' value='40' size='2'></span>
-											</td>
-											<td>
-												<span>30</span>
-												<span style='display:none;'><input type='text' value='30' size='2'></span>
+												800
+												<span style="display:none"><input type='text' value='800' size='2'></span>
 											</td>
 											<td>
 												<span>10/2/2014</span>
-												<span style='display:none;'><input type='text' value='Material Price' size='10'></span>
+												
 											</td>
+											<td>In Progress</td>
 											<td>
-												In-Process
-											</td>
-											<td>
-												<a>
-													<span class="glyphicon glyphicon-paperclip"></span>
+												<a data-toggle="modal" data-target="#myModal1" href="#" >
+													<i class="glyphicon glyphicon-paperclip"></i>
+												</a> &nbsp;
+                                              <a data-toggle="modal" data-target="#myModal" href="#" >
+												<i class='glyphicon glyphicon-edit'></i>
 												</a>
-												<span class='glyphicon glyphicon-edit'></span>
-												<span style='display:none;'><input id="upfile2" type="file" value="upload"multiple></span>
-											</td>
-										</tr>
-                                       <tr>
-											<td>6000325128</td>
-											<td>1000325128</td>
-											<td>Resin</td>
-											<td>450</td>
-											<td>30</td>
-											<td>20</td>
-											<td>
-												<span>500</span>
-												<span style='display:none;'><input type='text' value='500' size='2'></span>
-											</td>
-											<td>
-												<span>40</span>
-												<span style='display:none;'><input type='text' value='40' size='2'></span>
-											</td>
-											<td>
-												<span>30</span>
-												<span style='display:none;'><input type='text' value='30' size='2'></span>
-											</td>
-											<td>
-												<span>10/2/2014</span>
-												<span style='display:none;'><input type='text' value='Material Price' size='10'></span>
-											</td>
-											<td>
-												In-Process
-											</td>
-											<td>
-												<a>
-													<span class="glyphicon glyphicon-paperclip"></span>
-												</a>
-												<span class='glyphicon glyphicon-edit'></span>
-												<span class='glyphicon glyphicon-edit' style='display:none;'></span>
-												<span style='display:none;'><input id="upfile3" type="file" value="upload" multiple></span>
 											</td>
 										</tr>
                                     </tbody>
                                  </table>
-                              </div>
+                                       
+                                 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+<table width="100%" border="0" class="table table-bordered table-striped" >
+										<thead>
+                                         <tr >
+                                           <th  style="text-align: center; font-weight: bold;" colspan="3"><a>Requested</a></th>
+                                           <th width="20%" rowspan="2"><a>Effective Date</a></th>
+
+                                         </tr>
+                                         <tr>
+                                           <th width="22%"> Material Price</a></th>
+                                           <th width="27%"> Packing Price</a></th>
+                                           <th width="18%"> Freight Price</a></th>
+										</thead>
+                                        <tbody>
+                                         <tr>
+                                           <td><input type="text" class="form-control" name="textfield" value="1.00" id="textfield"></td>
+                                           <td><input type="text" class="form-control" name="textfield2" value="1.00"  id="textfield2"></td>
+                                           <td><input type="text" class="form-control" name="textfield3" value="1.00"  id="textfield3"></td>
+                                           <td><input type="text" class="form-control" name="textfield4"  value=""  id="textfield4"></td>
+                                      
+                                          </tr>
+                            </tbody>
+                          </table>
+                                <div class="form-group">
+                                <label>Remarks
+                                </label>
+                                <textarea id="remark" class="form-control"></textarea>
+                                </div>
+	
+      </div>
+      <div class="modal-footer">
+                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+      </div>
+    </div>
+  </div>
+</div>
+                              <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-body">
+		<legend>Attach Multiple Files <small class="alert-info">Use CTRL & select Multiple Files </small></legend>
+        <label>Select files</label>
+        <input type="file" multiple name="file1">
+      </div>
+      <div class="modal-footer">
+                                             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+      </div>
+    </div>
+  </div>
+</div>
+                             </div>
                            </div>
                         </div>
                      </div>
@@ -513,8 +403,7 @@
                      <div class="col-lg-12">
                         <div class="row">
                            <div class="col-lg-12">
-							<!-- -->                          
-						   </div>
+						   <!-- --></div>
                         </div>
                      </div>
                   </div>
@@ -535,11 +424,12 @@
       <script src="js/demo-skin-changer.js"></script>
       <script src="js/demo.js"></script>
       <script src="js/jquery.nanoscroller.min.js"></script>
-      <script src="js/demo-rtl.js"></script>
+      <script src="js/bootstrap-datepicker.js"></script>
       <script src="js/select2.min.js"></script>
+ 
       <script type="text/javascript">
          $(document).ready(function() {
-         	$("#table1").dataTable({"bPaginate": false});
+         	$("#table1").dataTable({"bPaginate": false, "sDom": 'zrtSpi'});
          	$('#reportrange').daterangepicker({
          		startDate: moment().subtract('days', 29),
          		endDate: moment(),
@@ -631,6 +521,7 @@
          		placeholder: 'Select a Material',
          		allowClear: true
          	});
+			$("#textfield4").datepicker();
          });
       </script>
    </body>

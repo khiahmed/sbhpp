@@ -131,6 +131,56 @@ $.fn.removeClassPrefix = function(prefix) {
 //$(".nav-stacked > li > ul ").css({"display":"block"});
 document.write('<script type="text/javascript" src="js/pace.min.js"></script>');
 document.write('<script type="text/javascript" src="js/jquery.dataTables.js"></script>');
+document.write('<script type="text/javascript" src="js/ColResize.js"></script>');
 document.write('<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>');
 
 })(jQuery, 'smartresize');
+
+//Center me 
+var global={};
+global["windowHeight"]=0;
+
+$(document).ready(function(){
+	initializeBanner();
+	$(window).resize(whenResized);
+});
+var whenResized = function(){
+		initializeBanner();
+	}
+var initializeBanner = function(){
+		getSettingValues();	
+		applySettingValues();
+		updateContentMinHeight();
+		
+	}
+var getSettingValues = function(){
+		global.windowHeight = $(window).height();
+		
+	}
+
+var applySettingValues = function(){
+		var $targetBox = $('.centerMe');
+		var targetBoxHeight = $targetBox.height(); 
+		var targetBoxMarginTop =(global.windowHeight - targetBoxHeight)/2; 
+		$targetBox.css('margin-top',targetBoxMarginTop + 'px');
+		$targetBox.fadeIn(2000);
+	}
+var updateContentMinHeight = function(){
+		this.newContentMinHeight=0;
+		var navbarHeightN = $('#header-navbar').height();
+		this.newContentMinHeight = global.windowHeight - navbarHeightN;
+		$('#content-wrapper').css('min-height', newContentMinHeight);
+}
+	//Center me End
+//accordion clicm on symbol	
+var $accordion = $(".panel-group");
+var $accordionPanel = $accordion.find('.accordion-toggle');
+$accordionPanel.click(function(){ 
+	var isCollapsed = $(this).hasClass('collapsed');
+	var $targetIcon =$(this).find('.glyphicon');
+	$targetIcon.toggleClass('glyphicon-minus',isCollapsed);
+	$targetIcon.toggleClass('glyphicon-plus',!isCollapsed);
+}); 
+//accordion clicm on symbol
+//theam helpers
+
