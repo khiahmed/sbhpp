@@ -104,6 +104,7 @@ padding-top:25px !important;
 .btn-tool{
 	padding:0px 3px !important;
 	margin:0 !important;
+	margin-right:5px !important; 
 }
  #config-tool-options {
     background: none !important;
@@ -181,7 +182,17 @@ color:#000;
 .table tr.success > th {
 	padding:2px !important;
 	/* background-color:#EAEAEA !important; */
-    background: url("../img/sprite.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0); 
+  /*  background: url("../img/sprite.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0);  */
+  background: #ffffff; /* Old browsers */
+background: -moz-linear-gradient(top, #ffffff 0%, #d8d8da 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d8d8da)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top, #ffffff 0%,#d8d8da 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top, #ffffff 0%,#d8d8da 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top, #ffffff 0%,#d8d8da 100%); /* IE10+ */
+background: linear-gradient(to bottom, #ffffff 0%,#d8d8da 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d8d8da',GradientType=0 ); /* IE6-9 */
+
+
 
 
 }
@@ -193,4 +204,8 @@ color:#000;
  td.sorting_1 {
  background-color: rgba(237, 245, 255, 0.5) !important;
 
+}
+th.sorting_asc, th.sorting_desc {
+color:#607d8b;
+text-decoration:underline;
 }

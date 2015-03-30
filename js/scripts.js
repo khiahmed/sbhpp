@@ -131,6 +131,7 @@ $.fn.removeClassPrefix = function(prefix) {
 //$(".nav-stacked > li > ul ").css({"display":"block"});
 document.write('<script type="text/javascript" src="js/pace.min.js"></script>');
 document.write('<script type="text/javascript" src="js/jquery.dataTables.js"></script>');
+document.write('<script type="text/javascript" src="js/ColResize.js"></script>');
 document.write('<script type="text/javascript" src="js/dataTables.bootstrap.js"></script>');
 
 })(jQuery, 'smartresize');
