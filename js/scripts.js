@@ -149,6 +149,8 @@ var whenResized = function(){
 var initializeBanner = function(){
 		getSettingValues();	
 		applySettingValues();
+		updateContentMinHeight();
+		
 	}
 var getSettingValues = function(){
 		global.windowHeight = $(window).height();
@@ -162,6 +164,12 @@ var applySettingValues = function(){
 		$targetBox.css('margin-top',targetBoxMarginTop + 'px');
 		$targetBox.fadeIn(2000);
 	}
+var updateContentMinHeight = function(){
+		this.newContentMinHeight=0;
+		var navbarHeightN = $('#header-navbar').height();
+		this.newContentMinHeight = global.windowHeight - navbarHeightN;
+		$('#content-wrapper').css('min-height', newContentMinHeight);
+}
 	//Center me End
 //accordion clicm on symbol	
 var $accordion = $(".panel-group");
@@ -172,5 +180,6 @@ $accordionPanel.click(function(){
 	$targetIcon.toggleClass('glyphicon-minus',isCollapsed);
 	$targetIcon.toggleClass('glyphicon-plus',!isCollapsed);
 }); 
-	//accordion clicm on symbol	
-	
+//accordion clicm on symbol
+//theam helpers
+
