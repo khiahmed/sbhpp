@@ -210,3 +210,7 @@ th.sorting_asc, th.sorting_desc {
 color:#607d8b;
 text-decoration:underline;
 }
+
+.table tr.success > th > label {
+display:block !important;
+}
