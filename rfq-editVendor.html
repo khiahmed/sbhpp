@@ -231,79 +231,73 @@
 									<button class="btn btn-default">Back to RFQ</button>
 								</div>
 							 </div>
-                              <div class="table-responsive">	
+                              <!--<div class="table-responsive">	-->
 								 <table class="table table-bordered table-striped table-condensed" style="margin:-1px;border-bottom:0px">
 										<tr class="success">
-											<th>RFQ No#<div style="color:#AB9D9D">6000004259</div></th>
-											<th>Start Date<div style="color:#AB9D9D">23/10/2014</div></th>
-											<th>End Date<div style="color:#AB9D9D">23/10/2014</div></th>
-											<th>Deadline Date<div style="color:#AB9D9D">23/10/2014</div></th>
-											<th>Payment Term<div style="color:#AB9D9D">P001-Payment Within 15 Days</div></th>
-											<th>Icon Term<div style="color:#AB9D9D">1001-Cost and Fright</div></th>
-											<th>Status<div style="color:#AB9D9D">Open</div></th>
+											<th>RFQ No#<label>6000004259</label></th>
+											<th>Start Date<label>23/10/2014</label></th>
+											<th>End Date<label>23/10/2014</label></th>
+											<th>Deadline Date<label>23/10/2014</label></th>
+											<th>Payment Term<label>P001-Payment Within 15 Days</label></th>
+											<th>Inco Term<label>1001-Cost and Fright</label></th>
+											<th>Status<label >Open</label></th>
 										</tr>
 									</table>
-								 <table class="table table-bordered table-striped table-condensed" id="table1" style="border-top:0px">
+								 <table class="table table-bordered table-striped table-condensed" id="table_rfq_edit" style="border-top:0px">
                                     <thead>
                                        <tr class="success">
-                                          <th rowspan="2" valign="middle">Plant</th>
-										  <th style="text-align: center; font-weight:bold; border-bottom:1px solid #ddd;" colspan="2">Material</th>
-										  <th rowspan="2" valign="middle">Forecasting Volume</th>
-										  <th rowspan="2" valign="middle">UOM</th>
-										  <th rowspan="2" valign="middle">Currency</th>
-										  <th rowspan="2" valign="middle">Unit Price</th>
-										  <th rowspan="2" valign="middle">Packing</th>
-										  <th rowspan="2" valign="middle">Packing Type</th>
-										  <th rowspan="2" valign="middle">Freight</th>
-										  <th rowspan="2" valign="middle">Freight Type</th>
-										  <th rowspan="2" valign="middle">Total</th>
-										  <th rowspan="2" valign="middle">Remarks</th>
-										  <th rowspan="2" valign="middle">Edit Quote</th>
-										  <th rowspan="2" valign="middle">No Quote</th>
+                                          <th><a>Plant</a></th>
+										  <th><a>Material</a></th>
+										  <th><a>Forecasting Volume</a></th>
+										  <th><a>UOM</a></th>
+										  <th><a>Unit Price</a></th>
+										  <th><a>Packing</a></th>
+										  <th><a>Packing Type</a></th>
+										  <th><a>Freight</a></th>
+										  <th><a>Freight Type</a></th>
+										  <th><a>Total</a></th>
+										  <th><a>Currency</a></th>
+										  <th><a>Remarks</a></th>
+										  <th><a>Edit Quote</a></th>
+										  <th><a>No Quote</a></th>
                                        </tr>
-									   <tr class="success">
-                                          <th>ID</th>
-										  <th>Description</th>
-									   </tr>
                                     </thead>
 									<tbody>
 										<tr>
 											<td>1000</td>
-											<td>ABCD1234</td>
-											<td>Station Gauge</td>
+											<td data-placement="bottom" data-toggle="tooltip" title="" data-original-title="ABCD1234">ABCD1234</td>
 											<td>56.00 </td>
 											<td>#NO</td>
-											<td>USD</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>6,880</td>
+											<td>USD</td>
 											<td>ABCD</td>
 											<td><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
-											<td> <div class="checkbox"> <input type="checkbox" checked disabled /></div> </td>
+											<td> <div class="checkbox"> <input type="checkbox" /></div> </td>
 										</tr>
 										<tr>
 											<td>1000</td>
-											<td>ABCD1234</td>
-											<td>Station Gauge</td>
+											<td data-placement="bottom" data-toggle="tooltip" title="" data-original-title="ABCD1234">ABCD1234</td>
 											<td>56.00 </td>
 											<td>#NO</td>
-											<td>USD</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>6,880</td>
+											<td>USD</td>
 											<td>ABCD</td>
 											<td><a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a></td>
-											<td> <div class="checkbox"> <input type="checkbox" checked disabled /></div> </td>
+											<td> <div class="checkbox"> <input type="checkbox" /></div> </td>
 										</tr>
 										</tbody>
                                  </table>
-                              </div>
+                              <!--</div>-->
 							   <div class="clearfix">
 									<p id="loadmore" align="center">&nbsp;</p>
 									<button class="btn btn-default col-lg-offset-4 col-md-offset-4 " id="btnload">Load More</button>
@@ -321,10 +315,6 @@
 							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 							  <div class="modal-dialog">
 								<div class="modal-content">
-								  <div class="modal-header">
-									<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-									<h4 class="modal-title" id="myModalLabel">RFQ Edit</h4>
-								  </div>
 								  <div class="modal-body">
 								  
 									<div class="row">
@@ -341,7 +331,7 @@
 										
 									<div class="row">
 										<div class="col-sm-2">
-											<label>Packing Per Unit:</label>	
+											<label>Packing</label>	
 										</div>
 										<div class="col-sm-3">
 											<div class="form-group">
@@ -372,7 +362,7 @@
 									<div class="row">
 
 										<div class="col-sm-2">
-											<label>Freight Per Unit:</label>	
+											<label>Freight</label>	
 										</div>
 										<div class="col-sm-3">
 											<div class="form-group">
@@ -410,13 +400,14 @@
 									</div>
 									<div class="col-sm-5">
 										<div class="form-group">
-											<input type="text" class="form-control" style="width:200px;" value="ABCD">
+											<!--<input type="text" class="form-control" style="width:200px;" value="ABCD">-->
+											<textarea>ABCD</textarea>
 										</div>
 									</div>
 									 <div class="col-sm-3">
 										<div class="form-group">
 											<label><b>Total :</b></label>
-											<span>6000</span>
+											<span><b>6000</b></span>
 										</div>
 									</div>
 								  </div>
