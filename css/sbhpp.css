@@ -158,3 +158,39 @@ display:;
 	width: 100%;
 	height: 30px;
 }
+
+.table.table-condensed tbody > tr > td {
+    padding: 1px 5px !important;
+}
+
+.dataTables_info{
+display:none;
+}
+
+
+.table tr.success > th {
+
+    border-right: 0px solid #cbcbcb !important;
+
+
+}
+.table tr.success > th  > a{
+color:#000;
+}
+
+.table tr.success > th {
+	padding:2px !important;
+	/* background-color:#EAEAEA !important; */
+    background: url("../img/sprite.png") repeat-x scroll 0 0 rgba(0, 0, 0, 0); 
+
+
+}
+
+.table-striped > tbody > tr:nth-child(2n+1) {
+    background-color: #edf5ff !important;
+}
+
+ td.sorting_1 {
+ background-color: rgba(237, 245, 255, 0.5) !important;
+
+}
