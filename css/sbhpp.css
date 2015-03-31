@@ -214,3 +214,11 @@ text-decoration:underline;
 .table tr.success > th > label {
 display:block !important;
 }
+@media (min-width: 768px){
+.modal-dialog.small-modal {
+  width: 300px;
+ }
+ .modal-dialog.medium-modal {
+  width: 400px;
+ }
+}
