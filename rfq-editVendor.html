@@ -317,7 +317,7 @@
 							<!-- -->     
 							<form method="post">
 							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							  <div class="modal-dialog">
+							  <div class="modal-dialog medium-modal">
 								<div class="modal-content">
 								  <div class="modal-body">
 								  
@@ -325,7 +325,7 @@
 										<div class="col-sm-2">
 											<label>Unit Price </label>	
 										</div>
-										<div class="col-sm-3">
+										<div class="col-sm-2">
 											<div class="form-group" style="width:200px;">
 												<input type="text" class="form-control" value="1.00">
 											</div>
@@ -337,20 +337,20 @@
 										<div class="col-sm-2">
 											<label>Packing</label>	
 										</div>
-										<div class="col-sm-3">
+										<div class="col-sm-2">
 											<div class="form-group">
-												<input type="text" class="form-control" style="width:120px;" value="1.00">
+												<input type="text" class="form-control" style="width:80px;" value="1.00">
 											</div>
 										</div>
-										<div class="col-sm-2">
+										<div class="col-sm-2 col-lg-offset-1">
 											<label>Packing Type</label>	
 										</div>
-										<div class="col-sm-3">
+										<div class="col-sm-2">
 											<div class="form-group">
 												<div class="form-group form-group-select2">
 													<!--<label>use , commas for, multiple selection(s)</label>-->
 													<div class="form-group form-group-select2 modalSelect">
-														<select style="width:200px" id="sel1Multi" multiple>
+														<select style="width:140px" id="sel1Multi" multiple>
 															<option value="0.00">0.00</option>
 															<option value="0.00">0.00</option>
 															<option value="0.00">0.00</option>
@@ -368,23 +368,23 @@
 										<div class="col-sm-2">
 											<label>Freight</label>	
 										</div>
-										<div class="col-sm-3">
+										<div class="col-sm-2">
 											<div class="form-group">
-												<input type="text" class="form-control" style="width:120px;" value="1.00">
+												<input type="text" class="form-control" style="width:80px;" value="1.00">
 											</div>
 										</div>
 										
-										<div class="col-sm-2">
+										<div class="col-sm-2 col-lg-offset-1">
 											<label>Freight Type</label>	
 										</div>
 										
-										<div class="col-sm-3">
+										<div class="col-sm-2">
 											<div class="form-group">
 						
 												<div class="form-group form-group-select2">
 													<!--<label>use , commas for, multiple selection(s)</label>-->
 													<div class="form-group form-group-select2 modalSelect">
-														<select style="width:200px" id="sel2Multi" multiple>
+														<select style="width:140px" id="sel2Multi" multiple>
 															<option value="0.00">0.00</option>
 															<option value="0.00">0.00</option>
 															<option value="0.00">0.00</option>
@@ -402,7 +402,7 @@
 									<div class="col-sm-2">
 											<label>Remarks</label>	
 									</div>
-									<div class="col-sm-5">
+									<div class="col-sm-7">
 										<div class="form-group">
 											<!--<input type="text" class="form-control" style="width:200px;" value="ABCD">-->
 											<textarea>ABCD</textarea>
@@ -550,11 +550,11 @@ $(document).ready(function() {
 		   $('#reportrange1 span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
 			
 			$('#sel1Multi').select2({
-         		placeholder: 'Select a Packing Type',
+         		placeholder: 'Select Packing Type',
          		allowClear: true
          	});
          	$('#sel2Multi').select2({
-         		placeholder: 'Select a Freight Type',
+         		placeholder: 'Select Freight Type',
          		allowClear: true
          	});
          	$('#sel3Multi').select2({
