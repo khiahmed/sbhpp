@@ -345,7 +345,14 @@
 
  
 $(document).ready(function() {
-			$("#table1").dataTable({"bPaginate": false, "sDom": 'zrtSpi'});
+			$("#table1").dataTable({
+					"bPaginate": false,
+					"sDom": 'zrtSpi',
+					columnDefs: [
+					   { orderable: false, targets: -1 },
+					   { orderable: false, targets: -2 },
+					]
+			});
 			$('#reportrange').daterangepicker({
          		startDate: moment().subtract('days', 29),
          		endDate: moment(),

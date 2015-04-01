@@ -317,13 +317,13 @@
 							<!-- -->     
 							<form method="post">
 							<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-							  <div class="modal-dialog medium-modal">
+							  <div class="modal-dialog">
 								<div class="modal-content">
 								  <div class="modal-body">
 								  
 									<div class="row">
 										<div class="col-sm-2">
-											<label>Unit Price Per Unit:</label>	
+											<label>Unit Price </label>	
 										</div>
 										<div class="col-sm-3">
 											<div class="form-group" style="width:200px;">
@@ -375,7 +375,7 @@
 										</div>
 										
 										<div class="col-sm-2">
-											<label>Packing Type</label>	
+											<label>Freight Type</label>	
 										</div>
 										
 										<div class="col-sm-3">
@@ -457,7 +457,15 @@
 
  
 $(document).ready(function() {
-			$("#table1").dataTable({"bPaginate": false});
+			$("#table1").dataTable({
+					"bPaginate": false,
+					"sDom": 'zrtSpi',
+					columnDefs: [
+					   { orderable: false, targets: -1 },
+					   { orderable: false, targets: -2 },
+					   { orderable: false, targets: -3 }
+					]
+			});
 			$('#reportrange').daterangepicker({
          		startDate: moment().subtract('days', 29),
          		endDate: moment(),
