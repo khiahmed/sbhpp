@@ -16,6 +16,8 @@
 <link rel="stylesheet" href="css/libs/daterangepicker.css" type="text/css"/>
 <link rel="stylesheet" href="css/libs/dataTables.tableTools.css" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="css/libs/jquery.nouislider.css">
+<link rel="stylesheet" href="css/libs/jquery-ui.css">
+      <link rel="stylesheet" href="css/libs/select2.css" type="text/css"/>
 </head>
 <body class="pace-done theme-white">
 <div id="theme-wrapper">
@@ -32,13 +34,7 @@
           <ul class="nav navbar-nav pull-right">
             <li class="dropdown profile-dropdown" id="profile-dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="img/user.jpg" alt=""/> <span class="hidden-xs"> Srinath Parthasarathy </span> <b class="caret"> </b> </a>
               <ul class="dropdown-menu">
-                <li>
-                                 <a href="#">
-                                 <i class="fa fa-envelope-o">
-                                 </i>
-                                Change Password
-                                 </a>
-                              </li>
+                <li> <a href="#"> <i class="fa fa-envelope-o"> </i> Messages </a> </li>
                 <li> <a href="#"> <i class="fa fa-power-off"> </i> Logout </a> </li>
               </ul>
             </li>
@@ -58,16 +54,16 @@
                 <li class=""> <a href="#" class="dropdown-toggle"> <i class="fa fa-envelope"> </i> <span> Mail Box </span> <span class="count badge badge-info"> 8 </span> <i class="fa fa-angle-right drop-icon"></i> </a>
                   <ul class="submenu email" style="display: none;">
                     <li class="" > <a href="email-inbox.html"> <i class="fa fa-inbox"></i> Inbox </a> </li>
-                    <!--<li >
+                    <li >
                                        <a href="email-compose.html">
                                        <i class="fa fa-envelope"></i> Compose Mail
                                        </a>
-                                    </li>-->
+                                    </li>
                   </ul>
                 </li>
                 <li class=""> <a href="#" class="dropdown-toggle"> <i class="fa fa-truck"></i> <span>PO & Shipment</span> <i class="fa fa-angle-right drop-icon"></i> </a>
                   <ul class="submenu" style="display: none;">
-				    <li> <a href="#"> PO Act </a> </li>
+				  
                     <li> <a href="#"> PO Ship </a> </li>
                     <li> <a href="#"> Shipment </a> </li>
                   </ul>
@@ -111,28 +107,30 @@
                     <div class="col-lg-4">
                       <label class="lead">Year / Month</label>
                     </div>
-						 <div class="col-lg-4">
-						  <div id="yearSlider" class="slider-range"></div>
-						  <span class="slider-label"></span> 
-						 </div>
-						
-						<div class="col-lg-4">
-						  <div id="monthSlider" class="slider-range"></div>
-						  <span class="slider-label"></span> 
-						  <!--<select class="form-control" name="month"><option>Month (All)</option><option>December</option></select> -->
-						 </div>
+                   <div class="col-lg-4">
+					  <div id="slider" ></div>
+					  <span id="yearlabel" class="slider-label"></span> 
+					 </div>
+					
+					<div class="col-lg-4">
+					  <div id="monthSlider" class="slider-range"></div>
+					  <span id="monthlabel" class="slider-label"></span> 
+					  <!--<select class="form-control" name="month"><option>Month (All)</option><option>December</option></select> -->
+					 </div>
                   </div>
                   <div class="row">
                     <div class="col-lg-4">
                       <label class="lead">Purch organization</label>
                     </div>
                     <div class="col-lg-4">
-                      <select class="form-control" name="organization">
-                        <option>C100 - org Description </option>
-                        <option>C100 - org Description </option>
-                        <option>C400 - org Description </option>
-                        <option>C800 - org Description </option>
-                      </select>
+                     <div class="form-group form-group-select2">
+						   <select style="width:220px" id="organisationName" multiple>
+							    <option>C100 - org Description </option>
+								<option>C100 - org Description </option>
+								<option>C400 - org Description </option>
+								<option>C800 - org Description </option>
+						   </select>
+						</div>
                     </div>
                     <div class="col-lg-4">
                       <button class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
@@ -145,8 +143,8 @@
                 <div class="table-responsive">
                   <table class="table table-bordered table-striped table-condensed" id="table1" width="100%" border="0">
                     <tr class="success">
-                      <td width="3%">&nbsp;</td>
-					  <td colspan="2" style=" text-align:center; font-weight:bolder">JAN - 2015 (3)</td>
+                      <td width="11%"></td>
+					  <td colspan="2" style=" text-align:center; font-weight:bolder">Jan - 2015 (3)</td>
                       <td colspan="2" style=" text-align:center; font-weight:bolder">FEB - 2015 (3)</td>
                       <td colspan="2" style=" text-align:center; font-weight:bolder">March - 2015 (2)</td>
                       <td colspan="2" style=" text-align:center; font-weight:bolder">April - 2015 (2)</td>
@@ -157,7 +155,7 @@
                       <td colspan="2" style=" text-align:center; font-weight:bolder">September - 2015 (3)</td>
                       <td colspan="2" style=" text-align:center; font-weight:bolder">October - 2015 (2)</td>
                       <td colspan="2" style=" text-align:center; font-weight:bolder">November - 2015 (2)</td>
-                      <td nowrap colspan="2" style=" text-align:center; font-weight:bolder">December - 2015 (2)</td>
+                      <td colspan="2" style=" text-align:center; font-weight:bolder">December - 2015 (2)</td>
                     </tr>
                     <tr class="success">
                       <td nowrap>Vendor Name</td>
@@ -183,11 +181,10 @@
                       <td width="7%" nowrap>Date</td>
                       <td width="14%" nowrap>Auditor Name</td>
                       <td width="10%" nowrap>Date</td>
-					  <td width="14%" nowrap>Auditor Name</td>
+					   <td width="14%" nowrap>Auditor Name</td>
                       <td width="10%" nowrap>Date</td>
                     </tr>
                     <tr>
-     
                       <td>IGML S001</td>
                       <td>Deepak Jain</td>
                       <td>11.10.2015</td>
@@ -211,12 +208,20 @@
                       <td>&nbsp;</td>
                       <td>&nbsp;</td>
                       <td>&nbsp;</td>
-					  <td>&nbsp;</td>
-                      <td>&nbsp;</td>
+					 <td>Deepak Jain</td>
+                      <td>11.10.2015</td>
                     </tr>
+                    
+                    
+                    
+                    
                   </table>
-
+                  
+                  
                 </div>
+				<div class="col-lg-offset-5">
+									<button id="btnload" class="btn btn-default ">Load More</button>
+								</div>
               </div>
             </div>
           </div>
@@ -229,75 +234,95 @@
     </div>
   </div>
 </div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog medium-modal">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+       <table class="table">
+       	<tr>
+        	<td>Vendor</td><td>
+			
+			 <div class="form-group form-group-select2">
+				<label>use , commas for, multiple selection(s)</label>
+				<div class="form-group form-group-select2">
+				   <select style="width:220px" id="vendorName" multiple>
+					   <option value="DeepakJain">Deepak Jain</option>
+					  <option value="Vinay Jain">Vinay Jain</option>
+					  <option value="Shyam Jain">Shyam Jain</option>
+					  <option value="Raj Jain">Raj Jain</option>
+					  <option value="Rihan Jain">rihan Jain</option>
+					  <option value="Midhun Jain">Midhun Jain</option>
+				   </select>
+				</div>
+			 </div>
+			 </div></td>
+        </tr>
+       </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="addvend2" data-dismiss="modal">Add Vendor</button>
+      </div>
+    </div>
+  </div>
+</div>
 <script src="js/jquery.js"></script> 
 <script src="js/bootstrap.js"></script> 
 <script src="js/moment.min.js"></script> 
-<script src="js/daterangepicker.js"></script> 
+<script src="js/bootstrap-datepicker.js"></script>
 <script src="js/scripts.js"></script> 
 <script src="js/demo-skin-changer.js"></script> 
 <script src="js/demo.js"></script> 
 <script src="js/jquery.nanoscroller.min.js"></script> 
 <script src="js/demo-rtl.js"></script> 
 <script src="js/select2.min.js"></script> 
-<script src="js/jquery.nouislider.js"></script> 
+<script src="js/jquery.nouislider.js"></script>
+<script src="js/jquery-ui.custom.min.js"></script>
+ 
 <script type="text/javascript">
          $(document).ready(function() {
-         	
+         		i=6;
+			
          			//range slider
-		$('#monthSlider').noUiSlider({
-			range: [1, 12],
-			start: [0, 1],
-			step: 1,
-			connect: true,
-			slide: function(){
-				var values = $(this).val();
-				
+		$('#monthSlider').slider({
+			 range: true,
+			  min: 1,
+			  max:12,
+			  values: [ 1, 4 ],
+			slide:function( event, ui ){					
 				$(this).next('span').text(
-					'Month: ' + getmonth(values[0]) + ' - ' + getmonth(values[1])
+					'Month: ' + getmonth(ui.values[0]) + ' - ' + getmonth(ui.values[1])
 				);
-			},
-			set: function(){
-				var values = $(this).val();
-				
-				$(this).next('span').text(
-					'Month: ' + getmonth(values[0]) + ' - ' + getmonth(values[1])
-				);
-			}
+			}			
 		});
+		 $( "#monthlabel").html("Month: "+ getmonth($( "#monthSlider" ).slider( "values", 0 )) + " - " + getmonth($( "#monthSlider" ).slider( "values", 1 )) );
 		function getmonth(month){
 			var months = ['January', 'February', 'March', 'April', 'May', 'June',  'July', 'August', 'September', 'October', 'November', 'December'];
 			return months[month-1];
 		}		
-		$('#monthSlider').val([6, 9], true);
-		
-		
-		$('#yearSlider').noUiSlider({
-			range: [1, 17],
-			start: [0, 1],
-			step: 1,
-			connect: true,
-			slide: function(){
-				var values = $(this).val();
-				
+
+			$( "#slider" ).slider({
+			range: false,
+			min: 2010,
+			max: 2015,
+			value:2012,
+			slide:function( event, ui ){				
 				$(this).next('span').text(
-					'Year: ' + getYear(values[0]) + ' - ' + getYear(values[1])
+					'Year: ' + ui.value					
 				);
-			},
-			set: function(){
-				var values = $(this).val();
-				
-				$(this).next('span').text(
-					'Year: ' + getYear(values[0]) + ' - ' + getYear(values[1])
-				);
-			}
+			}	
+			
+			});
+			$( "#yearlabel").html("Year: "+ $( "#slider" ).slider( "option", "value"  ) );
 		});
-		function getYear(year){
-			var years = ['2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016', '2017'];
-			return years[year-1];
-		}		
-		$('#yearSlider').val([6, 9], true);
-		
-        });
+	
+			$('#organisationName').select2({
+			placeholder: 'Select a Organizastion',
+			allowClear: true
+		});
+
       </script>
+
 </body>
 </html>
