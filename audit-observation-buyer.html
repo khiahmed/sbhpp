@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+<title>SBHPP</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
+<link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
+<link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
+<link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+<link rel="stylesheet" type="text/css" href="css/sbhpp.css">
+<link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
+<link href='fonts/fonts.googleapis.com/cssf58a.css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+<link rel="stylesheet" href="css/libs/daterangepicker.css" type="text/css"/>
+<link rel="stylesheet" href="css/libs/dataTables.tableTools.css" type="text/css"/>
+<link rel="stylesheet" href="css/libs/jquery-ui.css">
+<link rel="stylesheet" href="css/libs/select2.css" type="text/css"/>
+<link href="css/libs/bootstrap-editable.css" rel="stylesheet"/>
+
+</head>
+<body class="pace-done theme-white">
+<div id="theme-wrapper">
+  <header class="navbar" id="header-navbar">
+    <div class="container"> <a href="index-2.html" id="logo" class="navbar-brand"> <img src="img/sbhpp_logo_shs.png" alt="" class="normal-logo logo-white"/> </a>
+      <div class="clearfix">
+        <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button"> <span class="sr-only"> Toggle navigation </span> <span class="fa fa-bars"> </span> </button>
+        <div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs">
+          <ul class="nav navbar-nav pull-left">
+            <li> <a class="btn" id="make-small-nav"> <i class="fa fa-bars"> </i> </a> </li>
+          </ul>
+        </div>
+        <div class="nav-no-collapse pull-right" id="header-nav">
+          <ul class="nav navbar-nav pull-right">
+            <li class="dropdown profile-dropdown" id="profile-dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="img/user.jpg" alt=""/> <span class="hidden-xs"> Srinath Parthasarathy </span> <b class="caret"> </b> </a>
+              <ul class="dropdown-menu">
+                <li> <a href="#"> <i class="fa fa-envelope-o"> </i> Messages </a> </li>
+                <li> <a href="#"> <i class="fa fa-power-off"> </i> Logout </a> </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
+  <div id="page-wrapper" class="container">
+    <div class="row">
+      <div id="nav-col">
+        <section id="col-left" class="col-left-nano">
+          <div id="col-left-inner" class="col-left-nano-content">
+            <div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">
+              <ul class="nav nav-pills nav-stacked">
+                <li class="nav-header nav-header-first hidden-sm hidden-xs"> <span>&nbsp;</span> </li>
+                <li class=""> <a href="#" class="dropdown-toggle"> <i class="fa fa-envelope"> </i> <span> Mail Box </span> <span class="count badge badge-info"> 8 </span> <i class="fa fa-angle-right drop-icon"></i> </a>
+                  <ul class="submenu email" style="display: none;">
+                    <li class="" > <a href="email-inbox.html"> <i class="fa fa-inbox"></i> Inbox </a> </li>
+                    <li >
+                                       <a href="email-compose.html">
+                                       <i class="fa fa-envelope"></i> Compose Mail
+                                       </a>
+                                    </li>
+                  </ul>
+                </li>
+                <li class=""> <a href="#" class="dropdown-toggle"> <i class="fa fa-truck"></i> <span>PO & Shipment</span> <i class="fa fa-angle-right drop-icon"></i> </a>
+                  <ul class="submenu" style="display: none;">
+				  
+                    <li> <a href="#"> PO Ship </a> </li>
+                    <li> <a href="#"> Shipment </a> </li>
+                  </ul>
+                </li>
+                <li> <a href="#" class="dropdown-toggle"> <i class="fa fa-file-text"></i> <span>Pricing & RFQ</span> <i class="fa fa-angle-right drop-icon"></i> </a>
+                  <ul class="submenu" style="display: none;">
+                    <li> <a href="#"> Price Change </a> </li>
+                    <li> <a href="#"> RFQ </a> </li>
+                  </ul>
+                </li>
+                <li class=""> <a href="#" class="dropdown-toggle"> <i class="fa fa-tachometer"></i> <span>Quality</span> <i class="fa fa-angle-right drop-icon"></i> </a>
+                  <ul class="submenu" style="display: none;">
+                    <li> <a href="#"> Audit Plan </a> </li>
+                    <li> <a href="#"> Audit observation </a> </li>
+                  </ul>
+                </li>
+                <li class=""> <a href="#" class="dropdown-toggle"> <i class="fa  fa-file-archive-o"></i> <span>Reports</span> <i class="fa fa-angle-right drop-icon"></i> </a>
+                  <ul class="submenu" style="display: none;">
+                    <li> <a href="#"> Price Change Report </a> </li>
+                    <li> <a href="#"> Audit Report </a> </li>
+                    <li> <a href="#"> Payment History </a> </li>
+                    <li> <a href="#"> PO Reconcilation </a> </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+        <div id="nav-col-submenu"> </div>
+      </div>
+      <div id="content-wrapper">
+	  
+		<div class="modal fade" id="vendor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog small-modal">
+			   <div class="modal-content">
+				  <!--<div class="modal-header">
+					 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					 <h4 class="modal-title" id="myModalLabel">RFQ No Filter</h4>
+				  </div>-->
+				  <div class="modal-body">
+					 <div class="form-group form-group-select2">
+						<label>use , commas for, multiple selection(s)</label>
+						<div class="form-group form-group-select2">
+						   <select style="width:220px" id="vendor_name" multiple>
+							  <option value="DeepakJain">Deepak Jain</option>
+							  <option value="Vinay Jain">Vinay Jain</option>
+							  <option value="Shyam Jain">Shyam Jain</option>
+							  <option value="Raj Jain">Raj Jain</option>
+							  <option value="Rihan Jain">rihan Jain</option>
+							  <option value="Midhun Jain">Midhun Jain</option>
+						   </select>
+						</div>
+					 </div>
+				  </div>
+				  <div class="modal-footer">
+					 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					 <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+				  </div>
+			   </div>
+			</div>
+		 </div>
+         <!-- Modal -->
+        <div class="modal fade" id="observemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">              
+              <div class="modal-body">
+                <div class="collapse" id="showobserve">
+                	<legend>Observation #2101 <span class="pull-right">23.02.2015</span></legend>
+					<table class="table table-bordered table-condensed table-striped">
+                    	<tr class="success">
+                        	<th>Number</th>
+                            <th>Date</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                        	<td>25000</td>
+                            <td>25.12.2014</td>
+                            <td>Observation Details</td>
+                            
+                        </tr>
+                        <tr class="success"><th>
+                        Corrective action Date</th>
+                        <th>Corrective action</th>  
+                        <th>TDC</th>                      
+                        </tr>
+                        <tr>
+                        	<td>24.11.2014</td>
+                            <td>This is sample Corrective</td>
+                            <td>TDC contents</td>
+                        </tr>
+                       <tr class="success"><th>
+                       Responsible Person</th>
+                        <th>Status</th>  
+                        <th>Closing Date</th>                      
+                        </tr>
+                        <tr>
+                        	<td>Srinatj</td>
+                            <td>This is sample Status</td>
+                            <td>1.1.2015</td>
+                        </tr>
+                    </table> 
+                    <legend>Observation #2741 <span class="pull-right">29.02.2015</span></legend>
+                    <table class="table table-bordered table-condensed table-striped">
+                    	<tr class="success">
+                        	<th>Number</th>
+                            <th>Date</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                        	<td>25000</td>
+                            <td>25.12.2014</td>
+                            <td>Observation Details</td>
+                            
+                        </tr>
+                        <tr class="success"><th>
+                        Corrective action Date</th>
+                        <th>Corrective action</th>  
+                        <th>TDC</th>                      
+                        </tr>
+                        <tr>
+                        	<td>24.11.2014</td>
+                            <td>This is sample Corrective</td>
+                            <td>TDC contents</td>
+                        </tr>
+                       <tr class="success"><th>
+                       Responsible Person</th>
+                        <th>Status</th>  
+                        <th>Closing Date</th>                      
+                        </tr>
+                        <tr>
+                        	<td>Srinatj</td>
+                            <td>This is sample Status</td>
+                            <td>1.1.2015</td>
+                        </tr>
+                    </table>
+<!--                    <legend>Observation #2201 <span class="pull-right">3.03.2015</span></legend>
+                    <table class="table table-bordered table-condensed table-striped">
+                    	<tr class="success">
+                        	<th>Number</th>
+                            <th>Date</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                        	<td>25000</td>
+                            <td>25.12.2014</td>
+                            <td>Observation Details</td>
+                            
+                        </tr>
+                        <tr class="success"><th>
+                        Corrective action Date</th>
+                        <th>Corrective action</th>  
+                        <th>TDC</th>                      
+                        </tr>
+                        <tr>
+                        	<td>24.11.2014</td>
+                            <td>This is sample Corrective</td>
+                            <td>TDC contents</td>
+                        </tr>
+                       <tr class="success"><th>
+                       Responsible Person</th>
+                        <th>Status</th>  
+                        <th>Closing Date</th>                      
+                        </tr>
+                        <tr>
+                        	<td>Srinatj</td>
+                            <td>This is sample Status</td>
+                            <td>1.1.2015</td>
+                        </tr>
+                    </table>
+                    <legend>Observation #2151 <span class="pull-right">13.03.2015</span></legend>
+                    <table class="table table-bordered table-condensed table-striped">
+                    	<tr class="success">
+                        	<th>Number</th>
+                            <th>Date</th>
+                            <th>Details</th>
+                        </tr>
+                        <tr>
+                        	<td>25000</td>
+                            <td>25.12.2014</td>
+                            <td>Observation Details</td>
+                            
+                        </tr>
+                        <tr class="success"><th>
+                        Corrective action Date</th>
+                        <th>Corrective action</th>  
+                        <th>TDC</th>                      
+                        </tr>
+                        <tr>
+                        	<td>24.11.2014</td>
+                            <td>This is sample Corrective</td>
+                            <td>TDC contents</td>
+                        </tr>
+                       <tr class="success"><th>
+                       Responsible Person</th>
+                        <th>Status</th>  
+                        <th>Closing Date</th>                      
+                        </tr>
+                        <tr>
+                        	<td>Srinatj</td>
+                            <td>This is sample Status</td>
+                            <td>1.1.2015</td>
+                        </tr>
+                    </table>-->
+                </div>
+  				<div class="collapse" id="addobserve">
+                	<form>
+                    	<table class="table table-striped table-condensed table-hover" >
+                        <tr>
+                        	<th>Audit Number</th>
+                            <td><a data-title="Enter Audit Number" data-pk="1" data-type="text" id="auditnumber" href="#" class="editable editable-click">superuser</a></td>
+                        </tr>
+                        <tr>
+                         <th>Date</th>
+                         <td><a data-title="" data-placement="bottom" data-pk="1" data-viewformat="dd.mm.yyyy" data-type="date"  href="#" class="auditdate editable editable-click" data-original-title="" title="Audit Date">Date</a></td>
+                        </tr>
+                        </table> 
+                    </form>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <a class="btn btn-default" data-toggle="collapse" href="#showobserve" aria-expanded="true" aria-controls="collapseExample">
+               	Show Audit Observe
+                </a>
+                
+                <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#addobserve" aria-expanded="false" aria-controls="collapseExample">
+               	 Add Observation
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+                      
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="main-box clearfix">
+              <header class="main-box-header clearfix">
+                <h2 class="pull-left h4_bold">Audit Observation</h2>
+              </header>
+              <div class="col-lg-12 ">
+                <div class="col-lg-8  well-sm">
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <label class="lead">Year / Month</label>
+                    </div>
+                   <div class="col-lg-4">
+					  <div id="slider" ></div>
+					  <span id="yearlabel" class="slider-label"></span> 
+					 </div>
+					
+					<div class="col-lg-4">
+					  <div id="monthSlider" class="slider-range"></div>
+					  <span id="monthlabel" class="slider-label"></span> 
+					  <!--<select class="form-control" name="month"><option>Month (All)</option><option>December</option></select> -->
+					 </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-lg-4">
+                      <label class="lead">Purch organization</label>
+                    </div>
+                    <div class="col-lg-4">
+				
+						<div class="form-group form-group-select2">
+						   <select style="width:220px" id="organisationName" multiple>
+							    <option>C100 - org Description </option>
+								<option>C100 - org Description </option>
+								<option>C400 - org Description </option>
+								<option>C800 - org Description </option>
+						   </select>
+						</div>
+                    </div>
+                    <div class="col-lg-4">
+                      <button class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
+                      <button class="btn btn-default"><i class="fa fa-rotate-left"></i> Reset</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="main-box-body clearfix">
+				 <div class="row">
+					<div class="col-sm-12">
+						<button class="btn btn-default "><i class="fa fa-filter"></i> Reset</button>
+					</div>
+				 </div>
+                <div class="table-responsive">
+                  <table class="table table-bordered table-striped table-condensed" id="table1" width="100%" border="0">
+                    <tr class="success">
+                      <td width="11%">&nbsp;</td>
+					  <td colspan="2" style=" text-align:center; font-weight:bolder">Jan - 2015 (3)</td>
+                      <td colspan="2" style=" text-align:center; font-weight:bolder">FEB - 2015 (3)</td>
+                      <td colspan="2" style=" text-align:center; font-weight:bolder">March - 2015 (2)</td>
+                      <td colspan="2" style=" text-align:center; font-weight:bolder">April - 2015 (2)</td>
+                      <td colspan="2" style=" text-align:center; font-weight:bolder">May - 2015 (3)</td>
+                      <td colspan="2" style=" text-align:center; font-weight:bolder">June - 2015 (2)</td>
+                      <td colspan="2" style=" text-align:center; font-weight:bolder">July - 2015 (2)</td>
+                      <td colspan="2" style=" text-align:center; font-weight:bolder">August - 2015 (2)</td>
+                      <td colspan="2" style=" text-align:center; font-weight:bolder">September - 2015 (3)</td>
+                      <td colspan="2" style=" text-align:center; font-weight:bolder">October - 2015 (2)</td>
+                      <td colspan="2" style=" text-align:center; font-weight:bolder">November - 2015 (2)</td>
+                      <td colspan="2" style=" text-align:center; font-weight:bolder">December - 2015 (2)</td>
+                    </tr>
+                    <tr class="success">
+                      <td nowrap>Vendor <button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-vendor" data-toggle="modal" data-target="#vendor-modal"><i class="fa  fa-magic"></i></button></td>
+                      <td width="11%" nowrap>Auditor Name</td>
+                      <td width="7%" nowrap>Date</td>
+                      <td width="13%" nowrap>Auditor Name</td>
+                      <td width="12%" nowrap>Date</td>
+                      <td width="12%" nowrap>Auditor Name</td>
+                      <td width="7%" nowrap>Date</td>
+                      <td width="11%" nowrap>Auditor Name</td>
+                      <td width="7%" nowrap>Date</td>
+                      <td width="13%" nowrap>Auditor Name</td>
+                      <td width="12%" nowrap>Date</td>
+                      <td width="12%" nowrap>Auditor Name</td>
+                      <td width="7%" nowrap>Date</td>
+                      <td width="14%" nowrap>Auditor Name</td>
+                      <td width="10%" nowrap>Date</td>
+                      <td width="11%" nowrap>Auditor Name</td>
+                      <td width="7%" nowrap>Date</td>
+                      <td width="13%" nowrap>Auditor Name</td>
+                      <td width="12%" nowrap>Date</td>
+                      <td width="12%" nowrap>Auditor Name</td>
+                      <td width="7%" nowrap>Date</td>
+                      <td width="14%" nowrap>Auditor Name</td>
+                      <td width="10%" nowrap>Date</td>
+					   <td width="14%" nowrap>Auditor Name</td>
+                      <td width="10%" nowrap>Date</td>
+                    </tr>
+                    <tr>
+                      <td>IGML S001</td>
+                      <td>Deepak Jain</td>
+                      <td>11.10.2015</td>
+                      <td>Deepak Jain</td>
+                      <td>11.10.2015</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>Deepak Jain</td>
+                      <td><a href="#" data-toggle="modal" data-target="#observemodal">11.10.2015</a></td>
+                      <td>Deepak Jain</td>
+                      <td>11.10.2015</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>Deepak Jain</td>
+                      <td>11.10.2015</td>
+                      <td>Deepak Jain</td>
+                      <td>11.10.2015</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+                      <td>&nbsp;</td>
+					 <td>Deepak Jain</td>
+                      <td>11.10.2015</td>
+                    </tr>
+                    
+                    
+                    
+                    
+                  </table>
+                  
+                  
+                </div>
+				<div class="col-lg-offset-5">
+									<button id="btnload" class="btn btn-default ">Load More</button>
+								</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <footer id="footer-bar" class="row">
+          <p id="footer-copyright" class="col-xs-12"> &copy; 2015&nbsp;&nbsp;|&nbsp;&nbsp;all right reserved&nbsp;&nbsp;|&nbsp;&nbsp;sbhpp </p>
+        </footer>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog medium-modal">
+    <div class="modal-content">
+      
+      <div class="modal-body">
+       <table class="table">
+       	<tr>
+        	<td>Vendor</td><td>
+			
+			 <div class="form-group form-group-select2">
+				<label>use , commas for, multiple selection(s)</label>
+				<div class="form-group form-group-select2">
+				   <select style="width:220px" id="vendorName" multiple>
+					   <option value="DeepakJain">Deepak Jain</option>
+					  <option value="Vinay Jain">Vinay Jain</option>
+					  <option value="Shyam Jain">Shyam Jain</option>
+					  <option value="Raj Jain">Raj Jain</option>
+					  <option value="Rihan Jain">rihan Jain</option>
+					  <option value="Midhun Jain">Midhun Jain</option>
+				   </select>
+				</div>
+			 </div>
+			 </div></td>
+        </tr>
+       </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="addvend2" data-dismiss="modal">Add Vendor</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="js/jquery.js"></script> 
+<script src="js/bootstrap.js"></script> 
+<script src="js/moment.min.js"></script> 
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/scripts.js"></script> 
+<script src="js/demo-skin-changer.js"></script> 
+<script src="js/demo.js"></script> 
+<script src="js/jquery.nanoscroller.min.js"></script> 
+<script src="js/demo-rtl.js"></script> 
+<script src="js/select2.min.js"></script> 
+<script src="js/jquery-ui.custom.min.js"></script>
+<script src="js/bootstrap-editable.min.js"></script>
+ 
+<script type="text/javascript">
+         $(document).ready(function() {
+         		i = 6;
+   $('.editable').editable({
+      url: '/',
+      placement: 'right',
+	  PK:1
+   });
+
+			
+         			//range slider
+		$('#monthSlider').slider({
+			 range: true,
+			  min: 1,
+			  max:12,
+			  values: [ 1, 4 ],
+			slide:function( event, ui ){					
+				$(this).next('span').text(
+					'Month: ' + getmonth(ui.values[0]) + ' - ' + getmonth(ui.values[1])
+				);
+			}			
+		});
+		 $( "#monthlabel").html("Month: "+ getmonth($( "#monthSlider" ).slider( "values", 0 )) + " - " + getmonth($( "#monthSlider" ).slider( "values", 1 )) );
+		function getmonth(month){
+			var months = ['January', 'February', 'March', 'April', 'May', 'June',  'July', 'August', 'September', 'October', 'November', 'December'];
+			return months[month-1];
+		}		
+
+			$( "#slider" ).slider({
+			range: false,
+			min: 2010,
+			max: 2015,
+			value:2012,
+			slide:function( event, ui ){				
+				$(this).next('span').text(
+					'Year: ' + ui.value					
+				);
+			}	
+			
+			});
+			$( "#yearlabel").html("Year: "+ $( "#slider" ).slider( "option", "value"  ) );
+		});
+		$('#vendorName').select2({
+         		placeholder: 'Select a Vendor',
+         		allowClear: true
+         });
+		$('#organisationName').select2({
+			placeholder: 'Select a Organizastion',
+			allowClear: true
+		});
+		
+		$('#vendor_name').select2({
+			placeholder: 'Select a Vendor',
+			allowClear: true
+		});
+
+
+    var vendors = [];
+    $.each({"KH":"Khizar","SP":"Srinath","SH":"Sajjath"}, function(k, v) {
+        vendors.push({id: k, text: v});
+    }); 
+
+
+$(document).on('click', '.audit',function (e){
+	 e.preventDefault();
+	 $('.audit').editable({
+        source: vendors,
+        select2: {
+            width: 200,
+            placeholder: 'Select Vendor',
+            allowClear: true
+        } 
+    }); 
+	    $('.auditdate').editable({
+        datepicker: {
+            todayBtn: 'linked'
+        } 
+    });
+	  });
+
+      </script>
+
+</body>
+</html>
