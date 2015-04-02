@@ -228,20 +228,20 @@
                                          <th width="6%" rowspan="2" valign="middle"><a data-toggle="tooltip" data-placement="top" title="Vendor"> Vendor</a></th>
                                          <th width="8%" rowspan="2" valign="middle"><a data-toggle="tooltip" data-placement="top" title="Plant Code"> Plant</a></th>
                                          <th width="8%" rowspan="2" valign="middle"><a data-toggle="tooltip" data-placement="top" title="Material Code"> Material</a>
-                                         <th class="btn-primary" style="text-align: center; font-weight: bold;" colspan="3"><a >Current Price</a></th>
-                                         <th class="btn-primary" style="text-align: center; font-weight: bold;" colspan="3"><a >Requested price</a></th>
+                                         <th class="btn-primary" style="text-align: center; font-weight: bold; border:none;" colspan="3"><a >Current Price</a></th>
+                                         <th class="btn-primary" style="text-align: center; font-weight: bold; border:none;border-left: 1px solid #ddd; " colspan="3"><a >Requested price</a></th>
                                         
                                          <th width="8%" rowspan="2"><a data-toggle="tooltip" data-placement="top" title="Effective Date" > Effective Date</a></th>
-                                         <th width="12%" rowspan="2"><a>Remarks</a></th>
+                                         <th width="15%" rowspan="2"><a>Remarks</a></th>
                                          <th width="7%" rowspan="2"><a>Actions</a></th>
                                        </tr>
                                        <tr class="success">
-									      <th width="10%">  Material</a></th>
+									      <th width="8%">  Material</a></th>
                                           <th width="8%"> Packing </a></th>
-                                          <th width="9%"> Freight </a></th>
-                                          <th width="10%"> Material</a></th>
+                                          <th width="8%"> Freight </a></th>
+                                          <th width="8%"> Material</a></th>
                                           <th width="8%"> Packing </a></th>
-                                          <th width="9%"> Freight</a></th>
+                                          <th width="8%"> Freight</a></th>
 									   </tr>
                                     </thead>
                                     <tbody>
@@ -331,7 +331,7 @@
 									<table width="100%" border="0" class="table table-bordered table-striped" >
 																			<thead>
                                          <tr >
-                                           <th  style="text-align: center; font-weight: bold;" colspan="3"><a>Requested</a></th>
+                                           <th  style="text-align: center; font-weight: bold;" colspan="3"><a>Requested Price</a></th>
                                            <th width="20%" rowspan="2"><a>Effective Date</a></th>
 
                                          </tr>
@@ -410,7 +410,7 @@
       </div>
       <div class="modal-footer">
                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Attach</button>
       </div>
     </div>
   </div>
@@ -454,7 +454,14 @@
  
       <script type="text/javascript">
          $(document).ready(function() {
-         	$("#table1").dataTable({"bPaginate": false, "sDom": 'zrtSpi'});
+         	$("#table1").dataTable({
+				"bPaginate": false,
+				"sDom": 'zrtSpi',
+				columnDefs: [
+				   { orderable: false, targets: -1 },
+				   { orderable: false, targets: -2 },
+				]
+			});
          	$('#reportrange').daterangepicker({
          		startDate: moment().subtract('days', 29),
          		endDate: moment(),
