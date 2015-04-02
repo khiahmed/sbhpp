@@ -220,14 +220,14 @@
                               <div class="">
 
 								 
-								 
+								 <div class="col-sm-8">
 								 <table class="table table-bordered table-striped table-condensed" id="table1">
                                     <thead>
                                        <tr class="success" >
                                          <th rowspan="2" valign="middle"><a data-toggle="tooltip" data-placement="top" title="PCR Number" > Plant</a></th>
                                          <th rowspan="2" valign="middle"><a data-toggle="tooltip" data-placement="top" title="Plant Code">Material</a> </th>
                                          
-                                         <th class="btn-primary" style="text-align: center; font-weight: bold;" colspan="3"><a >Current Price</a></th>
+                                         <th class="btn-primary" style="text-align: center; font-weight: bold; border:none;" colspan="3"><a >Current Price</a></th>
            
                                          <th rowspan="2"><a>Remarks</a></th>
                                          <th rowspan="2"><a>Actions</a></th>
@@ -294,16 +294,71 @@
 										</tr>
                                     </tbody>
                                  </table>
+								 <div class="clearfix">
+									<p id="loadmore" align="center">&nbsp;</p>
+									<button class="btn btn-default col-lg-offset-4 col-md-offset-4 " id="btnload">Load More</button>
+									</div>
+								 </div>
+								 
+								 <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+									  <div class="modal-dialog medium-modal">
+										<div class="modal-content">
+										  <div class="modal-body">
+											<legend>Attachments</legend>
+											<div id="gallery-photos-lightbox">
+											<ul class="clearfix gallery-photos">
+											<li class="col-md-3 col-sm-3 col-xs-6">
+												<a style="background-image: url('http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg');" class="photo-box image-link" href="http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg"></a>
+												<span class="thumb-meta-time"><i class="fa fa-clock-o"></i> 23 minutes ago</span>
+											</li>
+											<li class="col-md-3 col-sm-3 col-xs-6">
+												<a style="background-image: url('http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg');" class="photo-box image-link" href="http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg"></a>
+												<span class="thumb-meta-time"><i class="fa fa-clock-o"></i> 23 minutes ago</span>
+											</li>
+											<li class="col-md-3 col-sm-3 col-xs-6">
+												<a style="background-image: url('http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg');" class="photo-box image-link" href="http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg"></a>
+												<span class="thumb-meta-time"><i class="fa fa-clock-o"></i> 23 minutes ago</span>
+											</li>
+											<li class="col-md-3 col-sm-3 col-xs-6">
+												<a style="background-image: url('http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg');" class="photo-box image-link" href="http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg"></a>
+												<span class="thumb-meta-time"><i class="fa fa-clock-o"></i> 23 minutes ago</span>
+											</li>
+											<li class="col-md-3 col-sm-3 col-xs-6">
+												<a style="background-image: url('http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg');" class="photo-box image-link" href="http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg"></a>
+												<span class="thumb-meta-time"><i class="fa fa-clock-o"></i> 23 minutes ago</span>
+											</li>
+											<li class="col-md-3 col-sm-3 col-xs-6">
+												<a style="background-image: url('http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg');" class="photo-box image-link" href="http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg"></a>
+												<span class="thumb-meta-time"><i class="fa fa-clock-o"></i> 23 minutes ago</span>
+											</li>
+											<li class="col-md-3 col-sm-3 col-xs-6">
+												<a style="background-image: url('http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg');" class="photo-box image-link" href="http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg"></a>
+												<span class="thumb-meta-time"><i class="fa fa-clock-o"></i> 23 minutes ago</span>
+											</li>
+											<li class="col-md-3 col-sm-3 col-xs-6">
+												<a style="background-image: url('http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg');" class="photo-box image-link" href="http://static.financialexpress.com/pic/uploadedImages/mediumImages/M_Id_461650_Ford_EcoSport.jpg"></a>
+												<span class="thumb-meta-time"><i class="fa fa-clock-o"></i> 23 minutes ago</span>
+											</li>
+										</ul>
+										</div>
+											  </div>
+											  <div class="modal-footer">
+												 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												<button data-dismiss="modal" type="button" class="btn btn-primary">Attach</button>
+										  </div>
+										</div>
+									  </div>
+									</div>
                                        
                                  <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog medium-modal">
     <div class="modal-content">
       
-      <div class="modal-body">
+      <div class="modal-body"   style="margin-bottom: -31px;">
 <table width="100%" border="0" class="table table-bordered table-striped" >
 										<thead>
                                          <tr >
-                                           <th  style="text-align: center; font-weight: bold;" colspan="3"><a>Requested</a></th>
+                                           <th  style="text-align: center; font-weight: bold;" colspan="3"><a>Requested Price</a></th>
                                            <th width="30%" rowspan="2"><a>Effective Date</a></th>
 
                                          </tr>
@@ -331,7 +386,7 @@
       </div>
       <div class="modal-footer">
                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+                                             <button data-dismiss="modal" type="button" class="btn btn-primary">Send</button>
       </div>
     </div>
   </div>
@@ -387,7 +442,14 @@
  
       <script type="text/javascript">
          $(document).ready(function() {
-         	$("#table1").dataTable({"bPaginate": false, "sDom": 'zrtSpi'});
+         	$("#table1").dataTable({
+				"bPaginate": false,
+				"sDom": 'zrtSpi',
+				columnDefs: [
+				   { orderable: false, targets: -1 },
+				   { orderable: false, targets: -2 },
+				]
+			});
          	$('#reportrange').daterangepicker({
          		startDate: moment().subtract('days', 29),
          		endDate: moment(),
