@@ -222,14 +222,10 @@
                            </header>
                            <div class="main-box-body clearfix">
                               <div class="">
-                             
                                  <div class="modal fade" id="dateNOT-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog modal-sm" style="width:318px;">
                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">RFQ Due Date Filter</h4>
-                                          </div>
+                                         
                                           <div class="modal-body">
                                             <div class="daterange-filter" id="reportrange">
                                                 <i class="fa fa-calendar"></i>&nbsp;
@@ -245,17 +241,12 @@
                                  </div>
                               
                               <div class="modal fade" id="poNoNOT-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                 <div class="modal-dialog">
-                                    <div class="modal-content">
-                                       <div class="modal-header">
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                          <h4 class="modal-title" id="myModalLabel">RFQ Collective Filter</h4>
-                                       </div>
+                                 <div class="modal-dialog modal-sm">
+                                    <div class="modal-content">  
                                        <div class="modal-body">
 											<div class="form-group form-group-select2">
-												<label>use , commas for, multiple selection(s)</label>
 												<div class="form-group form-group-select2 modalSelect">
-													<select style="width:300px" id="sel2Multi" multiple>
+													<select style="width:270px" id="sel2Multi" multiple>
 														<option value="600002458">600002458</option>
 														<option value="600002458">600002458</option>
 														<option value="600002458">600002458</option>
@@ -277,12 +268,8 @@
 							  
 							  
 							  <div class="modal fade" id="dateACC-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog modal-sm" style="width:318px;">
                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">RFQ Due Date Filter</h4>
-                                          </div>
                                           <div class="modal-body">
                                             <div class="daterange-filter" id="reportrange1">
                                                 <i class="fa fa-calendar"></i>&nbsp;
@@ -298,17 +285,12 @@
                                  </div>
                               
                               <div class="modal fade" id="poNoACC-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                 <div class="modal-dialog">
+                                 <div class="modal-dialog modal-sm">
                                     <div class="modal-content">
-                                       <div class="modal-header">
-                                          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                          <h4 class="modal-title" id="myModalLabel">RFQ Collective Filter</h4>
-                                       </div>
                                        <div class="modal-body">
 											<div class="form-group form-group-select2">
-												<label>use , commas for, multiple selection(s)</label>
 												<div class="form-group form-group-select2 modalSelect">
-													<select style="width:300px" id="sel1Multi" multiple>
+													<select style="width:270px" id="sel1Multi" multiple>
 														<option value="600002458">600002458</option>
 														<option value="600002458">600002458</option>
 														<option value="600002458">600002458</option>
@@ -330,50 +312,54 @@
                              
 							 <div class="filter">
 							 <div class="row">
-								<div class="col-sm-1">
-									<h5 class="h4_bold">Plant:</h5>
-								</div>
-								<div class="col-lg-3">
-									<div class="form-group form-group-select2">
-										<!--<label>use , commas for, multiple selection(s)</label>-->
+									<div class="col-md-1">
+										<h5 class="h4_bold">Plant:</h5>
+									</div>
+									<div class="col-md-3">
+										<div class="form-group form-group-select2">
+											<!--<label>use , commas for, multiple selection(s)</label>-->
+											<div class="form-group form-group-select2 modalSelect">
+												<select style="width:200px" id="selfilter1Multi" multiple>
+													<option selected>54545455</option>
+													<option>54545456</option>
+													<option>54545457</option>
+													<option>54545458</option>
+												</select>                                                 
+											</div>
+										</div>
+									</div>
+									
+									<div class="col-md-1">
+										<h5 class="h4_bold">Material:</h5>
+									</div>
+									<div class="col-md-3">
 										<div class="form-group form-group-select2 modalSelect">
-											<select style="width:240px" id="selfilter1Multi" multiple>
-												<option selected>54545455</option>
-												<option>54545456</option>
-												<option>54545457</option>
-												<option>54545458</option>
+											<select style="width:200px" id="selfilter2Multi" multiple>
+											<option selected>54545455</option>
+											<option>54545456</option>
+											<option>54545457</option>
+											<option>54545458</option>
 											</select>                                                 
 										</div>
 									</div>
-								</div>
-							 	
-								<div class="col-sm-1">
-									<h5 class="h4_bold">Material:</h5>
-								</div>
-								<div class="col-sm-3">
-									<div class="form-group form-group-select2 modalSelect">
-										<select style="width:240px" id="selfilter2Multi" multiple>
-										<option selected>54545455</option>
-										<option>54545456</option>
-										<option>54545457</option>
-										<option>54545458</option>
-										</select>                                                 
+									<div class="col-md-1">
+										<button class="btn btn-primary pull-left"><i class=" fa fa-list" ></i> Get List</button>
 									</div>
-								</div>
-								<div class="col-sm-2">
-									<button class="btn btn-primary pull-left"><i class=" fa fa-list" ></i> Get List</button>
-								</div>
-								<div class="col-sm-1">
-									<button class="btn btn-default pull-left"><i class="fa fa-filter" ></i> Reset</button>
+									<div class="col-md-1" style="margin-left:10px;">
+										<button class="btn btn-default pull-left"><i class="fa fa-filter" ></i> Reset</button>
+									</div>
 								</div>
 							</div>
 						 </div>
-			
-					
-							 </div>
+					</div>
+							
 							 
-							 
-                              <div class="panel-group" id="accordion">
+                              <div class="panel-group col-sm-9" id="accordion">
+								<div class="row">
+								<div class="col-sm-9">
+									<button class="btn btn-default">Reset</button>
+								</div>
+							</div>
                                  <div class="panel panel-default">
                                     <div class="panel-heading">
                                        <h4 class="panel-title">
@@ -389,7 +375,7 @@
                                              <table class="table table-bordered table-striped table-condensed" id="table1">
                                                 <thead>
                                                    <tr class="success">
-                                                      <th><a>PO No</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-pono" data-toggle="modal" data-target="#poNoNOT-modal"><i class="fa  fa-magic"></i></button></th>
+                                                      <th><a>PO No.</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-pono" data-toggle="modal" data-target="#poNoNOT-modal"><i class="fa  fa-magic"></i></button></th>
                                                       <th><a>PO Date</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-date" data-toggle="modal" data-target="#dateNOT-modal"><i class="fa  fa-magic"></i></button></th>
                                                       <th><a>Status</a></th>
                                                       <th><a>Vendor Remarks</a></th>
@@ -400,40 +386,75 @@
                                                 <tbody>
                                                    <tr>
                                                       <td>600002458</td>
-                                                      <td>02-10-15</td>
-                                                      <td>Clarification</td>
+                                                      <td>02/10/15</td>
+                                                      <td>
+														<div class="form-group form-group-select2">
+															<select	 class="sel2">
+																<option value="clarification ">Clarification</option>
+																<option value="acknowledge">Acknowledge</option>
+															</select>
+														</div>
+													  </td>
                                                       <td><textarea class="table-text-field"></textarea></td>
                                                       <td>ABC Comment</td>
                                                       <td><input type="button" class="btn btn-default" id="row1" value="Save" /></td>
                                                    </tr>
                                                    <tr>
                                                       <td>600002458</td>
-                                                      <td>02-10-15</td>
-                                                      <td>Acknowledge</td>
+                                                      <td>02/10/15</td>
+                                                      <td>
+														<div class="form-group form-group-select2">
+															<select	 class="sel2">
+																<option value="clarification ">Clarification</option>
+																<option value="acknowledge">Acknowledge</option>
+															</select>
+														</div>
+													  </td>
                                                       <td><textarea class="table-text-field"></textarea></td>
                                                       <td>ABC Comment</td>
                                                       <td><input type="button" class="btn btn-default" id="row2" value="Save" /></td>
                                                    </tr>
                                                    <tr>
                                                       <td>600002458</td>
-                                                      <td>02-10-15</td>
-                                                      <td>Clarification</td>
+                                                      <td>02/10/15</td>
+                                                      <td>
+														<div class="form-group form-group-select2">
+															<select	 class="sel2">
+																<option value="clarification ">Clarification</option>
+																<option value="acknowledge">Acknowledge</option>
+															</select>
+														</div>
+													  </td>
                                                       <td><textarea class="table-text-field"></textarea></td>
                                                       <td>ABC Comment</td>
                                                       <td><input type="button" class="btn btn-default" id="row3" value="Save" /></td>
                                                    </tr>
                                                    <tr>
                                                       <td>600002458</td>
-                                                      <td>02-10-15</td>
-                                                      <td>Acknowledge</td>
+                                                      <td>02/10/15</td>
+                                                      <td>
+														<div class="form-group form-group-select2">
+															<select	 class="sel2">
+																<option value="clarification ">Clarification</option>
+																<option value="acknowledge">Acknowledge</option>
+															</select>
+														</div>
+													  </td>
                                                       <td><textarea class="table-text-field"></textarea></td>
                                                       <td>ABC Comment</td>
                                                       <td><input type="button" class="btn btn-default" id="row4" value="Save" /></td>
                                                    </tr>
                                                    <tr>
                                                       <td>600002458</td>
-                                                      <td>02-10-15</td>
-                                                      <td>Clarification</td>
+                                                      <td>02/10/15</td>
+                                                      <td>
+														<div class="form-group form-group-select2">
+															<select	 class="sel2">
+																<option value="clarification ">Clarification</option>
+																<option value="acknowledge">Acknowledge</option>
+															</select>
+														</div>
+													  </td>
                                                       <td><textarea class="table-text-field"></textarea></td>
                                                       <td>ABC Comment</td>
                                                       <td><input type="button" class="btn btn-default" id="row5" value="Save" /></td>
@@ -447,6 +468,11 @@
                                        </div>
                                     </div>
                                  </div>
+								 <div class="row">
+									<div class="col-sm-12">
+										<button class="btn btn-default">Reset</button>
+									</div>
+								</div>
                                  <div class="panel panel-default">
                                     <div class="panel-heading">
                                        <h4 class="panel-title">
@@ -462,7 +488,7 @@
                                           <table class="table table-bordered table-striped table-condensed" id="table2">
                                                 <thead>
                                                 <tr class="success">
-                                                   <th><a>PO No</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-pono" data-toggle="modal" data-target="#poNoACC-modal"><i class="fa  fa-magic"></i></button></th>
+                                                   <th><a>PO No.</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-pono" data-toggle="modal" data-target="#poNoACC-modal"><i class="fa  fa-magic"></i></button></th>
                                                    <th><a>PO Date</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-date" data-toggle="modal" data-target="#dateACC-modal"><i class="fa  fa-magic"></i></button></th>
                                                    <th ><a>Vendor Remarks</a></th>
 												   <th ><a>Buyer Remarks</a></th>                                        
@@ -473,42 +499,42 @@
                                              <tbody>
                                                 <tr>
                                                    <td>600002458</td>
-                                                   <td>02-10-15</td>
+                                                   <td>02/10/15</td>
                                                    <td>ABC Comment</td>
                                                    <td>ABC Comment</td>
-                                                   <td>02-10-15</td>
+                                                   <td>02/10/15</td>
                                                    <td><input type="button" class="btn btn-default btn-black" value="Create ASN" /></td>
                                                 </tr>
                                                 <tr>
                                                    <td>600002458</td>
-                                                   <td>02-10-15</td>
+                                                   <td>02/10/15</td>
                                                    <td>ABC Comment</td>
                                                    <td>ABC Comment</td>
-                                                   <td>02-10-15</td>
+                                                   <td>02/10/15</td>
                                                    <td><input type="button" class="btn btn-default btn-black" value="Create ASN" /></td>
                                                 </tr>
                                                 <tr>
                                                    <td>600002458</td>
-                                                   <td>02-10-15</td>
+                                                   <td>02/10/15</td>
                                                    <td>ABC Comment</td>
                                                    <td>ABC Comment</td>
-                                                   <td>02-10-15</td>
+                                                   <td>02/10/15</td>
                                                    <td><input type="button" class="btn btn-default btn-black" value="Create ASN" /></td>
                                                 </tr>
                                                 <tr>
                                                    <td>600002458</td>
-                                                   <td>02-10-15</td>
+                                                   <td>02/10/15</td>
                                                    <td>ABC Comment</td>
                                                    <td>ABC Comment</td>
-                                                   <td>02-10-15</td>
+                                                   <td>02/10/15</td>
                                                    <td><input type="button" class="btn btn-default btn-black" value="Create ASN" /></td>
                                                 </tr>
                                                 <tr>
                                                    <td>600002458</td>
-                                                   <td>02-10-15</td>
+                                                   <td>02/10/15</td>
                                                    <td>ABC Comment</td>
                                                    <td>ABC Comment</td>
-                                                   <td>02-10-15</td>
+                                                   <td>02/10/15</td>
                                                    <td><input type="button" class="btn btn-default btn-black" value="Create ASN" /></td>
                                                 </tr>
                                              </tbody>
@@ -684,7 +710,7 @@
 				placeholder: 'Select a Description',
 
 				});
-
+			$('.sel2').select2();
          
          });
       </script>
