@@ -18,6 +18,8 @@
 <link rel="stylesheet" type="text/css" href="css/libs/jquery.nouislider.css">
 <link rel="stylesheet" href="css/libs/jquery-ui.css">
       <link rel="stylesheet" href="css/libs/select2.css" type="text/css"/>
+      <link href="css/libs/bootstrap-editable.css" rel="stylesheet"/>
+
 </head>
 <body class="pace-done theme-white">
 <div id="theme-wrapper">
@@ -315,16 +317,32 @@
 <script src="js/select2.min.js"></script> 
 <script src="js/jquery.nouislider.js"></script>
 <script src="js/jquery-ui.custom.min.js"></script>
+<script src="js/bootstrap-editable.min.js"></script>
  
 <script type="text/javascript">
          $(document).ready(function() {
          		i = 6;
-			$("#addvend2").click(function(e) {
+   $('.editable').editable({
+      url: '/',
+      placement: 'right',
+	  PK:1
+   });
+		
+		$('.audit').editable({
+        source: vendors,
+        select2: {
+            width: 200,
+            placeholder: 'Select Vendor',
+            allowClear: true
+        } 
+    }); 
+		$("#addvend2").click(function(e) {
 				//$("#vendate").val('');
 				ven = $("#vendorName").val();
-                $("#table1").append('<tr><td>'+ven+'</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>'+'</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>');
+                $("#table1").append('<tr><td>'+ven+'</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><a data-title="Select Auditor" data-value="BS" data-pk="1" data-type="select2" id="auditor'+i+'" href="#" class="editable audit editable-click editable-open" data-original-title="" title="">Auditor</a></td><td><a data-title="" data-placement="" data-pk="1" data-viewformat="dd.mm.yyyy" data-type="date"  href="#" class="auditdate editable editable-click" data-original-title="" title="">25.02.2013</a></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>');
 				i++;
             });
+			
          			//range slider
 		$('#monthSlider').slider({
 			 range: true,
@@ -370,6 +388,30 @@
 			placeholder: 'Select a Vendor',
 			allowClear: true
 		});
+
+
+    var vendors = [];
+    $.each({"KH":"Khizar","SP":"Srinath","SH":"Sajjath"}, function(k, v) {
+        vendors.push({id: k, text: v});
+    }); 
+
+
+$(document).on('click', '.audit',function (e){
+	 e.preventDefault();
+	 $('.audit').editable({
+        source: vendors,
+        select2: {
+            width: 200,
+            placeholder: 'Select Vendor',
+            allowClear: true
+        } 
+    }); 
+	    $('.auditdate').editable({
+        datepicker: {
+            todayBtn: 'linked'
+        } 
+    });
+	  });
 
       </script>
 

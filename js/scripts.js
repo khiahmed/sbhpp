@@ -176,11 +176,13 @@ var updateContentMinHeight = function(){
 var $accordion = $(".panel-group");
 var $accordionPanel = $accordion.find('.accordion-toggle');
 $accordionPanel.click(function(){ 
-	var isCollapsed = $(this).hasClass('collapsed');
-	var $targetIcon =$(this).find('.glyphicon');
-	$targetIcon.toggleClass('glyphicon-minus',isCollapsed);
-	$targetIcon.toggleClass('glyphicon-plus',!isCollapsed);
+	var isCollapsing = $(this).closest('.panel').children(".panel-collapse").hasClass('collapsing');
+	if(!isCollapsing){
+		var isCollapsed = $(this).closest('.panel').children(".panel-collapse").hasClass('in');
+		var $targetIcon =$(this).find('.glyphicon');
+		$targetIcon.toggleClass('glyphicon-minus',!isCollapsed);
+		$targetIcon.toggleClass('glyphicon-plus',isCollapsed);
+	}
 }); 
 //accordion clicm on symbol
 //theam helpers
-
