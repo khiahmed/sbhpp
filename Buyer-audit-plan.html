@@ -34,13 +34,7 @@
           <ul class="nav navbar-nav pull-right">
             <li class="dropdown profile-dropdown" id="profile-dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <img src="img/user.jpg" alt=""/> <span class="hidden-xs"> Srinath Parthasarathy </span> <b class="caret"> </b> </a>
               <ul class="dropdown-menu">
-                <li>
-                                 <a href="#">
-                                 <i class="fa fa-envelope-o">
-                                 </i>
-                                Change Password
-                                 </a>
-                              </li>
+                <li> <a href="#"> <i class="fa fa-envelope-o"> </i> Messages </a> </li>
                 <li> <a href="#"> <i class="fa fa-power-off"> </i> Logout </a> </li>
               </ul>
             </li>
@@ -101,6 +95,36 @@
         <div id="nav-col-submenu"> </div>
       </div>
       <div id="content-wrapper">
+	  
+		<div class="modal fade" id="vendor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog small-modal">
+			   <div class="modal-content">
+				  <!--<div class="modal-header">
+					 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					 <h4 class="modal-title" id="myModalLabel">RFQ No Filter</h4>
+				  </div>-->
+				  <div class="modal-body">
+					 <div class="form-group form-group-select2">
+						<label>use , commas for, multiple selection(s)</label>
+						<div class="form-group form-group-select2">
+						   <select style="width:220px" id="vendor_name" multiple>
+							  <option value="DeepakJain">Deepak Jain</option>
+							  <option value="Vinay Jain">Vinay Jain</option>
+							  <option value="Shyam Jain">Shyam Jain</option>
+							  <option value="Raj Jain">Raj Jain</option>
+							  <option value="Rihan Jain">rihan Jain</option>
+							  <option value="Midhun Jain">Midhun Jain</option>
+						   </select>
+						</div>
+					 </div>
+				  </div>
+				  <div class="modal-footer">
+					 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					 <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+				  </div>
+			   </div>
+			</div>
+		 </div>
         <div class="row">
           <div class="col-lg-12">
             <div class="main-box clearfix">
@@ -129,12 +153,15 @@
                       <label class="lead">Purch organization</label>
                     </div>
                     <div class="col-lg-4">
-                      <select class="form-control" name="organization">
-                        <option>C100 - org Description </option>
-                        <option>C100 - org Description </option>
-                        <option>C400 - org Description </option>
-                        <option>C800 - org Description </option>
-                      </select>
+				
+						<div class="form-group form-group-select2">
+						   <select style="width:220px" id="organisationName" multiple>
+							    <option>C100 - org Description </option>
+								<option>C100 - org Description </option>
+								<option>C400 - org Description </option>
+								<option>C800 - org Description </option>
+						   </select>
+						</div>
                     </div>
                     <div class="col-lg-4">
                       <button class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
@@ -144,6 +171,11 @@
                 </div>
               </div>
               <div class="main-box-body clearfix">
+				 <div class="row">
+					<div class="col-sm-12">
+						<button class="btn btn-default "><i class="fa fa-filter"></i> Reset</button>
+					</div>
+				 </div>
                 <div class="table-responsive">
                   <table class="table table-bordered table-striped table-condensed" id="table1" width="100%" border="0">
                     <tr class="success">
@@ -162,7 +194,7 @@
                       <td colspan="2" style=" text-align:center; font-weight:bolder">December - 2015 (2)</td>
                     </tr>
                     <tr class="success">
-                      <td nowrap>Vendor Name</td>
+                      <td nowrap>Vendor <button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-vendor" data-toggle="modal" data-target="#vendor-modal"><i class="fa  fa-magic"></i></button></td>
                       <td width="11%" nowrap>Auditor Name</td>
                       <td width="7%" nowrap>Date</td>
                       <td width="13%" nowrap>Auditor Name</td>
@@ -223,6 +255,9 @@
                   
                   
                 </div>
+				<div class="col-lg-offset-5">
+									<button id="btnload" class="btn btn-default ">Load More</button>
+								</div>
               </div>
             </div>
           </div>
@@ -242,22 +277,23 @@
       <div class="modal-body">
        <table class="table">
        	<tr>
-        	<td>Author Name</td><td><div class="form-group form-group-select2">
-                                               
-                                           
-                                                   <select  id="venname" class="form-control" >
-                                                      <option value="DeepakJain">Deepak Jain</option>
-                                                      <option value="Vinay Jain">Vinay Jain</option>
-                                                      <option value="Shyam Jain">Shyam Jain</option>
-                                                      <option value="Raj Jain">Raj Jain</option>
-                                                      <option value="Rihan Jain">rihan Jain</option>
-                                                      <option value="Midhun Jain">Midhun Jain</option>
-                                                    </select>                                                 
-                                           
-                                             </div></td>
+        	<td>Vendor</td><td>
+			
+			 <div class="form-group form-group-select2">
+				<label>use , commas for, multiple selection(s)</label>
+				<div class="form-group form-group-select2">
+				   <select style="width:220px" id="vendorName" multiple>
+					   <option value="DeepakJain">Deepak Jain</option>
+					  <option value="Vinay Jain">Vinay Jain</option>
+					  <option value="Shyam Jain">Shyam Jain</option>
+					  <option value="Raj Jain">Raj Jain</option>
+					  <option value="Rihan Jain">rihan Jain</option>
+					  <option value="Midhun Jain">Midhun Jain</option>
+				   </select>
+				</div>
+			 </div>
+			 </div></td>
         </tr>
-        <tr><td>Date</td><td><input type="text" id="vendate" class="form-control"></td></tr>
-
        </table>
       </div>
       <div class="modal-footer">
@@ -282,12 +318,11 @@
  
 <script type="text/javascript">
          $(document).ready(function() {
-         		i=6;
+         		i = 6;
 			$("#addvend2").click(function(e) {
 				//$("#vendate").val('');
-				ven=$("#venname").val();
-				vendate=$("#vendate").val();
-                $("#table1").append('<tr><td>'+ven+'</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>'+vendate+'</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>');
+				ven = $("#vendorName").val();
+                $("#table1").append('<tr><td>'+ven+'</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>'+'</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>');
 				i++;
             });
          			//range slider
@@ -321,6 +356,19 @@
 			
 			});
 			$( "#yearlabel").html("Year: "+ $( "#slider" ).slider( "option", "value"  ) );
+		});
+		$('#vendorName').select2({
+         		placeholder: 'Select a Vendor',
+         		allowClear: true
+         });
+		$('#organisationName').select2({
+			placeholder: 'Select a Organizastion',
+			allowClear: true
+		});
+		
+		$('#vendor_name').select2({
+			placeholder: 'Select a Vendor',
+			allowClear: true
 		});
 
       </script>
