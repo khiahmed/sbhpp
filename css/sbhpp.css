@@ -229,7 +229,19 @@ display:block !important;
 }
 .attachment{
 	width: 317px;
-    height: 112px;
+    height: 35px;
     background-color: rgb(221, 234, 254);
+}
+.spacing{
+	position: relative !important;
+	left: -432px!important;
+}
+.spacing1{
+	position: relative !important;
+	left: -215px !important;
+	top: -196px !important;
+}
+.file-caption-ellipsis{
+	display:none !important;
 }
 }
