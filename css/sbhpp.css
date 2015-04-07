@@ -227,4 +227,9 @@ display:block !important;
  .carrier_ > div > div{
 			padding-bottom: 10px;
 }
+.attachment{
+	width: 317px;
+    height: 112px;
+    background-color: rgb(221, 234, 254);
+}
 }

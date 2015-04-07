@@ -18,6 +18,7 @@
       <link rel="stylesheet" href="css/libs/daterangepicker.css" type="text/css"/>
       <link rel="stylesheet" href="css/libs/dataTables.tableTools.css" type="text/css"/>
       <link rel="stylesheet" href="css/libs/select2.css" type="text/css"/>
+	  <link rel="stylesheet" href="css/fileinput.min.css" type="text/css"/>
 	  <style>
 		
 	  </style>
@@ -227,11 +228,11 @@
                               <div class="">
 	
                                  <div>
-									<div class="row">
-								<div class="col-sm-10">
-                                   <button class="btn btn-default">Reset</button>
-								</div>	
-							 </div>
+								<!--<div class="row">
+									<div class="col-sm-10">
+									   <button class="btn btn-default">Reset</button>
+									</div>	
+								</div>-->
 							 
 							 
 								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -470,28 +471,43 @@
 								 <div class="col-lg-offset-5">
 									<button id="btnload" class="btn btn-default ">Load More</button>
 								</div>
-								
-								<div class="carrier_">
-									<div class="row">
-
-										<div class="col-sm-2"><label>Carrier1</label></div>
-										<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
-									</div>
-									<div class="row">
-										<div class="col-sm-2"><label>Tracking Number</label></div>
-										<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
-									</div>
-									<div class="row">
-										<div class="col-sm-2"><label>Carrier2</label></div>
-										<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
-									</div>
-									<div class="row">
-										<div class="col-sm-2"><label>Tracking Number</label></div>
-										<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
-									</div>
-									<div class="row">
-										<div class="uploadFile"></div>
+								<br></br>
+								<div class="col-lg-offset-1 carrier_" style="width:900px;">
+									<div class="col-sm-11">
+										<div class="row">
+											<div class="col-sm-2"><label>Carrier1</label></div>
+											<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2"><label>Tracking Number</label></div>
+											<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2"><label>Carrier2</label></div>
+											<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2"><label>Tracking Number</label></div>
+											<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
+										</div>
 										
+									</div>
+									<div class="col-sm-1" >
+										<div class="row" style="position:relative;left:-414px;">
+											<span class="label label-default">Attach Invoice either at each item level or at overall</span>
+											<div class="attachment success">
+												  <div class="row">
+													<div class="col-sm-12">
+														<input id="input-1a" type="file" class="file" data-show-preview="false" data-show-Upload="false" data-show-Remove="false">
+														</br>
+														<div class="col-sm-3"></div>
+														<button class="btn btn-primary">Submit</button>
+														<button class="btn btn-default">Cancel</button>
+													</div>
+												</div>
+											</div>
+											</div>	
+										</div> 
 									</div>
 								</div>
 								
@@ -528,11 +544,12 @@
       <script src="js/jquery.nanoscroller.min.js"></script>
       <script src="js/demo-rtl.js"></script>
       <script src="js/select2.min.js"></script>
-	    <script src="js/bootstrap-datepicker.js"></script>
+	  <script src="js/bootstrap-datepicker.js"></script>
+	  <script src="js/fileinput.min.js"></script>
       <script type="text/javascript">
          $(document).ready(function() {
          	$("#table1").dataTable({"bPaginate": false, "sDom": 'zrtSpi'});
-         	
+         	$("#input-1a").fileinput({});
 			
 			$("#textfield4").datepicker();
          });
