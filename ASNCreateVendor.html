@@ -18,10 +18,9 @@
       <link rel="stylesheet" href="css/libs/daterangepicker.css" type="text/css"/>
       <link rel="stylesheet" href="css/libs/dataTables.tableTools.css" type="text/css"/>
       <link rel="stylesheet" href="css/libs/select2.css" type="text/css"/>
+	  <link rel="stylesheet" href="css/fileinput.min.css" type="text/css"/>
 	  <style>
-		.carrier_ > div > div{
-			padding-bottom: 10px;
-		}
+		
 	  </style>
    </head>
    <body class="pace-done theme-white">
@@ -229,11 +228,11 @@
                               <div class="">
 	
                                  <div>
-									<div class="row">
-								<div class="col-sm-10">
-                                   <button class="btn btn-default">Reset</button>
-								</div>	
-							 </div>
+								<!--<div class="row">
+									<div class="col-sm-10">
+									   <button class="btn btn-default">Reset</button>
+									</div>	
+								</div>-->
 							 
 							 
 								<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -258,8 +257,43 @@
 											
 										</div>
 
+								</div>
+								
+								<div class="modal fade" id="upload-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								   <div class="modal-dialog small-modal">
+									  <div class="modal-content">
+										 <div class="modal-body">
+											<input type="file" value="Browse">
+											
+											</div>
+											<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button data-dismiss="modal" type="button" class="btn btn-primary">Load</button>
 										 </div>
-										 
+										</div>
+											
+										</div>
+
+								</div>
+								
+								<div class="modal fade" id="upload1-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								   <div class="modal-dialog small-modal">
+									  <div class="modal-content">
+										 <div class="modal-body">
+											<input type="file" value="Browse">
+											
+											</div>
+											<div class="modal-footer">
+											<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+											<button data-dismiss="modal" type="button" class="btn btn-primary">Load</button>
+										 </div>
+										</div>
+											
+										</div>
+
+								</div>
+								
+								
 									  </div>
 								   </div>
 								</div>
@@ -295,12 +329,12 @@
 											<td>100</td>
 											<td>02/10/2015</td>
 											<td><a>
-													<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
+													<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#upload-modal"></span>
 												</a>
 											</td>
 											<td>
 												<a>
-													<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
+													<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#upload1-modal"></span>
 												</a>
 											</td>
 											<th>
@@ -320,12 +354,12 @@
 											<td>02/10/2015</td>
 											<td>
 												<a>
-													<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
+													<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#upload-modal"></span>
 												</a>
 											</td>
 											<td>
 												<a>
-													<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
+													<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#upload1-modal"></span>
 												</a>
 											</td>
 											<th>
@@ -345,12 +379,12 @@
 											<td>02/10/2015</td>
 											<td>
 												<a>
-													<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
+													<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#upload-modal"></span>
 												</a>
 											</td>
 											<td>
 												<a>
-													<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
+													<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#upload1-modal"></span>
 												</a>
 											</td>
 											<th>
@@ -370,36 +404,12 @@
 												<td>02/10/2015</td>
 												<td>
 													<a>
-														<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
+														<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#upload-modal"></span>
 													</a>
 												</td>
 												<td>
 													<a>
-														<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
-													</a>
-												</td>
-												<th>
-													<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a>
-												</th>
-											</tr>
-											<tr>
-												<td>1000001</td>							
-												<td>2010</td>
-												<td>ABCD1234</td>
-												<td>100</td>
-												<td>50</td>
-												<td>10/22/2015</td>
-												<td>100</td>
-												<td>100</td>
-												<td>02/10/2015</td>
-												<td>
-													<a>
-														<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
-													</a>
-												</td>
-												<td>
-													<a>
-														<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
+														<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#upload1-modal"></span>
 													</a>
 												</td>
 												<th>
@@ -418,12 +428,36 @@
 												<td>02/10/2015</td>
 												<td>
 													<a>
-														<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
+														<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#upload-modal"></span>
 													</a>
 												</td>
 												<td>
 													<a>
-														<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
+														<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#upload1-modal"></span>
+													</a>
+												</td>
+												<th>
+													<a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-edit"></i></a>
+												</th>
+											</tr>
+											<tr>
+												<td>1000001</td>							
+												<td>2010</td>
+												<td>ABCD1234</td>
+												<td>100</td>
+												<td>50</td>
+												<td>10/22/2015</td>
+												<td>100</td>
+												<td>100</td>
+												<td>02/10/2015</td>
+												<td>
+													<a>
+														<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#upload-modal"></span>
+													</a>
+												</td>
+												<td>
+													<a>
+														<span class='glyphicon glyphicon-paperclip' data-id="table-attachment" data-toggle="modal" data-target="#upload1-modal"></span>
 													</a>
 												</td>
 												<th>
@@ -437,23 +471,43 @@
 								 <div class="col-lg-offset-5">
 									<button id="btnload" class="btn btn-default ">Load More</button>
 								</div>
-								
-								<div class="carrier_">
-									<div class="row">
-										<div class="col-sm-2"><label>Carrier1</label></div>
-										<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
+								<br></br>
+								<div class="col-lg-offset-1 carrier_" style="width:900px;">
+									<div class="col-sm-11">
+										<div class="row">
+											<div class="col-sm-2"><label>Carrier1</label></div>
+											<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2"><label>Tracking Number</label></div>
+											<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2"><label>Carrier2</label></div>
+											<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
+										</div>
+										<div class="row">
+											<div class="col-sm-2"><label>Tracking Number</label></div>
+											<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
+										</div>
+										
 									</div>
-									<div class="row">
-										<div class="col-sm-2"><label>Tracking Number</label></div>
-										<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
-									</div>
-									<div class="row">
-										<div class="col-sm-2"><label>Carrier2</label></div>
-										<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
-									</div>
-									<div class="row">
-										<div class="col-sm-2"><label>Tracking Number</label></div>
-										<div class="col-sm-3"><input type="text" name="textfield" value="1" id="textfield" style="width:200px;"></div>
+									<div class="col-sm-1" >
+										<div class="row" style="position:relative;left:-414px;">
+											<span class="label label-default">Attach Invoice either at each item level or at overall</span>
+											<div class="attachment success">
+												  <div class="row">
+													<div class="col-sm-12">
+														<input id="input-1a" type="file" class="file" data-show-preview="false" data-show-Upload="false" data-show-Remove="false">
+														</br>
+														<div class="col-sm-3"></div>
+														<button class="btn btn-primary">Submit</button>
+														<button class="btn btn-default">Cancel</button>
+													</div>
+												</div>
+											</div>
+											</div>	
+										</div> 
 									</div>
 								</div>
 								
@@ -490,11 +544,12 @@
       <script src="js/jquery.nanoscroller.min.js"></script>
       <script src="js/demo-rtl.js"></script>
       <script src="js/select2.min.js"></script>
-	    <script src="js/bootstrap-datepicker.js"></script>
+	  <script src="js/bootstrap-datepicker.js"></script>
+	  <script src="js/fileinput.min.js"></script>
       <script type="text/javascript">
          $(document).ready(function() {
          	$("#table1").dataTable({"bPaginate": false, "sDom": 'zrtSpi'});
-         	
+         	$("#input-1a").fileinput({});
 			
 			$("#textfield4").datepicker();
          });
