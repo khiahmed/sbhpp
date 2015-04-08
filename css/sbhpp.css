@@ -244,4 +244,7 @@ display:block !important;
 .file-caption-ellipsis{
 	display:none !important;
 }
+.trAlign{
+	text-align:center;
+}
 }
