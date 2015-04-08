@@ -220,9 +220,7 @@
                                     <div class="modal-dialog medium-modal">
                                      <div class="modal-content">
                                           <div class="modal-body">
-                                             <div class="daterange-filter" id="reportrange1">
-                                                <h5 class="h4_bold">Plant Code</h5>
-												<div class="form-group form-group-select2">
+                                       				<div class="form-group form-group-select2">
 														<!--<label>use , commas for, multiple selection(s)</label>-->
 														<div class="form-group form-group-select2 modalSelect">
 															<select style="width:300px" id="sel5Multi" multiple>
@@ -235,7 +233,7 @@
 															</select>                                                 
 														</div>
 													</div>
-												</div>     
+												    
                                              </div>
 											 
 											 <div class="modal-footer">
@@ -265,9 +263,7 @@
                                     <div class="modal-dialog medium-modal">
                                        <div class="modal-content">
                                            <div class="modal-body">
-                                             <div class="daterange-filter" id="reportrange1">
-                                                <h5 class="h4_bold">Vendor</h5>
-													<div class="form-group form-group-select2">
+                                         			<div class="form-group form-group-select2">
 														<!--<label>use , commas for, multiple selection(s)</label>-->
 														<div class="form-group form-group-select2 modalSelect">
 															<select style="width:300px" id="sel1Multi" multiple>
@@ -280,7 +276,7 @@
 															</select>                                                 
 														</div>
 													</div>    
-                                             </div>
+                                        
                                           </div>
                                           <div class="modal-footer">
                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -325,8 +321,6 @@
                                     <div class="modal-dialog medium-modal">
                                        <div class="modal-content">
                                           <div class="modal-body">
-                                             <div class="daterange-filter" id="reportrange1">
-                                                <h5 class="h4_bold">PO No.</h5>
 													<div class="form-group form-group-select2">
 														<!--<label>use , commas for, multiple selection(s)</label>-->
 														<div class="form-group form-group-select2 modalSelect">
@@ -340,7 +334,7 @@
 															</select>                                                 
 														</div>
 													</div>
-                                             </div>
+                         
                                           </div>
                                           <div class="modal-footer">
                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -353,9 +347,7 @@
                                     <div class="modal-dialog medium-modal">
                                        <div class="modal-content">
                                           <div class="modal-body">
-                                             <div class="daterange-filter" id="reportrange1">
-                                                <h5 class="h4_bold">Invoice No</h5>
-													<div class="form-group form-group-select2">
+               										<div class="form-group form-group-select2">
 														<!--<label>use , commas for, multiple selection(s)</label>-->
 														<div class="form-group form-group-select2 modalSelect">
 															<select style="width:300px" id="sel3Multi" multiple>
@@ -368,7 +360,7 @@
 															</select>                                                 
 														</div>
 													</div>
-                                             </div>
+                                
                                           </div>
                                           <div class="modal-footer">
                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -381,25 +373,20 @@
                                     <div class="modal-dialog medium-modal">
                                        <div class="modal-content">
                                           <div class="modal-body">
-												<div class="daterange-filter" id="reportrange1">
-												
-														<h5 class="h4_bold">Invoice NO</h5>
-															<div class="form-group form-group-select2">
-																<!--<label>use , commas for, multiple selection(s)</label>-->
-																<div class="form-group form-group-select2 modalSelect">
-																	<select style="width:300px" id="sel4Multi" multiple>
-																		<option value="1000001">10</option>
-																		<option value="1000001">20</option>
-																		<option value="1000001">30</option>
-																		<option value="1000001">101</option>
-																		<option value="1000001">100</option>
-																		<option value="1000001">10</option>
-																	</select>                                                 
-																</div>
-															</div>
-													
+												<div class="form-group form-group-select2">
+													<!--<label>use , commas for, multiple selection(s)</label>-->
+													<div class="form-group form-group-select2 modalSelect">
+														<select style="width:300px" id="sel4Multi" multiple>
+															<option value="1000001">10</option>
+															<option value="1000001">20</option>
+															<option value="1000001">30</option>
+															<option value="1000001">101</option>
+															<option value="1000001">100</option>
+															<option value="1000001">10</option>
+														</select>                                                 
+													</div>
 												</div>
-                                          </div>
+									        </div>
                                           <div class="modal-footer">
                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                              <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
@@ -461,11 +448,15 @@
                                  </div>     
                                  <div>
 									<div class="row">
-
-									<div class="col-sm-12">
-										<button class="btn btn-default"><i class="fa fa-filter"></i> Reset</button>
-									</div>
-								 </div>
+								<div class="col-sm-10">
+                                   <button class="btn btn-default">Reset</button>
+								</div>
+								<div class="col-sm-2">
+                                	<div class="btn-group pull-right">
+                                    	<button class="btn btn-default"><i class="fa  fa-file-excel-o"></i> Download as Excel</button>
+                                    </div>
+								</div>
+							 </div>
 							
 								 
 								<div class="table-responsive">
@@ -635,7 +626,11 @@
 											</tr>
 										</tbody>
                                  </table>
+								
                                  </div>
+								  <div class="col-lg-offset-5">
+									<button id="btnload" class="btn btn-default ">Load More</button>
+								</div>
 								 </div>
                            </div>
                         </div>
@@ -804,15 +799,15 @@
          		allowClear: true
          	});
 			$('#sel3Multi').select2({
-         		placeholder: 'Select a Invoice Number',
+         		placeholder: 'Select a Supplier Invoice No',
          		allowClear: true
          	});
 			$('#sel4Multi').select2({
-         		placeholder: 'Select a Plant Code',
+         		placeholder: 'Select a Invoice No',
          		allowClear: true
          	});
 			$('#sel5Multi').select2({
-         		placeholder: 'Select a PO Code',
+         		placeholder: 'Select a Plant',
          		allowClear: true
          	});
          });

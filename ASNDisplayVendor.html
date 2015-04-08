@@ -321,7 +321,7 @@
                                     </div>
                                  </div>
 								 
-								 		  <div class="modal fade" id="plant_date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+								 <div class="modal fade" id="plant_date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
                                     <div class="modal-dialog medium-modal">
                                        <div class="modal-content">
                                         
@@ -334,6 +334,33 @@
                                           <div class="modal-footer">
                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                              <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+								 
+								  <div class="modal fade" id="carrierEdit-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog medium-modal">
+                                       <div class="modal-content">
+                                        
+                                          <div class="modal-body">
+                                            <div class="row">
+												<div class="col-sm-5"><label for="carrier">Carrier2</label></div>
+												<div class="col-sm-2">
+													<input type="text" id="carrier"/>
+												</div>
+											</div>
+											</br>
+											 <div class="row">
+												<div class="col-sm-5"><label for="tracking">Tracking No</label></div>
+												<div class="col-sm-2">
+													<input type="text" id="tracking"/>
+												</div>
+											</div>
+                                          </div>
+                                          <div class="modal-footer">
+                                             <button type="button" class="btn btn-primary" data-dismiss="modal">Submit</button>
+                                             <button data-dismiss="modal" type="button" class="btn btn-default">Close</button>
                                           </div>
                                        </div>
                                     </div>
@@ -421,7 +448,13 @@
 								 </div>
 							
 								 
-
+									<div class="row">
+												<div class="col-sm-12">
+													<button class="btn btn-default">Reset</button>
+												</div>
+											</div>
+											
+								<div class="col-lg-12">	
 								 <table class="table table-bordered table-striped table-condensed" id="table1">
                                     <thead>
                                        <tr class="success">
@@ -436,6 +469,7 @@
                                           <th><a>ASN No</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-asn" data-toggle="modal" data-target="#asn-modal"><i class="fa  fa-magic"></i></button></th>
 										   <th><a>Carrier 1 / Tracking No </a></th>
 										  <th><a>Carrier 2 / Tracking No </a></th>
+										  <th><a>Attachments</a></th>
 										  <th><a>Actions</a></th>
                                        </tr>
                                     </thead>
@@ -457,9 +491,10 @@
 												<a>
 													<span class="glyphicon glyphicon-paperclip" data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
 												</a>
-												<!--<span class='glyphicon glyphicon-edit' style="display:inline;"></span>-->
-												<span style="display:none;"><button>Save</button></span>
-												<span style="display:none"><input id="upfile" type="file" value="upload" multiple></span>
+												
+											</td>
+											<td>
+												<a href="#" data-toggle="modal" data-target="#carrierEdit-modal"><i class="fa fa-edit"></i></a>
 											</td>
 										</tr>
 										<tr>
@@ -479,13 +514,19 @@
 												<a>
 													<span class="glyphicon glyphicon-paperclip" data-id="table-attachment" data-toggle="modal" data-target="#myModal1"></span>
 												</a>
-												<!--<span class='glyphicon glyphicon-edit' style="display:inline;"></span>-->
-												<span style="display:none;"><button>Save</button></span>
-												<span style="display:none"><input id="upfile" type="file" value="upload" multiple></span>
+												
+											</td>
+											<td>
+												<a href="#" data-toggle="modal" data-target="#carrierEdit-modal"><i class="fa fa-edit"></i></a>
 											</td>
 										</tr>
                                     </tbody>
                                  </table>
+								 <div class="col-lg-offset-5">
+									<button id="btnload" class="btn btn-default ">Load More</button>
+								</div>
+								 </div>	
+								  
                               </div>
                            </div>
                         </div>
@@ -629,6 +670,7 @@
          		placeholder: 'Select a ASN No',
          		allowClear: true
          	});
+			
          });
       </script>
    </body>

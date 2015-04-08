@@ -224,4 +224,24 @@ display:block !important;
     top:180px;
 	
  }
+ .carrier_ > div > div{
+			padding-bottom: 10px;
+}
+.attachment{
+	width: 317px;
+    height: 35px;
+    background-color: rgb(221, 234, 254);
+}
+.spacing{
+	position: relative !important;
+	left: -432px!important;
+}
+.spacing1{
+	position: relative !important;
+	left: -215px !important;
+	top: -196px !important;
+}
+.file-caption-ellipsis{
+	display:none !important;
+}
 }
