@@ -225,7 +225,7 @@ display:block !important;
 	
  }
  .carrier_ > div > div{
-			padding-bottom: 10px;
+	padding-bottom: 10px;
 }
 .attachment{
 	width: 317px;
@@ -247,4 +247,7 @@ display:block !important;
 .trAlign{
 	text-align:center;
 }
+.tickCheckbox {
+	margin-left: 22px;
+	margin-top: 8px;
 }
