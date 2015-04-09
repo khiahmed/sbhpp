@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+      <title>
+         SBHPP
+      </title>
+      <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
+      <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
+      <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
+      <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+      <link rel="stylesheet" type="text/css" href="css/sbhpp.css">
+      <link type="image/x-icon" href="favicon.png" rel="shortcut icon"/>
+      <link href='fonts/fonts.googleapis.com/cssf58a.css?family=Open+Sans:400,600,700,300|Titillium+Web:200,300,400' rel='stylesheet' type='text/css'>
+      <link rel="stylesheet" type="text/css" href="css/compiled/theme_styles.css"/>
+      <link rel="stylesheet" href="css/libs/daterangepicker.css" type="text/css"/>
+      <link rel="stylesheet" href="css/libs/dataTables.tableTools.css" type="text/css"/>
+      <link rel="stylesheet" href="css/libs/select2.css" type="text/css"/>
+   </head>
+   <body class="pace-done theme-white">
+        <div id="theme-wrapper">
+         <header class="navbar" id="header-navbar">
+            <div class="container">
+               <a href="index-2.html" id="logo" class="navbar-brand">
+               <img src="img/sbhpp_logo_shs.png" alt="" class="normal-logo logo-white"/>
+               </a>
+               <div class="clearfix">
+                  <button class="navbar-toggle" data-target=".navbar-ex1-collapse" data-toggle="collapse" type="button">
+                  <span class="sr-only">
+                  Toggle navigation
+                  </span>
+                  <span class="fa fa-bars">
+                  </span>
+                  </button>
+                  <div class="nav-no-collapse navbar-left pull-left hidden-sm hidden-xs">
+                     <ul class="nav navbar-nav pull-left">
+                        <li>
+                           <a class="btn" id="make-small-nav">
+                           <i class="fa fa-bars">
+                           </i>
+                           </a>
+                        </li>
+                     </ul>
+                  </div>
+                  <div class="nav-no-collapse pull-right" id="header-nav">
+                     <ul class="nav navbar-nav pull-right">
+                        <li class="dropdown profile-dropdown" id="profile-dropdown">
+                           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                           <img src="img/user.jpg" alt=""/>
+                           <span class="hidden-xs">
+                           Srinath Parthasarathy
+                           </span>
+                           <b class="caret">
+                           </b>
+                           </a>
+                           <ul class="dropdown-menu">
+                              
+                              <li>
+                                 <a href="#" data-id="table-reset" data-toggle="modal" data-target="#changePassword-modal">
+                                 <i class="fa fa-envelope-o">
+                                 </i>
+                                Change Password
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#">
+                                 <i class="fa fa-power-off">
+                                 </i>
+                                 Logout
+                                 </a>
+                              </li>
+                           </ul>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </header>
+         <div id="page-wrapper" class="container">
+            <div class="row">
+               <div id="nav-col">
+                  <section id="col-left" class="col-left-nano">
+                     <div id="col-left-inner" class="col-left-nano-content">
+                        <div class="collapse navbar-collapse navbar-ex1-collapse" id="sidebar-nav">
+                           <ul class="nav nav-pills nav-stacked">
+                              <li class="nav-header nav-header-first hidden-sm hidden-xs">
+                                 <span>&nbsp;</span>
+                              </li>
+                              <li class="">
+                                 <a href="#" class="dropdown-toggle">
+                                 <i class="fa fa-envelope">
+                                 </i>
+                                 <span>
+                                 Compose Mail									
+                                 </span>
+                                 <span class="count badge badge-info">
+                                 8
+                                 </span>
+                                 <i class="fa fa-angle-right drop-icon"></i>
+                                 </a>
+                                
+                              </li>
+                              <li class="">
+									<a href="#" class="dropdown-toggle">
+									
+									<span>Admin Control Panel</span>
+									
+									</a>
+									
+								</li>
+                              <li>
+                                 <a href="#" class="dropdown-toggle">
+                                 
+                                 <span>Audit Trail</span>
+                                 
+                                 </a>
+                                 
+                              </li>
+                             
+							 
+                           </ul>
+                        </div>
+                     </div>
+                  </section>
+                  <div id="nav-col-submenu">
+                  </div>
+               </div>
+               <div id="content-wrapper">
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="main-box clearfix">
+                           <header class="main-box-header clearfix">
+                              <h2 class="pull-left h4_bold">Admin Control Panel</h2>
+                           </header>
+                           <div class="main-box-body clearfix">
+                              <div class="">
+							  
+							  
+								  <div class="modal fade" id="changePassword-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog medium-modal">
+                                       <div class="modal-content">
+                                         
+                                          <div class="modal-body">
+												<div>
+													<input  class="form-control" placeholder="Enter Old Password" type="text">
+												</div></br>
+												<div>
+													<input  class="form-control" placeholder="Enter New Password" type="text">
+												</div>
+												</br>
+												<div >
+													<input  class="form-control" placeholder="Re-Enter New Password" type="text">
+												</div>
+												</br>
+												
+												<div class="row">
+													<div class="col-lg-offset-1">
+														<div class="col-sm-7"><button class="btn btn-primary btn-lg">Change Password</button></div>
+														<div class="col-sm-5"><button class="btn btn-default btn-lg">Cancel</button></div>
+													</div>
+												</div>
+												
+												
+	
+                                          </div>
+                                          
+                                       </div>
+                                    </div>
+                                 </div>
+							  
+							  
+							  
+								 
+								  <div class="modal fade" id="passwordReset-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog medium-modal">
+                                       <div class="modal-content">
+                                         
+                                          <div class="modal-body">
+												<div>
+													<input  class="form-control" placeholder="Enter New Password" type="text">
+												</div>
+												</br>
+												<div >
+													<input  class="form-control" placeholder="Re-Enter New Password" type="text">
+												</div>
+												</br>
+												<div class="row">
+													<div class="col-lg-offset-3">
+														<div class="col-sm-5"><button class="btn btn-primary">Submit</button></div>
+														<div class="col-sm-5"><button class="btn btn-default">Cancel</button></div>
+													</div>
+												</div>
+	
+                                          </div>
+                                          
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <div>
+									<div class="row">
+										<div class="col-sm-12">
+											<button class="btn btn-default">Reset</button>
+										</div>
+									</div>
+							<div class="col-sm11">
+								 <table class="table table-bordered table-striped table-condensed" id="table1">
+                                    <thead>
+                                       <tr class="success">
+                                        <td>Admin</td>
+                                        <td>Quality</td>
+										<td>Buyer</td>
+										<td>Vendor</td>
+										<td>Status</td>
+										<td> <div class="form-group form-group-select2">
+										   <select id="userName" multiple>
+												<option>User Name1</option>
+												<option>User Name1</option>
+												<option>User Name2</option>
+												<option>User Name3</option>
+										   </select>
+										</div></td>
+										<td>Purchase Group</td>
+										<td></td>
+                                       </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+											<td class="trAlign"><a><i class="glyphicon glyphicon-ok"></i></a></td>
+											<td class="trAlign"></td>
+											<td class="trAlign"></td>
+											<td class="trAlign"></td>
+											<td>
+												<div class="form-group form-group-select2">
+													<select class="sel3" style="width:95px;">
+													<option value="active">Active</option>
+													<option value="inactive">InActive</option>
+													</select>
+												</div>
+											</td>
+											<td>User Name 1</td>
+											<td>
+												<div class="form-group form-group-select2">
+													<select class="sel2">
+													<option value="purchase">Purchase Group1</option>
+													<option value="purchase">Purchase Group2</option>
+													<option value="purchase">Purchase Group3</option>
+													<option value="purchase">Purchase Group4</option>
+													<option value="purchase">Purchase Group5</option>
+													<option value="purchase">Purchase Group6</option>
+													</select>
+												</div>
+											</td>
+											<td><button class="btn btn-default" data-id="table-reset" data-toggle="modal" data-target="#passwordReset-modal">Reset Password</button></td>
+										</tr>
+										<tr>
+											<td class="trAlign"><a><i class="glyphicon glyphicon-ok"></i></a></td>
+											<td class="trAlign"><a><i class="glyphicon glyphicon-ok"></i></a></td>
+											<td class="trAlign"><a><i class="glyphicon glyphicon-ok"></i></a></td>
+											<td class="trAlign"></td>
+											<td>
+												<div class="form-group form-group-select2">
+													<select class="sel3" style="width:95px;">
+													<option value="active">Active</option>
+													<option value="inactive">InActive</option>
+													</select>
+												</div>
+											</td>
+											<td>User Name 2</td>
+											<td>
+												<div class="form-group form-group-select2">
+													<select class="sel2">
+													<option value="purchase">Purchase Group1</option>
+													<option value="purchase">Purchase Group2</option>
+													<option value="purchase">Purchase Group3</option>
+													<option value="purchase">Purchase Group4</option>
+													<option value="purchase">Purchase Group5</option>
+													<option value="purchase">Purchase Group6</option>
+													</select>
+												</div>
+											</td>
+											<td><button class="btn btn-default" data-id="table-reset" data-toggle="modal" data-target="#passwordReset-modal">Reset Password</button></td>
+										</tr>
+										<tr>
+											<td class="trAlign"></td>
+											<td class="trAlign"></td>
+											<td class="trAlign"></td>
+											<td class="trAlign"><a><i class="glyphicon glyphicon-ok"></i></a></td>
+											<td>
+												<div class="form-group form-group-select2">
+													<select class="sel3" style="width:95px;">
+													<option value="active">Active</option>
+													<option value="inactive">InActive</option>
+													</select>
+												</div>
+											</td>
+											<td>User Name 3</td>
+											<td>
+												<div class="form-group form-group-select2">
+													<select class="sel2">
+													<option value="purchase">Purchase Group1</option>
+													<option value="purchase">Purchase Group2</option>
+													<option value="purchase">Purchase Group3</option>
+													<option value="purchase">Purchase Group4</option>
+													<option value="purchase">Purchase Group5</option>
+													<option value="purchase">Purchase Group6</option>
+													</select>
+												</div>
+											</td>
+											<td><button class="btn btn-default" data-id="table-reset" data-toggle="modal" data-target="#passwordReset-modal">Reset Password</button></td>
+										</tr>
+										<tr>
+											<td class="trAlign"></td>
+											<td class="trAlign"></td>
+											<td class="trAlign"></td>
+											<td class="trAlign"><a><i class="glyphicon glyphicon-ok"></i></a></td>
+											<td>
+												<div class="form-group form-group-select2">
+													<select class="sel3" style="width:95px;">
+													<option value="active">Active</option>
+													<option value="inactive">InActive</option>
+													</select>
+												</div>
+											</td>
+											<td>User Name 4</td>
+											<td>
+												<div class="form-group form-group-select2">
+													<select class="sel2">
+													<option value="purchase">Purchase Group1</option>
+													<option value="purchase">Purchase Group2</option>
+													<option value="purchase">Purchase Group3</option>
+													<option value="purchase">Purchase Group4</option>
+													<option value="purchase">Purchase Group5</option>
+													<option value="purchase">Purchase Group6</option>
+													</select>
+												</div>
+											</td>
+											<td><button class="btn btn-default" data-id="table-reset" data-toggle="modal" data-target="#passwordReset-modal">Reset Password</button></td>
+										</tr>
+										<tr>
+											<td class="trAlign"></td>
+											<td class="trAlign"></td>
+											<td class="trAlign"></td>
+											<td class="trAlign"><a><i class="glyphicon glyphicon-ok"></i></a></td>
+											<td>
+												<div class="form-group form-group-select2">
+													<select class="sel3" style="width:95px;">
+													<option value="active">Active</option>
+													<option value="inactive">InActive</option>
+													</select>
+												</div>
+											</td>
+											<td>User Name 5</td>
+											<td>
+												<div class="form-group form-group-select2">
+													<select class="sel2">
+													<option value="purchase">Purchase Group1</option>
+													<option value="purchase">Purchase Group2</option>
+													<option value="purchase">Purchase Group3</option>
+													<option value="purchase">Purchase Group4</option>
+													<option value="purchase">Purchase Group5</option>
+													<option value="purchase">Purchase Group6</option>
+													</select>
+												</div>
+											</td>
+											<td><button class="btn btn-default" data-id="table-reset" data-toggle="modal" data-target="#passwordReset-modal">Reset Password</button></td>
+										</tr>
+										<tr>
+											<td class="trAlign"></td>
+											<td class="trAlign"><a><i class="glyphicon glyphicon-ok"></i></a></td>
+											
+											<td class="trAlign"></td>
+											<td class="trAlign"></td>
+											<td>
+												<div class="form-group form-group-select2">
+													<select class="sel3" style="width:95px;" >
+													<option value="active">Active</option>
+													<option value="inactive">InActive</option>
+													</select>
+												</div>
+											</td>
+											<td>User Name 6</td>
+											<td>
+												<div class="form-group form-group-select2">
+													<select class="sel2">
+													<option value="purchase">Purchase Group1</option>
+													<option value="purchase">Purchase Group2</option>
+													<option value="purchase">Purchase Group3</option>
+													<option value="purchase">Purchase Group4</option>
+													<option value="purchase">Purchase Group5</option>
+													<option value="purchase">Purchase Group6</option>
+													</select>
+												</div>
+											</td>
+											<td><button class="btn btn-default" data-id="table-reset" data-toggle="modal" data-target="#passwordReset-modal">Reset Password</button></td>
+										</tr>
+                                    </tbody>
+                                 </table>
+							</div>
+								
+                              </div>
+							   
+                           </div>
+						    
+                        </div>
+						<div class="col-lg-offset-4">
+									<button id="btnload" class="btn btn-default ">Load More</button>
+								</div>
+                     </div>
+					 </div>
+                  </div>
+                  <div class="row">
+                     <div class="col-lg-12">
+                        <div class="row">
+                           <div class="col-lg-12">
+							<!-- -->                          
+						   </div>
+                        </div>
+                     </div>
+                  </div>
+                  <footer id="footer-bar" class="row">
+                     <p id="footer-copyright" class="col-xs-12">
+                        &copy; 2015&nbsp;&nbsp;|&nbsp;&nbsp;all right reserved&nbsp;&nbsp;|&nbsp;&nbsp;sbhpp
+                     </p>
+                  </footer>
+               </div>
+            </div>
+         </div>
+      </div>
+      <script src="js/jquery.js"></script>
+      <script src="js/bootstrap.js"></script>
+      <script src="js/moment.min.js"></script>
+      <script src="js/daterangepicker.js"></script>
+      <script src="js/scripts.js"></script>
+      <script src="js/demo-skin-changer.js"></script>
+      <script src="js/demo.js"></script>
+      <script src="js/jquery.nanoscroller.min.js"></script>
+      <script src="js/demo-rtl.js"></script>
+      <script src="js/select2.min.js"></script>
+      <script type="text/javascript">
+         $(document).ready(function() {
+         	$("#table1").dataTable({
+					"bPaginate": false,
+					"sDom": 'zrtSpi',
+					columnDefs: [
+					   { orderable: false, targets: -1 }
+					]
+			});
+         	$('#reportrange').daterangepicker({
+         		startDate: moment().subtract('days', 29),
+         		endDate: moment(),
+         		minDate: '01/01/1990',
+         		maxDate: '12/31/2022',
+         		dateLimit: { days: 60 },
+         		showDropdowns: true,
+         		showWeekNumbers: true,
+         		timePicker: false,
+         		timePickerIncrement: 1,
+         		timePicker12Hour: true,
+         		ranges: {
+         			'Today': [moment(), moment()],
+         			'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+         			'Last 7 Days': [moment().subtract('days', 6), moment()],
+         			'Last 30 Days': [moment().subtract('days', 29), moment()],
+         			'This Month': [moment().startOf('month'), moment().endOf('month')],
+         			'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+         		},
+         		opens: 'left',
+         		buttonClasses: ['btn btn-default'],
+         		applyClass: 'btn-small btn-primary',
+         		cancelClass: 'btn-small',
+         		format: 'MM/DD/YYYY',
+         		separator: ' to ',
+         		locale: {
+         			applyLabel: 'Submit',
+         			fromLabel: 'From',
+         			toLabel: 'To',
+         			customRangeLabel: 'Custom Range',
+         			daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+         			monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+         			firstDay: 1
+         		}
+         	 },
+         	 function(start, end) {
+         	  console.log("Callback has been called!");
+         	  $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+         	 }
+           );
+		   $('#reportrange1').daterangepicker({
+         		startDate: moment().subtract('days', 29),
+         		endDate: moment(),
+         		minDate: '01/01/1990',
+         		maxDate: '12/31/2022',
+         		dateLimit: { days: 60 },
+         		showDropdowns: true,
+         		showWeekNumbers: true,
+         		timePicker: false,
+         		timePickerIncrement: 1,
+         		timePicker12Hour: true,
+         		ranges: {
+         			'Today': [moment(), moment()],
+         			'Yesterday': [moment().subtract('days', 1), moment().subtract('days', 1)],
+         			'Last 7 Days': [moment().subtract('days', 6), moment()],
+         			'Last 30 Days': [moment().subtract('days', 29), moment()],
+         			'This Month': [moment().startOf('month'), moment().endOf('month')],
+         			'Last Month': [moment().subtract('month', 1).startOf('month'), moment().subtract('month', 1).endOf('month')]
+         		},
+         		opens: 'left',
+         		buttonClasses: ['btn btn-default'],
+         		applyClass: 'btn-small btn-primary',
+         		cancelClass: 'btn-small',
+         		format: 'MM/DD/YYYY',
+         		separator: ' to ',
+         		locale: {
+         			applyLabel: 'Submit',
+         			fromLabel: 'From',
+         			toLabel: 'To',
+         			customRangeLabel: 'Custom Range',
+         			daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr','Sa'],
+         			monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+         			firstDay: 1
+         		}
+         	 },
+         	 function(start, end) {
+         	  console.log("Callback has been called!");
+			  $('#reportrange1 span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+         	 }
+           );
+           //Set the initial state of the picker label
+		   $('#reportrange1 span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+			
+			
+         	$('#userName').select2({
+         		placeholder: 'Select a User',
+         		allowClear: true
+         	});
+			
+			$('.sel2').select2();
+			$('.sel3').select2();
+			
+         });
+      </script>
+   </body>
+</html>
