@@ -338,8 +338,16 @@
                       <label class="lead">Year / Month</label>
                     </div>
                    <div class="col-lg-4">
-					  <div id="slider" ></div>
-					  <span id="yearlabel" class="slider-label"></span> 
+					  <div class="form-group form-group-select2">
+							<select style="width:80px" id="sel2">
+							<option value="2010">2010</option>
+							<option value="2011">2011</option>
+							<option value="2012">2012</option>
+							<option value="2013">2013</option>
+							<option value="2014">2014</option>
+							<option value="2015">2015</option>
+							</select>
+						</div>
 					 </div>
 					
 					<div class="col-lg-4">
@@ -595,7 +603,7 @@ $(document).on('click', '.audit',function (e){
         } 
     });
 	  });
-
+$('#sel2').select2();
       </script>
 
 </body>
