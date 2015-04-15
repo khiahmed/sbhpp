@@ -20,7 +20,6 @@
       </head>
    <body class="pace-done theme-white">
       <div id="theme-wrapper">
-	  
          <header class="navbar" id="header-navbar">
             <div class="container">
                <a href="index-2.html" id="logo" class="navbar-brand">
@@ -240,7 +239,7 @@
         </div>
         <div class="row">
             <div class="col-lg-12">
-<div id="email-new" class="email-new-nano">
+	<div id="email-new" class="email-new-nano">
 
     <div class="email-new-nano-content">
         <div id="email-new-inner">
@@ -250,26 +249,26 @@
             <form>
                 <div id="email-new-header">
                     <div class="row form-group">
-                        <label for="exampleInpTo" class="col-md-2">To:</label>
-                        <div class="col-md-10">
+                        <label for="exampleInpTo" class="col-sm-1">To:</label>
+                        <div class="col-sm-11">
                             <input type="text" placeholder="Enter recepients" id="exampleInpTo" class="form-control-s2 email-recepients" value="mila@kunis.com,ryan@gosling.com" />
                         </div>
                     </div>
                     <div class="row form-group">
-                        <label for="exampleInpCc" class="col-md-2">CC:</label>
-                        <div class="col-md-10">
+                        <label for="exampleInpCc" class="col-sm-1">CC:</label>
+                        <div class="col-sm-11">
                             <input type="text" placeholder="Enter recepients" id="exampleInpCc" class="form-control-s2 email-recepients" value="angelina@jolie.com" />
                         </div>
                     </div>
 					<div class="row form-group">
-                        <label for="exampleInpBCC" class="col-md-2">BCC:</label>
-                        <div class="col-md-10">
+                        <label for="exampleInpBCC" class="col-sm-1">BCC:</label>
+                        <div class="col-sm-11">
                             <input type="text" placeholder="Enter recepients" id="exampleInpBCC" class="form-control-s2 email-recepients" value="angelina@jolie.com" />
                         </div>
                     </div>
                     <div class="row form-group">
-                        <label for="exampleInpSubject" class="col-md-2">Subject:</label>
-                        <div class="col-md-10">
+                        <label for="exampleInpSubject" class="col-sm-1">Subject:</label>
+                        <div class="col-sm-11">
                             <input type="text" placeholder="Enter subject" id="exampleInpSubject" class="form-control" />
                         </div>
                     </div>
@@ -277,7 +276,7 @@
                 <div id="email-new-body">
                     <div class="row">
                         <label class="visible-xs">Content:</label>
-                        <div class="col-md-12">
+                        <div class="col-sm-12">
                             <div id="alerts"></div>
                             <div class="btn-toolbar editor-toolbar hidden-xs" data-role="editor-toolbar" data-target="#editor">
                                 <input type="text" data-edit="inserttext" id="voiceBtn" x-webkit-speech="">
@@ -366,52 +365,14 @@
 			});
 		});
 		
-		setHeightEmailContent();
-		
-		initEmailScroller();
-		
 		$('.email-recepients').select2({
 			placeholder: 'Enter recepients',
 			tags: ['angelina@jolie.com', 'mila@kunis.com', 'ryan@gosling.com', 'scarlett@johansson.com', 'emma@watson.com', 'robert@downey.com']
 		});
+		$('#email-new').css('height', '600px');
 	});
 	
-	$(window).smartresize(function(){
-		setHeightEmailContent();
-		
-		initEmailScroller();
-	});
 	
-	function setHeightEmailContent() {
-		if ($( document ).width() >= 992) {
-			var windowHeight = $(window).height();
-			var staticContentH = $('#header-navbar').outerHeight() + $('#email-header').outerHeight();
-			staticContentH += ($('#email-box').outerHeight() - $('#email-box').height());
-	
-			$('#email-new').css('height', windowHeight - staticContentH);
-		}
-		else {
-			$('#email-new').css('height', '');
-		}
-	}
-	
-	function initEmailScroller() {
-		if ($( document ).width() >= 992) {
-			$('#email-navigation').nanoScroller({
-		    	alwaysVisible: false,
-		    	iOSNativeScrolling: false,
-		    	preventPageScrolling: true,
-		    	contentClass: 'email-nav-nano-content'
-		    });
-			
-			$('#email-new').nanoScroller({
-		    	alwaysVisible: false,
-		    	iOSNativeScrolling: false,
-		    	preventPageScrolling: true,
-		    	contentClass: 'email-new-nano-content'
-		    });
-		}
-	}
 	
 	$(function(){
 		function initToolbarBootstrapBindings() {

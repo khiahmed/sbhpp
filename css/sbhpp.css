@@ -255,3 +255,7 @@ display:block !important;
 .vendor_mail li {
     padding-left: 73px !important;
 }
+
+#email-new-header .form-group, #email-new-body .form-group {
+  margin-bottom: 5px !important;
+}
