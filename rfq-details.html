@@ -62,7 +62,7 @@
                                  <a href="#">
                                  <i class="fa fa-envelope-o">
                                  </i>
-                                 Messages
+                                Change Password
                                  </a>
                               </li>
                               <li>
@@ -222,46 +222,42 @@
                            </header>
                            <div class="main-box-body clearfix">
 							 <div class="row">
-								<div class="col-sm-12">
+								<div class="col-sm-10">
+                                   <button class="btn btn-default">Back to RFQ</button>
+								</div>
+								<div class="col-sm-2">
                                 	<div class="btn-group pull-right">
-                                    
-                                    	<button class="btn btn-default"><i class="fa fa-filter"></i> Reset Filter</button>
                                     	<button class="btn btn-default"><i class="fa  fa-file-excel-o"></i> Download as Excel</button>
-                                        
-                                        
                                     </div>
-								
-									
 								</div>
 							 </div>
                               <div class="table-responsive">	
 								<table class="table table-bordered table-striped table-condensed" style="margin-bottom:-1px !important">
 										<tr class="success">
-											<th>RFQ No#<div style="color:#AB9D9D">6000004259</div></th>
-											<th>Start Date<div style="color:#AB9D9D">23/10/2014</div></th>
-											<th>End Date<div style="color:#AB9D9D">23/10/2014</div></th>
-											<th>Deadline Date<div style="color:#AB9D9D">23/10/2014</div></th>
-											<th>Payment Term<div style="color:#AB9D9D">P001-Payment Within 15 Days</div></th>
-											<th>Icon Term<div style="color:#AB9D9D">1001-Cost and Fright</div></th>
-											<th>Status<div style="color:#AB9D9D">Open</div></th>
+											<th>RFQ No#<label>6000004259</label></th>
+											<th>Start Date<label>23/10/2014</label></th>
+											<th>End Date<label>23/10/2014</label></th>
+											<th>Deadline Date<label>23/10/2014</label></th>
+											<th>Payment Term<label>P001-Payment Within 15 Days</label></th>
+											<th>Inco Term<label>1001-Cost and Fright</label></th>
+											<th>Currency<label>USD</label></th>
+											<th>Status<label>Open</label></th>
 										</tr>
 									</table>
 								 <table class="table table-bordered table-striped table-condensed" id="table1">
                                     <thead>
                                        <tr class="success">
-                                          <th >Plant</th>
-                                          <th >Material Number</th>
-                                          <th >Material Description</th>
-                                          <th >Forecating volume</th>
-                                          <th >Unit of Measurment</th>
-										   <th >Currency</th>
-										  <th>Unit Price per Unit</th>
+                                          <th>Plant</th>
+                                          <th>Material</th>
+                                          <th width=90>Forecasting volume</th>
+                                          <th>UOM</th>
+										  <th>Unit Price</th>
+										  <th>Packing</th>
 										  <th>Packing Type</th>
-										  <th >Packing Per Unit</th>
-										  <th >Freight Type</th>
-										  <th >Freight Per Unit</th>
-										   <th >Total</th>
-										  <th >Remarks</th>
+										  <th>Freight</th>
+										  <th>Freight Type</th>
+										  <th>Total</th>
+										  <th width=100>Remarks</th>
 										  <th>No Quote</th>
                                        </tr>
                                     </thead>
@@ -269,10 +265,8 @@
 										<tr>
 											<td>1000</td>
 											<td>ABCD1234</td>
-											<td>Station Gauge</td>
 											<td>56.00 </td>
 											<td>#NO</td>
-											<td>USD</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
@@ -280,15 +274,13 @@
 											<td>0.00</td>
 											<td>6,880</td>
 											<td>ABCD</td>
-											<td> <div class="checkbox"> <input type="checkbox"/></div> </td>
+											<td> <div class="checkbox"> <input type="checkbox" checked disabled /></div> </td>
 										</tr>
 										<tr>
 											<td>1000</td>
 											<td>ABCD1234</td>
-											<td>Station Gauge</td>
 											<td>56.00 </td>
 											<td>#NO</td>
-											<td>USD</td>
 											<td>0.00</td>
 											<td>0.00</td>
 											<td>0.00</td>
@@ -296,7 +288,7 @@
 											<td>0.00</td>
 											<td>6,880</td>
 											<td>ABCD</td>
-											<td> <div class="checkbox"> <input type="checkbox"/></div> </td>
+											<td> <div class="checkbox"> <input type="checkbox" checked disabled /></div> </td>
 										</tr>
 										</tbody>
                                  </table>
@@ -346,7 +338,14 @@
 
  
 $(document).ready(function() {
-			$("#table1").dataTable({"bPaginate": false, "sDom": 'zrtSpi'});
+			$("#table1").dataTable({
+					"bPaginate": false,
+					"sDom": 'zrtSpi',
+					columnDefs: [
+					   { orderable: false, targets: -1 },
+					   { orderable: false, targets: -2 },
+					]
+			});
 			$('#reportrange').daterangepicker({
          		startDate: moment().subtract('days', 29),
          		endDate: moment(),
