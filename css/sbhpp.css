@@ -259,3 +259,54 @@ display:block !important;
 #email-new-header .form-group, #email-new-body .form-group {
   margin-bottom: 5px !important;
 }
+
+#sidebar-nav .nav > li > a >i {
+  margin-top: 2px !important;
+}
+
+#sidebar-nav .nav > li > a {
+  height: 31px !important;
+  line-height: 16px !important;
+}
+#sidebar-nav .nav li .submenu>li>a {
+  line-height: 24px !important;
+  height: 23px !important;
+}
+.nav-stacked{
+	margin-top: -22px !important;
+	margin-left: -12px !important;
+	margin-right: 50px !important;
+}
+#sidebar-nav .nav>li>a>span {
+  margin-left: 21px !important;
+}
+#sidebar-nav .nav li a.dropdown-toggle>.drop-icon {
+  top: 29% !important; 
+  right: 7px !important;
+}
+#nav-col {
+  padding: 0;
+  z-index: 0 !important; 
+  position: absolute;
+  background: #2c3e50;
+  width: 192px !important;
+}
+
+#content-wrapper {
+  margin-left: 150px !important;
+}
+
+.navbar>.container .navbar-brand {
+  width: 151px !important;
+}
+
+#sidebar-nav .nav>li>a{
+	  width: 162px;
+}
+
+#sidebar-nav .nav li .submenu>li>a, .nav-small #nav-col-submenu .submenu>li>a {
+  width: 162px;
+}
+#sidebar-nav .nav li .submenu, #nav-col-submenu .submenu {
+  width: 162px;
+}
