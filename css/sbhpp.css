@@ -210,3 +210,52 @@ th.sorting_asc, th.sorting_desc {
 color:#607d8b;
 text-decoration:underline;
 }
+
+.table tr.success > th > label {
+display:block !important;
+}
+@media (min-width: 768px){
+.modal-dialog.small-modal {
+  width: 300px;
+  top:180px;
+ }
+ .modal-dialog.medium-modal {
+  width: 400px;
+    top:180px;
+	
+ }
+ .carrier_ > div > div{
+	padding-bottom: 10px;
+}
+.attachment{
+	width: 317px;
+    height: 35px;
+    background-color: rgb(221, 234, 254);
+}
+.spacing{
+	position: relative !important;
+	left: -432px!important;
+}
+.spacing1{
+	position: relative !important;
+	left: -215px !important;
+	top: -196px !important;
+}
+.file-caption-ellipsis{
+	display:none !important;
+}
+.trAlign{
+	text-align:center;
+}
+.tickCheckbox {
+	margin-left: 22px;
+	margin-top: 8px;
+}
+
+.vendor_mail li {
+    padding-left: 73px !important;
+}
+
+#email-new-header .form-group, #email-new-body .form-group {
+  margin-bottom: 5px !important;
+}

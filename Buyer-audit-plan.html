@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 <title>SBHPP</title>
+<link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/smoothness/jquery-ui.css"/>
+<link href="css/MonthPicker.css" media="all" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
 <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
@@ -16,7 +19,10 @@
 <link rel="stylesheet" href="css/libs/daterangepicker.css" type="text/css"/>
 <link rel="stylesheet" href="css/libs/dataTables.tableTools.css" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="css/libs/jquery.nouislider.css">
-      <link rel="stylesheet" href="css/libs/select2.css" type="text/css"/>
+<!--<link rel="stylesheet" href="css/libs/jquery-ui.css">-->
+<link rel="stylesheet" href="css/libs/select2.css" type="text/css"/>
+<link href="css/libs/bootstrap-editable.css" rel="stylesheet"/>
+
 </head>
 <body class="pace-done theme-white">
 <div id="theme-wrapper">
@@ -94,6 +100,36 @@
         <div id="nav-col-submenu"> </div>
       </div>
       <div id="content-wrapper">
+	  
+		<div class="modal fade" id="vendor-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-dialog small-modal">
+			   <div class="modal-content">
+				  <!--<div class="modal-header">
+					 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+					 <h4 class="modal-title" id="myModalLabel">RFQ No Filter</h4>
+				  </div>-->
+				  <div class="modal-body">
+					 <div class="form-group form-group-select2">
+						<label>use , commas for, multiple selection(s)</label>
+						<div class="form-group form-group-select2">
+						   <select style="width:220px" id="vendor_name" multiple>
+							  <option value="DeepakJain">Deepak Jain</option>
+							  <option value="Vinay Jain">Vinay Jain</option>
+							  <option value="Shyam Jain">Shyam Jain</option>
+							  <option value="Raj Jain">Raj Jain</option>
+							  <option value="Rihan Jain">rihan Jain</option>
+							  <option value="Midhun Jain">Midhun Jain</option>
+						   </select>
+						</div>
+					 </div>
+				  </div>
+				  <div class="modal-footer">
+					 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+					 <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+				  </div>
+			   </div>
+			</div>
+		 </div>
         <div class="row">
           <div class="col-lg-12">
             <div class="main-box clearfix">
@@ -103,18 +139,13 @@
               <div class="col-lg-12 ">
                 <div class="col-lg-8  well-sm">
                   <div class="row">
-                    <div class="col-lg-4">
+                    <div class="col-lg-3">
                       <label class="lead">Year / Month</label>
                     </div>
-                   <div class="col-lg-4">
-					  <div id="yearSlider" class="slider-range"></div>
-					  <span class="slider-label"></span> 
-					 </div>
-					
-					<div class="col-lg-4">
-					  <div id="monthSlider" class="slider-range"></div>
-					  <span class="slider-label"></span> 
-					  <!--<select class="form-control" name="month"><option>Month (All)</option><option>December</option></select> -->
+					 <div class="col-lg-4">
+						<form>
+							<input class="month-year-input" id="IconDemo" type="text">
+						</form>
 					 </div>
                   </div>
                   <div class="row">
@@ -122,12 +153,15 @@
                       <label class="lead">Purch organization</label>
                     </div>
                     <div class="col-lg-4">
-                      <select class="form-control" name="organization">
-                        <option>C100 - org Description </option>
-                        <option>C100 - org Description </option>
-                        <option>C400 - org Description </option>
-                        <option>C800 - org Description </option>
-                      </select>
+				
+						<div class="form-group form-group-select2">
+						   <select style="width:220px" id="organisationName" multiple>
+							    <option>C100 - org Description </option>
+								<option>C100 - org Description </option>
+								<option>C400 - org Description </option>
+								<option>C800 - org Description </option>
+						   </select>
+						</div>
                     </div>
                     <div class="col-lg-4">
                       <button class="btn btn-primary"><i class="fa fa-search"></i> Search</button>
@@ -137,6 +171,11 @@
                 </div>
               </div>
               <div class="main-box-body clearfix">
+				 <div class="row">
+					<div class="col-sm-12">
+						<button class="btn btn-default "><i class="fa fa-filter"></i> Reset</button>
+					</div>
+				 </div>
                 <div class="table-responsive">
                   <table class="table table-bordered table-striped table-condensed" id="table1" width="100%" border="0">
                     <tr class="success">
@@ -155,7 +194,7 @@
                       <td colspan="2" style=" text-align:center; font-weight:bolder">December - 2015 (2)</td>
                     </tr>
                     <tr class="success">
-                      <td nowrap>Vendor Name</td>
+                      <td nowrap>Vendor <button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-vendor" data-toggle="modal" data-target="#vendor-modal"><i class="fa  fa-magic"></i></button></td>
                       <td width="11%" nowrap>Auditor Name</td>
                       <td width="7%" nowrap>Date</td>
                       <td width="13%" nowrap>Auditor Name</td>
@@ -216,6 +255,9 @@
                   
                   
                 </div>
+				<div class="col-lg-offset-5">
+									<button id="btnload" class="btn btn-default ">Load More</button>
+								</div>
               </div>
             </div>
           </div>
@@ -229,28 +271,29 @@
   </div>
 </div>
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog medium-modal">
     <div class="modal-content">
       
       <div class="modal-body">
        <table class="table">
        	<tr>
-        	<td>Author Name</td><td><div class="form-group form-group-select2">
-                                               
-                                           
-                                                   <select  id="venname" class="form-control" >
-                                                      <option value="DeepakJain">Deepak Jain</option>
-                                                      <option value="Vinay Jain">Vinay Jain</option>
-                                                      <option value="Shyam Jain">Shyam Jain</option>
-                                                      <option value="Raj Jain">Raj Jain</option>
-                                                      <option value="Rihan Jain">rihan Jain</option>
-                                                      <option value="Midhun Jain">Midhun Jain</option>
-                                                    </select>                                                 
-                                           
-                                             </div></td>
+        	<td>Vendor</td><td>
+			
+			 <div class="form-group form-group-select2">
+				<label>use , commas for, multiple selection(s)</label>
+				<div class="form-group form-group-select2">
+				   <select style="width:220px" id="vendorName" multiple>
+					   <option value="DeepakJain">Deepak Jain</option>
+					  <option value="Vinay Jain">Vinay Jain</option>
+					  <option value="Shyam Jain">Shyam Jain</option>
+					  <option value="Raj Jain">Raj Jain</option>
+					  <option value="Rihan Jain">rihan Jain</option>
+					  <option value="Midhun Jain">Midhun Jain</option>
+				   </select>
+				</div>
+			 </div>
+			 </div></td>
         </tr>
-        <tr><td>Date</td><td><input type="text" id="vendate" class="form-control"></td></tr>
-
        </table>
       </div>
       <div class="modal-footer">
@@ -261,6 +304,8 @@
   </div>
 </div>
 <script src="js/jquery.js"></script> 
+<script src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="js/MonthPicker.min.js"></script>
 <script src="js/bootstrap.js"></script> 
 <script src="js/moment.min.js"></script> 
 <script src="js/bootstrap-datepicker.js"></script>
@@ -271,75 +316,75 @@
 <script src="js/demo-rtl.js"></script> 
 <script src="js/select2.min.js"></script> 
 <script src="js/jquery.nouislider.js"></script>
+<!--<script src="js/jquery-ui.custom.min.js"></script>-->
+<script src="js/bootstrap-editable.min.js"></script>
  
 <script type="text/javascript">
+		var btn = $.fn.button.noConflict() 
+		$.fn.btn = btn;
          $(document).ready(function() {
-         		i=6;
+			$('#IconDemo').MonthPicker({ StartYear: 2015, ShowIcon: true });
+         		i = 6;
+			   $('.editable').editable({
+				  url: '/',
+				  placement: 'right',
+				  PK:1
+			   });
+		
+			$('.audit').editable({
+				source: vendors,
+				select2: {
+					width: 200,
+					placeholder: 'Select Vendor',
+					allowClear: true
+				} 
+			}); 
 			$("#addvend2").click(function(e) {
 				//$("#vendate").val('');
-				ven=$("#venname").val();
-				vendate=$("#vendate").val();
-                $("#table1").append('<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>'+ven+'</td><td>'+vendate+'</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>');
+				ven = $("#vendorName").val();
+                $("#table1").append('<tr><td>'+ven+'</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td><a data-title="Select Auditor" data-value="BS" data-pk="1" data-type="select2" id="auditor'+i+'" href="#" class="editable audit editable-click editable-open" data-original-title="" title="">Auditor</a></td><td><a data-title="" data-placement="" data-pk="1" data-viewformat="dd.mm.yyyy" data-type="date"  href="#" class="auditdate editable editable-click" data-original-title="" title="">25.02.2013</a></td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>');
 				i++;
             });
-         			//range slider
-		$('#monthSlider').noUiSlider({
-			range: [1, 12],
-			start: [0, 1],
-			step: 1,
-			connect: true,
-			slide: function(){
-				var values = $(this).val();
-				
-				$(this).next('span').text(
-					'Month: ' + getmonth(values[0]) + ' - ' + getmonth(values[1])
-				);
-			},
-			set: function(){
-				var values = $(this).val();
-				
-				$(this).next('span').text(
-					'Month: ' + getmonth(values[0]) + ' - ' + getmonth(values[1])
-				);
-			}
 		});
-		function getmonth(month){
-			var months = ['January', 'February', 'March', 'April', 'May', 'June',  'July', 'August', 'September', 'October', 'November', 'December'];
-			return months[month-1];
-		}		
-		$('#monthSlider').val([6, 9], true);
-		
-		
-		$('#yearSlider').noUiSlider({
-			range: [1, 17],
-			start: [0, 1],
-			step: 1,
-			connect: true,
-			slide: function(){
-				var values = $(this).val();
-				
-				$(this).next('span').text(
-					'Year: ' + getYear(values[0]) + ' - ' + getYear(values[1])
-				);
-			},
-			set: function(){
-				var values = $(this).val();
-				
-				$(this).next('span').text(
-					'Year: ' + getYear(values[0]) + ' - ' + getYear(values[1])
-				);
-			}
+		$('#vendorName').select2({
+         		placeholder: 'Select a Vendor',
+         		allowClear: true
+         });
+		$('#organisationName').select2({
+			placeholder: 'Select a Organizastion',
+			allowClear: true
 		});
-		function getYear(year){
-			var years = ['2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016', '2017'];
-			return years[year-1];
-		}		
-		$('#yearSlider').val([6, 9], true);
-		$("#vendate").datepicker({
-		  format: 'mm-dd-yyyy'
+		
+		$('#vendor_name').select2({
+			placeholder: 'Select a Vendor',
+			allowClear: true
 		});
 
-        });
+
+    var vendors = [];
+    $.each({"KH":"Khizar","SP":"Srinath","SH":"Sajjath"}, function(k, v) {
+        vendors.push({id: k, text: v});
+    }); 
+
+
+$(document).on('click', '.audit',function (e){
+	 e.preventDefault();
+	 $('.audit').editable({
+        source: vendors,
+        select2: {
+            width: 200,
+            placeholder: 'Select Vendor',
+            allowClear: true
+        } 
+    }); 
+	    $('.auditdate').editable({
+        datepicker: {
+            todayBtn: 'linked'
+        } 
+    });
+	  });
+
       </script>
+
 </body>
 </html>

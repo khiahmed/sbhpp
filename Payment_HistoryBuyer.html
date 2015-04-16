@@ -61,7 +61,7 @@
                                  <a href="#">
                                  <i class="fa fa-envelope-o">
                                  </i>
-                                 Messages
+                                Change Password
                                  </a>
                               </li>
                               <li>
@@ -78,6 +78,7 @@
                </div>
             </div>
          </header>
+		
          <div id="page-wrapper" class="container">
             <div class="row">
                <div id="nav-col">
@@ -212,18 +213,41 @@
                      <div class="col-lg-12">
                         <div class="main-box clearfix">
                            <header class="main-box-header clearfix">
-                              <h2 class="pull-left h4_bold">ASN Display</h2>
+                              <h2 class="pull-left h4_bold">Payment_HistoryBuyer</h2>
                            </header>
                            <div class="main-box-body clearfix">
                               <div class="">
-								  <div class="modal fade" id="deli_date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
-                                       <div class="modal-content">
-                                          <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">Delivery Date Filter</h4>
-                                          </div>
+								<div class="modal fade" id="deli_plant-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog medium-modal">
+                                     <div class="modal-content">
                                           <div class="modal-body">
+                                       				<div class="form-group form-group-select2">
+														<!--<label>use , commas for, multiple selection(s)</label>-->
+														<div class="form-group form-group-select2 modalSelect">
+															<select style="width:300px" id="sel5Multi" multiple>
+																<option value="54545455">54545455</option>
+																<option value="54545455">54545455</option>
+																<option value="54545455">54545455</option>
+																<option value="54545455">54545455</option>
+																<option value="54545455">54545455</option>
+																<option value="54545455">54545455</option>
+															</select>                                                 
+														</div>
+													</div>
+												    
+                                             </div>
+											 
+											 <div class="modal-footer">
+												 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+												 <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
+                                            </div>
+                                      </div> 
+                                    </div>
+                            </div>
+								  <div class="modal fade" id="deli_date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog medium-modal">
+                                       <div class="modal-content">
+                                        <div class="modal-body">
                                              <div class="daterange-filter" id="reportrange">
                                                 <i class="fa fa-calendar"></i>&nbsp;
                                                 <span>February 16, 2015 - March 17, 2015</span> <b class="caret"></b>
@@ -237,16 +261,10 @@
                                     </div>
                                  </div>
 							 <div class="modal fade" id="deli_code-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog medium-modal">
                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">Vendor Code Filter</h4>
-                                          </div>
-                                          <div class="modal-body">
-                                             <div class="daterange-filter" id="reportrange1">
-                                                <h5 class="h4_bold">Vendor Code</h5>
-													<div class="form-group form-group-select2">
+                                           <div class="modal-body">
+                                         			<div class="form-group form-group-select2">
 														<!--<label>use , commas for, multiple selection(s)</label>-->
 														<div class="form-group form-group-select2 modalSelect">
 															<select style="width:300px" id="sel1Multi" multiple>
@@ -259,7 +277,7 @@
 															</select>                                                 
 														</div>
 													</div>    
-                                             </div>
+                                        
                                           </div>
                                           <div class="modal-footer">
                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -269,12 +287,8 @@
                                     </div>
                             </div>
 							<div class="modal fade" id="fin_year-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog medium-modal">
                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">Financial Year Filter</h4>
-                                          </div>
                                           <div class="modal-body">
                                              <div class="daterange-filter" id="reportrange1">
                                                 <i class="fa fa-calendar"></i>&nbsp;
@@ -289,13 +303,9 @@
                                     </div>
                             </div>
 							<div class="modal fade" id="po_date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog medium-modal">
                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">PO Date</h4>
-                                          </div>
-                                          <div class="modal-body">
+                                           <div class="modal-body">
                                              <div class="daterange-filter" id="reportrange2">
                                                 <i class="fa fa-calendar"></i>&nbsp;
                                                 <span>February 16, 2015 - March 17, 2015</span> <b class="caret"></b>
@@ -309,15 +319,9 @@
                                     </div>
                             </div>
 							<div class="modal fade" id="po_doc-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog medium-modal">
                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">PO Document</h4>
-                                          </div>
                                           <div class="modal-body">
-                                             <div class="daterange-filter" id="reportrange1">
-                                                <h5 class="h4_bold">PO document No</h5>
 													<div class="form-group form-group-select2">
 														<!--<label>use , commas for, multiple selection(s)</label>-->
 														<div class="form-group form-group-select2 modalSelect">
@@ -331,7 +335,7 @@
 															</select>                                                 
 														</div>
 													</div>
-                                             </div>
+                         
                                           </div>
                                           <div class="modal-footer">
                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -341,16 +345,10 @@
                                     </div>
                             </div>
 							<div class="modal fade" id="voice_no-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog medium-modal">
                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">Invoice No Filter</h4>
-                                          </div>
                                           <div class="modal-body">
-                                             <div class="daterange-filter" id="reportrange1">
-                                                <h5 class="h4_bold">Invoice No</h5>
-													<div class="form-group form-group-select2">
+               										<div class="form-group form-group-select2">
 														<!--<label>use , commas for, multiple selection(s)</label>-->
 														<div class="form-group form-group-select2 modalSelect">
 															<select style="width:300px" id="sel3Multi" multiple>
@@ -363,7 +361,7 @@
 															</select>                                                 
 														</div>
 													</div>
-                                             </div>
+                                
                                           </div>
                                           <div class="modal-footer">
                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -373,32 +371,23 @@
                                     </div>
                             </div>
 							<div class="modal fade" id="invoice_no-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog medium-modal">
                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">Invoice No Filter</h4>
-                                          </div>
                                           <div class="modal-body">
-												<div class="daterange-filter" id="reportrange1">
-												
-														<h5 class="h4_bold">Invoice NO</h5>
-															<div class="form-group form-group-select2">
-																<!--<label>use , commas for, multiple selection(s)</label>-->
-																<div class="form-group form-group-select2 modalSelect">
-																	<select style="width:300px" id="sel4Multi" multiple>
-																		<option value="1000001">10</option>
-																		<option value="1000001">20</option>
-																		<option value="1000001">30</option>
-																		<option value="1000001">101</option>
-																		<option value="1000001">100</option>
-																		<option value="1000001">10</option>
-																	</select>                                                 
-																</div>
-															</div>
-													
+												<div class="form-group form-group-select2">
+													<!--<label>use , commas for, multiple selection(s)</label>-->
+													<div class="form-group form-group-select2 modalSelect">
+														<select style="width:300px" id="sel4Multi" multiple>
+															<option value="1000001">10</option>
+															<option value="1000001">20</option>
+															<option value="1000001">30</option>
+															<option value="1000001">101</option>
+															<option value="1000001">100</option>
+															<option value="1000001">10</option>
+														</select>                                                 
+													</div>
 												</div>
-                                          </div>
+									        </div>
                                           <div class="modal-footer">
                                              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                                              <button data-dismiss="modal" type="button" class="btn btn-primary">Filter</button>
@@ -407,12 +396,8 @@
                                     </div>
                             </div>
 							<div class="modal fade" id="invoice_date-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog medium-modal">
                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">Invoice Date Filter</h4>
-                                          </div>
                                           <div class="modal-body">
                                              <div class="daterange-filter" id="reportrange4">
                                                 <i class="fa fa-calendar"></i>&nbsp;
@@ -427,13 +412,9 @@
                                     </div>
                             </div>	 
                             <div class="modal fade" id="status-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-                                    <div class="modal-dialog">
+                                    <div class="modal-dialog small-modal">
                                        <div class="modal-content">
-                                          <div class="modal-header">
-                                             <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                                             <h4 class="modal-title" id="myModalLabel">Status Filter</h4>
-                                          </div>
-                                          <div class="modal-body">
+                                         <div class="modal-body">
                                              <div class="checkbox-nice">
                                                 <input type="checkbox" id="checkbox-1" checked="checked"/>
                                                 <label for="checkbox-1">
@@ -467,38 +448,27 @@
                                     </div>
                                  </div>     
                                  <div>
-									<div class="row">
-																
-									<div class="col-sm-3">
-										<h5 class="h4_bold">Plant Code</h5>
-										<div class="form-group form-group-select2">
-												<!--<label>use , commas for, multiple selection(s)</label>-->
-												<div class="form-group form-group-select2 modalSelect">
-													<select style="width:300px" id="sel5Multi" multiple>
-														<option value="54545455">54545455</option>
-														<option value="54545455">54545455</option>
-														<option value="54545455">54545455</option>
-														<option value="54545455">54545455</option>
-														<option value="54545455">54545455</option>
-														<option value="54545455">54545455</option>
-													</select>                                                 
-												</div>
-											</div>    
-									</div>
-									<div class="col-sm-12">
-										<button class="btn btn-default"><i class="fa fa-filter"></i> Reset</button>
-									</div>
 								 </div>
+									<div class="row">
+								<div class="col-sm-10">
+                                   <button class="btn btn-default">Reset</button>
+								</div>
+								<div class="col-sm-2">
+                                	<div class="btn-group pull-right">
+                                    	<button class="btn btn-default"><i class="fa  fa-file-excel-o"></i> Download as Excel</button>
+                                    </div>
+								</div>
+							 </div>
 							
 								 
 								<div class="table-responsive">
 								 <table class="table table-bordered table-striped table-condensed" id="table1">
                                     <thead>
                                        <tr class="success">
-                                          <th><a> Vendor code</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#deli_code-modal"><i class="fa  fa-magic"></i></button></th>
-                                          <th><a>vendor name</a></th>
+										  <th><a> Plant</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#deli_plant-modal"><i class="fa  fa-magic"></i></button></th>
+                                          <th><a> Vendor</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#deli_code-modal"><i class="fa  fa-magic"></i></button></th>
                                           <th><a> Financial year</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#fin_year-modal"><i class="fa  fa-magic"></i></button></th>
-                                          <th><a> PO Document</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#po_doc-modal"><i class="fa  fa-magic"></i></button></th>
+                                          <th><a> PO No.</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#po_doc-modal"><i class="fa  fa-magic"></i></button></th>
                                           <th><a> PO Date</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#po_date-modal"><i class="fa  fa-magic"></i></button></th>
                                           <th><a>Supplier Invoice No</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#voice_no-modal"><i class="fa  fa-magic"></i></button></th>
                                           <th><a>Supplier Invoice Date</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#deli_date-modal"><i class="fa  fa-magic"></i></button></th>
@@ -510,23 +480,23 @@
 										  <th><a>Bank name</a></th>
 										  <th><a>Cheque No.</a></th>
 										  <th><a>Cheque Amount</a></th>
-										  <th><a>remarks</a></th>
-										  <th><a>status</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#status-modal"><i class="fa  fa-magic"></i></button></th>
-										  <th><a>Action</a></th>
+										  <th width=100><a>Remarks</a></th>
+										  <th><a>Status</a><button class="btn pull-right btn-primary btn-xs btn-tool" data-id="table-deliDate" data-toggle="modal" data-target="#status-modal"><i class="fa  fa-magic"></i></button></th>
+								
                                        </tr>
                                     </thead>
                                     <tbody>
 										<tr>
-											<td>1000001</td>
-											<td>Deepak Jain</td>								
+											<td>10000001</td>
+											<td>1000001</td>					
 											<td>2010</td>
 											<td>
 												<span>1000</span>
 												<span style="display:none"><input type='text' value='1000' size='6'></span>
 											</td>
-											<td>22/10/2015</td>
+											<td>10/22/2015</td>
 											<td>50</td>
-											<td>22/10/2015</td>
+											<td>10/22/2015</td>
 											<td>per qty</td>
 											<td>100</td>
 											<td>100</td>
@@ -535,21 +505,21 @@
 											<td>XXX</td>
 											<td>MMA100001</td>
 											<td>1000</td>
-											<td>XXX</td>
+											<td>ABCD</td>
 											<td>Open</td>
-											<td></td>
+											
 										</tr>
 										
 										<tr>
+											<td>10000001</td>
 											<td>1000001</td>
-											<td>Rakesh Patail</td>
 											<td>2010</td>
 											<td>
 												<span>200</span>
 												<span style="display:none"><input type='text' value='200' size='12'></span></td>
-											<td>22/10/2015</td>
+											<td>10/22/2015</td>
 											<td>50</td>
-											<td>22/10/2015</td>
+											<td>10/22/2015</td>
 											<td>per qty</td>
 											<td>100</td>
 											<td>1000</td>
@@ -560,20 +530,20 @@
 											<td>1000</td>
 											<td>XXX</td>
 											<td>Close</td>
-											<td></td>
+											
 										</tr>
 										
 										<tr>
-											<td>10000001</td>	
-											<td>Chand Magesh</td>		
+											<td>10000001</td>
+											<td>10000001</td>		
 											<td>2010</td>
 											<td>
 												<span>342</span>
 												<span style="display:none"><input type='text' value='342' size='12'></span>
 											</td>
-											<td>22/10/2015</td>
+											<td>10/22/2015</td>
 											<td>50</td>
-											<td>22/10/2015</td>
+											<td>10/22/2015</td>
 											<td>per qty</td>
 											<td>100</td>
 											<td>1000</td>
@@ -584,20 +554,20 @@
 											<td>1000</td>
 											<td>XXX</td>
 											<td>Close</td>
-											<td></td>
+											
 										</tr>
 										
 											<tr>
-												<td>10000001</td>	
-												<td>Ram Kumar</td>						
+												<td>10000001</td>
+												<td>10000001</td>					
 												<td>2010</td>
 												<td>
 													<span>1342</span>
 													<span style="display:none"><input type='text' value='1342' size='12'></span>
 												</td>
-												<td>22/10/2015</td>
+												<td>10/22/2015</td>
 												<td>50</td>
-												<td>22/10/2015</td>
+												<td>10/22/2015</td>
 												<td>per qty</td>
 												<td>100</td>
 												<td>1000</td>
@@ -608,42 +578,42 @@
 												<td>1000</td>
 												<td>XXX</td>
 												<td>Close</td>
-												<td></td>
-											</tr>
-											<tr>
-												<td>10000001</td>	
-												<td>Deepak Jain</td>
-												<td>2010</td>
-												<td>
-													<span>4200</span>
-													<span style="display:none"><input type='text' value='4200' size='12'></span>
-												</td>
-												<td>22/10/2015</td>
-												<td>50</td>
-												<td>22/10/2015</td>
-												<td>per qty</td>
-												<td>100</td>
-												<td>100</td>
-												<td>1000</td>
-												<td>100</td>
-												<td>XXX</td>
-												<td>MMA100001</td>
-												<td>1000</td>
-												<td>XXX</td>
-												<td>Close</td>
-												<td></td>
+												
 											</tr>
 											<tr>
 												<td>10000001</td>
-												<td>Rakesh Patail</td>								
+												<td>10000001</td>	
 												<td>2010</td>
 												<td>
 													<span>4200</span>
 													<span style="display:none"><input type='text' value='4200' size='12'></span>
 												</td>
-												<td>22/10/2015</td>
+												<td>10/22/2015</td>
 												<td>50</td>
-												<td>22/10/2015</td>
+												<td>10/22/2015</td>
+												<td>per qty</td>
+												<td>100</td>
+												<td>100</td>
+												<td>1000</td>
+												<td>100</td>
+												<td>XXX</td>
+												<td>MMA100001</td>
+												<td>1000</td>
+												<td>XXX</td>
+												<td>Close</td>
+												
+											</tr>
+											<tr>
+												<td>10000001</td>
+												<td>10000001</td>							
+												<td>2010</td>
+												<td>
+													<span>4200</span>
+													<span style="display:none"><input type='text' value='4200' size='12'></span>
+												</td>
+												<td>10/22/2015</td>
+												<td>50</td>
+												<td>10/22/2015</td>
 												<td>per qty</td>
 												<td>100</td>
 												<td>100</td>
@@ -654,11 +624,16 @@
 												<td>1000</td>
 												<td>XXX</td>
 												<td>Open</td>
-												<td></td>
+												
 											</tr>
 										</tbody>
                                  </table>
+								
                                  </div>
+								  <div class="col-lg-offset-5">
+									<button id="btnload" class="btn btn-default ">Load More</button>
+								</div>
+								 </div>
                            </div>
                         </div>
                      </div>
@@ -677,10 +652,11 @@
                         &copy; 2015&nbsp;&nbsp;|&nbsp;&nbsp;all right reserved&nbsp;&nbsp;|&nbsp;&nbsp;sbhpp
                      </p>
                   </footer>
-               </div>
+               
             </div>
          </div>
       </div>
+	  </div>
       <script src="js/jquery.js"></script>
       <script src="js/bootstrap.js"></script>
       <script src="js/moment.min.js"></script>
@@ -818,23 +794,23 @@
 		   $('#reportrange1 span').html(moment().subtract('days', 29).format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
 			
 			$('#sel1Multi').select2({
-         		placeholder: 'Select a Vendor Code',
+         		placeholder: 'Select a Vendor',
          		allowClear: true
          	});
 			$('#sel2Multi').select2({
-         		placeholder: 'Select a PO Code',
+         		placeholder: 'Select a PO No.',
          		allowClear: true
          	});
 			$('#sel3Multi').select2({
-         		placeholder: 'Select a Invoice Number',
+         		placeholder: 'Select a Supplier Invoice No',
          		allowClear: true
          	});
 			$('#sel4Multi').select2({
-         		placeholder: 'Select a Plant Code',
+         		placeholder: 'Select a Invoice No',
          		allowClear: true
          	});
 			$('#sel5Multi').select2({
-         		placeholder: 'Select a PO Code',
+         		placeholder: 'Select a Plant',
          		allowClear: true
          	});
          });
