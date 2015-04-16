@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 <title>SBHPP</title>
+
+<link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="css/smoothness/jquery-ui.css"/>
+<link href="css/MonthPicker.css" media="all" rel="stylesheet" type="text/css" />
 <link rel="stylesheet" type="text/css" href="css/bootstrap/bootstrap.min.css"/>
 <link rel="stylesheet" type="text/css" href="css/libs/font-awesome.css"/>
 <link rel="stylesheet" type="text/css" href="css/libs/nanoscroller.css"/>
@@ -17,6 +21,8 @@
 <link rel="stylesheet" href="css/libs/dataTables.tableTools.css" type="text/css"/>
 <link rel="stylesheet" type="text/css" href="css/libs/jquery.nouislider.css">
 <link rel="stylesheet" href="css/libs/select2.css" type="text/css"/>
+
+
 </head>
 <body class="pace-done theme-white">
 <div id="theme-wrapper">
@@ -107,38 +113,16 @@
               </header>
               <div class="col-lg-12 ">
                 <div class="col-lg-8  well-sm">
-                  <div class="row">
+                <div class="row">
                     <div class="col-lg-3">
                       <label class="lead">Year / Month</label>
                     </div>
-                    <!--<div class="col-lg-4">
-                      <select class="form-control" name="year">
-                        <option>2015</option>
-                        <option>2014</option>
-                      </select>
-                    </div>-->
-					
-					 <div class="col-lg-2">
-                      <!--<div id="yearSlider" class="slider-range"></div>
-                      <span class="slider-label"></span> -->
-						<div class="form-group form-group-select2">
-							<select style="width:80px" id="sel2">
-							<option value="2010">2010</option>
-							<option value="2011">2011</option>
-							<option value="2012">2012</option>
-							<option value="2013">2013</option>
-							<option value="2014">2014</option>
-							<option value="2015">2015</option>
-							</select>
-							</div>
+					 <div class="col-lg-4">
+						<form>
+							<input class="month-year-input" id="IconDemo" type="text">
+						</form>
 					 </div>
-					
-                    <div class="col-lg-4">
-                      <div id="monthSlider" class="slider-range"></div>
-                      <span class="slider-label"></span> 
-                      <!--<select class="form-control" name="month"><option>Month (All)</option><option>December</option></select> -->
-					 </div>
-                    </div>
+                </div>
 					 <div class="row">
                     <div class="col-sm-2">
                       <label class="lead">Vendor</label>
@@ -420,80 +404,35 @@
   </div>
 </div>
 
-<script src="js/jquery.js"></script> 
+
+<script src="js/jquery.js"></script>
+<script src="js/jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src="js/MonthPicker.min.js"></script>
 <script src="js/bootstrap.js"></script> 
 <script src="js/moment.min.js"></script> 
 <script src="js/daterangepicker.js"></script> 
 <script src="js/scripts.js"></script> 
 <script src="js/demo-skin-changer.js"></script> 
-<script src="js/demo.js"></script> 
-<script src="js/jquery.nanoscroller.min.js"></script> 
+<script src="js/demo.js"></script>
+<script src="js/jquery.nanoscroller.min.js"></script>
+ <script src="js/jquery.nouislider.js"></script> 
 <script src="js/demo-rtl.js"></script> 
 <script src="js/select2.min.js"></script> 
-<script src="js/jquery.nouislider.js"></script> 
+
+
 <script type="text/javascript">
-         $(document).ready(function() {
-         	
-         			//range slider
-		$('#monthSlider').noUiSlider({
-			range: [1, 12],
-			start: [0, 1],
-			step: 1,
-			connect: true,
-			slide: function(){
-				var values = $(this).val();
-				
-				$(this).next('span').text(
-					'Month: ' + getmonth(values[0]) + ' - ' + getmonth(values[1])
-				);
-			},
-			set: function(){
-				var values = $(this).val();
-				
-				$(this).next('span').text(
-					'Month: ' + getmonth(values[0]) + ' - ' + getmonth(values[1])
-				);
-			}
-		});
-		function getmonth(month){
-			var months = ['January', 'February', 'March', 'April', 'May', 'June',  'July', 'August', 'September', 'October', 'November', 'December'];
-			return months[month-1];
-		}		
-		$('#monthSlider').val([6, 9], true);
-		
-		
-		$('#yearSlider').noUiSlider({
-			range: [1, 17],
-			start: [0, 1],
-			step: 1,
-			connect: true,
-			slide: function(){
-				var values = $(this).val();
-				
-				$(this).next('span').text(
-					'Year: ' + getYear(values[0]) + ' - ' + getYear(values[1])
-				);
-			},
-			set: function(){
-				var values = $(this).val();
-				
-				$(this).next('span').text(
-					'Year: ' + getYear(values[0]) + ' - ' + getYear(values[1])
-				);
-			}
-		});
-		function getYear(year){
-			var years = ['2000','2001','2002','2003','2004','2005','2006','2007','2008','2009','2010','2011','2012','2013','2014','2015','2016', '2017'];
-			return years[year-1];
-		}		
-		$('#yearSlider').val([6, 9], true);
-		
+		var btn = $.fn.button.noConflict() 
+		$.fn.btn = btn;
+        $(document).ready(function() {
+			$('#IconDemo').MonthPicker({ StartYear: 2015, ShowIcon: true });
         });
+		
 		$('#sel1Multi').select2({
-         		placeholder: 'Select a Vendor',
-         		allowClear: true
-         	});
-			$('#sel2').select2();
+         	placeholder: 'Select a Vendor',
+         	allowClear: true
+        });
+		$('#sel2').select2();
+		
       </script>
 </body>
 </html>
