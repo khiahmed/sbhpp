@@ -290,6 +290,7 @@ display:block !important;
   position: absolute;
   background: #2c3e50;
   width: 192px !important;
+  width: 192px !important;
 }
 
 #content-wrapper {
@@ -309,4 +310,31 @@ display:block !important;
 }
 #sidebar-nav .nav li .submenu, #nav-col-submenu .submenu {
   width: 162px;
+}
+#email-new.email-new-nano > .email-new-nano-content {
+    position: absolute;
+	overflow-y: hidden !important;
+	overflow-x: hidden;
+	top: 0px;
+	right: 0px;
+	bottom: 0px;
+	left: 0px;
+}
+#email-new .wysiwyg-editor {
+	width: 1063px !important;
+	height: 165px !important;
+}
+
+#email-new .select2-container.select2-container-multi .select2-search-choice-close {
+  top: 2px !important;
+}
+
+#email-new .select2-container.select2-container-multi .select2-choices .select2-search-choice {
+  height: 19px;
+  line-height: 10px;
+}
+
+#email-new .form-control-s2 {
+   height: 20px;
+   padding-bottom: 10px;
 }
