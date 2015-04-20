@@ -321,7 +321,7 @@ display:block !important;
 	left: 0px;
 }
 #email-new .wysiwyg-editor {
-	width: 1063px !important;
+	width: 1057px !important;
 	height: 165px !important;
 }
 
@@ -338,4 +338,16 @@ display:block !important;
    height: 20px;
    padding-bottom: 10px;
 
+}
+
+#email-new-header .form-group label, #email-new-body label {
+  margin-left: -26px;
+}
+
+#email-new .form-control-s2 {
+  width: 102% !important;
+}
+
+#exampleInpSubject{
+	width: 102% !important;
 }
