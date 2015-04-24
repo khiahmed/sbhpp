@@ -364,6 +364,7 @@
 		
 		$('.email-recepients').select2({
 			placeholder: 'Enter recepients',
+			tokenSeparators: [',', ';', ' '],
 			tags: ['angelina@jolie.com', 'mila@kunis.com', 'ryan@gosling.com', 'scarlett@johansson.com', 'emma@watson.com', 'robert@downey.com']
 		});
 		$('#email-new').css('height', '600px');
